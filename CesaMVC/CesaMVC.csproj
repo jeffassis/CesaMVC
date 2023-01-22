@@ -84,14 +84,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="br.com.cesa.view\Form1.cs">
+    <Compile Include="br.com.cesa.connect\ConnectionFactory.cs" />
+    <Compile Include="br.com.cesa.dao\UsuarioDAO.cs" />
+    <Compile Include="br.com.cesa.model\Usuario.cs" />
+    <Compile Include="br.com.cesa.view\FrmUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="br.com.cesa.view\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="br.com.cesa.view\FrmUsuario.Designer.cs">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cesadbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cesadbDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="br.com.cesa.view\FrmUsuario.resx">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -100,7 +111,19 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="cesadbDataSet.xsc">
+      <DependentUpon>cesadbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="cesadbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cesadbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cesadbDataSet.xss">
+      <DependentUpon>cesadbDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -116,9 +139,25 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="br.com.cesa.connect\" />
-    <Folder Include="br.com.cesa.dao\" />
-    <Folder Include="br.com.cesa.model\" />
+    <None Include="Resources\cesa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_cancelar_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_editar_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_excluir_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_novo_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_salvar_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pesquisar_20.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
