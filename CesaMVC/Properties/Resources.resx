@@ -118,25 +118,82 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="cesa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cesa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btn_cancelar_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn_cancelar_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ferramentas_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ferramentas_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btn_editar_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn_editar_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btn_excluir_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn_excluir_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sobre_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sobre_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btn_novo_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn_novo_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sem-foto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sem-foto.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logOn_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logOn_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="financeiro_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\financeiro_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="login_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\login_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="relatorio_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\relatorio_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="login_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\login_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_cancelar_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_cancelar_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pesquisar_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pesquisar_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gestao_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gestao_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="led_red_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\led_red_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btn_salvar_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn_salvar_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pesquisar_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pesquisar_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="capturar_foto_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\capturar_foto_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cesa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cesa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cadastros_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cadastros_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="led_green_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\led_green_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_excluir_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_excluir_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_foto_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_foto_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="backup_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backup_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_novo_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_novo_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logOff_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logOff_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pedagogico_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pedagogico_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_play_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_play_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

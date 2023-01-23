@@ -13,6 +13,6 @@ namespace CesaMVC.br.com.cesa.model
         public string Username { get; set; }
         public string Senha { get; set; }
         public string Status { get; set; }
-        public string Nivel { get; set; }
+        public int Nivel { get; set; }
     }
 }

@@ -15,6 +15,7 @@ namespace CesaMVC
     public partial class FrmUsuario : Form
     {
         string idSelecionado;
+        string UsuarioAntigo;
         public FrmUsuario()
         {
             InitializeComponent();
@@ -69,7 +70,7 @@ namespace CesaMVC
         {
             txtNome.Text = txtSenha.Text = txtUsername.Text = string.Empty;
             cbStatus.SelectedIndex = 0;
-            cbNivel.SelectedIndex = 0;
+            txtNivel.Value = 0;
         }
 
         private void Habilitar()
@@ -78,7 +79,7 @@ namespace CesaMVC
             txtUsername.Enabled = true;
             txtSenha.Enabled = true;
             cbStatus.Enabled = true;
-            cbNivel.Enabled = true;
+            txtNivel.Enabled = true;
         }
 
         private void Desabilitar()
@@ -92,7 +93,7 @@ namespace CesaMVC
             txtUsername.Enabled = false;
             txtSenha.Enabled = false;
             cbStatus.Enabled = false;
-            cbNivel.Enabled = false;
+            txtNivel.Enabled = false;
         }
 
         private void FrmUsuario_Load(object sender, EventArgs e)
@@ -151,13 +152,12 @@ namespace CesaMVC
                 Username = txtUsername.Text,
                 Senha = txtSenha.Text,
                 Status = cbStatus.Text,
-                Nivel = cbNivel.Text
+                Nivel = int.Parse(txtNivel.Value.ToString())
             };            
             UsuarioDAO dao = new UsuarioDAO();
 
             // Verifica se o username ja existe
-            DataTable dt = new DataTable();
-            dt = dao.VerficaUsername(txtUsername.Text);
+            DataTable dt = dao.VerficaUsername(txtUsername.Text);
             if (dt.Rows.Count > 0)
             {
                 MessageBox.Show("Username já cadastrado!!", "Erro ao adicionar dados", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -203,20 +203,22 @@ namespace CesaMVC
                 Username = txtUsername.Text,
                 Senha = txtSenha.Text,
                 Status = cbStatus.Text,
-                Nivel = cbNivel.Text
+                Nivel = int.Parse(txtNivel.Value.ToString())
             };
             UsuarioDAO dao = new UsuarioDAO();
 
             // Verifica se o username ja existe
-            DataTable dt = new DataTable();
-            dt = dao.VerficaUsername(txtUsername.Text);
-            if (dt.Rows.Count > 0)
+            if (txtUsername.Text != UsuarioAntigo)
             {
-                MessageBox.Show("Username já cadastrado!!", "Erro ao adicionar dados", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtUsername.Text = "";
-                txtUsername.Focus();
-                return;
-            }
+                DataTable dt = dao.VerficaUsername(txtUsername.Text);
+                if (dt.Rows.Count > 0)
+                {
+                    MessageBox.Show("Username já cadastrado!!", "Erro ao atualizar dados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtUsername.Text = "";
+                    txtUsername.Focus();
+                    return;
+                }
+            }            
             // Atualiza usuario
             dao.UpdateUser(obj, idSelecionado);
             Desabilitar();
@@ -246,12 +248,15 @@ namespace CesaMVC
             txtUsername.Text = Grid.CurrentRow.Cells[2].Value.ToString();
             txtSenha.Text = Grid.CurrentRow.Cells[3].Value.ToString();
             cbStatus.Text = Grid.CurrentRow.Cells[4].Value.ToString();
-            cbNivel.Text = Grid.CurrentRow.Cells[5].Value.ToString();
+            txtNivel.Text = Grid.CurrentRow.Cells[5].Value.ToString();
 
             tabUsuario.SelectedTab = tabPage2;
             Habilitar();
             BtnEditar.Enabled = true;
             BtnExcluir.Enabled = true;
+
+            // Pega o nome de usuario para atualizar
+            UsuarioAntigo = Grid.CurrentRow.Cells[2].Value.ToString();
         }
 
         private void TxtPesquisar_TextChanged(object sender, EventArgs e)

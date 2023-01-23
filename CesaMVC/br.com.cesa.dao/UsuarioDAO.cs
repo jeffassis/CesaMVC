@@ -1,5 +1,6 @@
 ﻿using CesaMVC.br.com.cesa.connect;
 using CesaMVC.br.com.cesa.model;
+using CesaMVC.br.com.cesa.view;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -130,7 +131,8 @@ namespace CesaMVC.br.com.cesa.dao
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                 da.Fill(dt);
                 vcon.Close();
-
+                vcon.Dispose();
+                vcon.ClearAllPoolsAsync();
                 return dt;
             }
             catch (Exception ex)
@@ -153,7 +155,8 @@ namespace CesaMVC.br.com.cesa.dao
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                 da.Fill(dt);
                 vcon.Close();
-
+                vcon.Dispose();
+                vcon.ClearAllPoolsAsync();
                 return dt;
             }
             catch (Exception ex)
@@ -161,6 +164,31 @@ namespace CesaMVC.br.com.cesa.dao
                 MessageBox.Show("Erro ao verificar Username: " + ex);
                 return null;
             }
-        } 
+        }
+
+        public DataTable EfetuarLogin(string username, string senha)
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                string sql = "SELECT * FROM tb_user WHERE username=@user and senha=@senha";
+                MySqlCommand cmd = new MySqlCommand(sql, vcon);
+                cmd.Parameters.AddWithValue("@user", username);
+                cmd.Parameters.AddWithValue("@senha", senha);
+                vcon.Open();
+                cmd.ExecuteNonQuery();
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                da.Fill(dt);
+                vcon.Close();
+                vcon.Dispose();
+                vcon.ClearAllPoolsAsync();
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao efetuar login: " + ex);
+                return null;
+            }
+        }            
     }
 }

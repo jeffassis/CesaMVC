@@ -30,13 +30,23 @@ namespace CesaMVC
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUsuario));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.tabUsuario = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.Grid = new System.Windows.Forms.DataGridView();
+            this.TxtPesquisar = new System.Windows.Forms.TextBox();
+            this.BtnNovo = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.cbNivel = new System.Windows.Forms.ComboBox();
+            this.txtNivel = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BtnCancelar = new System.Windows.Forms.Button();
+            this.BtnExcluir = new System.Windows.Forms.Button();
+            this.BtnEditar = new System.Windows.Forms.Button();
+            this.BtnSalvar = new System.Windows.Forms.Button();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -46,23 +56,15 @@ namespace CesaMVC
             this.cbStatus = new System.Windows.Forms.ComboBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.BtnEditar = new System.Windows.Forms.Button();
-            this.BtnExcluir = new System.Windows.Forms.Button();
-            this.BtnCancelar = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.BtnSalvar = new System.Windows.Forms.Button();
-            this.BtnNovo = new System.Windows.Forms.Button();
-            this.TxtPesquisar = new System.Windows.Forms.TextBox();
-            this.Grid = new System.Windows.Forms.DataGridView();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.tabUsuario.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNivel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -111,14 +113,75 @@ namespace CesaMVC
             this.tabPage1.Text = "Consultar";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox2.Image = global::CesaMVC.Properties.Resources.pesquisar_20;
+            this.pictureBox2.Location = new System.Drawing.Point(466, 31);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(48, 27);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 24;
+            this.pictureBox2.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox2, "Pesquisar");
+            // 
+            // Grid
+            // 
+            this.Grid.AllowUserToAddRows = false;
+            this.Grid.AllowUserToDeleteRows = false;
+            this.Grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Grid.BackgroundColor = System.Drawing.Color.White;
+            this.Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Grid.Location = new System.Drawing.Point(16, 93);
+            this.Grid.MultiSelect = false;
+            this.Grid.Name = "Grid";
+            this.Grid.ReadOnly = true;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.Grid.RowHeadersVisible = false;
+            this.Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Grid.Size = new System.Drawing.Size(718, 239);
+            this.Grid.TabIndex = 23;
+            this.Grid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellDoubleClick);
+            // 
+            // TxtPesquisar
+            // 
+            this.TxtPesquisar.Location = new System.Drawing.Point(513, 31);
+            this.TxtPesquisar.Name = "TxtPesquisar";
+            this.TxtPesquisar.Size = new System.Drawing.Size(221, 27);
+            this.TxtPesquisar.TabIndex = 1;
+            this.TxtPesquisar.TextChanged += new System.EventHandler(this.TxtPesquisar_TextChanged);
+            // 
+            // BtnNovo
+            // 
+            this.BtnNovo.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BtnNovo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnNovo.ForeColor = System.Drawing.Color.White;
+            this.BtnNovo.Image = global::CesaMVC.Properties.Resources.btn_novo_24;
+            this.BtnNovo.Location = new System.Drawing.Point(16, 17);
+            this.BtnNovo.Name = "BtnNovo";
+            this.BtnNovo.Size = new System.Drawing.Size(120, 55);
+            this.BtnNovo.TabIndex = 0;
+            this.BtnNovo.Text = "  Novo";
+            this.BtnNovo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.BtnNovo, "Novo registro");
+            this.BtnNovo.UseVisualStyleBackColor = false;
+            this.BtnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
+            // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.txtNivel);
             this.tabPage2.Controls.Add(this.pictureBox1);
             this.tabPage2.Controls.Add(this.BtnCancelar);
             this.tabPage2.Controls.Add(this.BtnExcluir);
             this.tabPage2.Controls.Add(this.BtnEditar);
             this.tabPage2.Controls.Add(this.BtnSalvar);
-            this.tabPage2.Controls.Add(this.cbNivel);
             this.tabPage2.Controls.Add(this.txtSenha);
             this.tabPage2.Controls.Add(this.txtUsername);
             this.tabPage2.Controls.Add(this.label6);
@@ -137,24 +200,101 @@ namespace CesaMVC
             this.tabPage2.Text = "Dados Usuário";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // cbNivel
+            // txtNivel
             // 
-            this.cbNivel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbNivel.Enabled = false;
-            this.cbNivel.FormattingEnabled = true;
-            this.cbNivel.Items.AddRange(new object[] {
-            "Administrativo",
-            "Professor",
-            "Secretária",
-            "Administrador"});
-            this.cbNivel.Location = new System.Drawing.Point(379, 154);
-            this.cbNivel.Name = "cbNivel";
-            this.cbNivel.Size = new System.Drawing.Size(159, 29);
-            this.cbNivel.TabIndex = 5;
+            this.txtNivel.Enabled = false;
+            this.txtNivel.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.txtNivel.Location = new System.Drawing.Point(379, 155);
+            this.txtNivel.Maximum = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.txtNivel.Name = "txtNivel";
+            this.txtNivel.Size = new System.Drawing.Size(159, 27);
+            this.txtNivel.TabIndex = 25;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CesaMVC.Properties.Resources.cesa;
+            this.pictureBox1.Location = new System.Drawing.Point(575, 46);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(140, 137);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 24;
+            this.pictureBox1.TabStop = false;
+            // 
+            // BtnCancelar
+            // 
+            this.BtnCancelar.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BtnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCancelar.ForeColor = System.Drawing.Color.White;
+            this.BtnCancelar.Image = global::CesaMVC.Properties.Resources.btn_cancelar_24;
+            this.BtnCancelar.Location = new System.Drawing.Point(493, 237);
+            this.BtnCancelar.Name = "BtnCancelar";
+            this.BtnCancelar.Size = new System.Drawing.Size(140, 60);
+            this.BtnCancelar.TabIndex = 9;
+            this.BtnCancelar.Text = " Cancelar";
+            this.BtnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.BtnCancelar, "Cancelar ação");
+            this.BtnCancelar.UseVisualStyleBackColor = false;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
+            // 
+            // BtnExcluir
+            // 
+            this.BtnExcluir.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BtnExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnExcluir.Enabled = false;
+            this.BtnExcluir.ForeColor = System.Drawing.Color.White;
+            this.BtnExcluir.Image = global::CesaMVC.Properties.Resources.btn_excluir_24;
+            this.BtnExcluir.Location = new System.Drawing.Point(347, 237);
+            this.BtnExcluir.Name = "BtnExcluir";
+            this.BtnExcluir.Size = new System.Drawing.Size(140, 60);
+            this.BtnExcluir.TabIndex = 8;
+            this.BtnExcluir.Text = "  Excluir";
+            this.BtnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.BtnExcluir, "Remover dados");
+            this.BtnExcluir.UseVisualStyleBackColor = false;
+            this.BtnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
+            // 
+            // BtnEditar
+            // 
+            this.BtnEditar.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BtnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnEditar.Enabled = false;
+            this.BtnEditar.ForeColor = System.Drawing.Color.White;
+            this.BtnEditar.Image = global::CesaMVC.Properties.Resources.btn_editar_24;
+            this.BtnEditar.Location = new System.Drawing.Point(201, 237);
+            this.BtnEditar.Name = "BtnEditar";
+            this.BtnEditar.Size = new System.Drawing.Size(140, 60);
+            this.BtnEditar.TabIndex = 7;
+            this.BtnEditar.Text = "  Editar";
+            this.BtnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.BtnEditar, "Editar dados");
+            this.BtnEditar.UseVisualStyleBackColor = false;
+            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
+            // 
+            // BtnSalvar
+            // 
+            this.BtnSalvar.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BtnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnSalvar.Enabled = false;
+            this.BtnSalvar.ForeColor = System.Drawing.Color.White;
+            this.BtnSalvar.Image = global::CesaMVC.Properties.Resources.btn_salvar_24;
+            this.BtnSalvar.Location = new System.Drawing.Point(52, 237);
+            this.BtnSalvar.Name = "BtnSalvar";
+            this.BtnSalvar.Size = new System.Drawing.Size(140, 60);
+            this.BtnSalvar.TabIndex = 6;
+            this.BtnSalvar.Text = "  Salvar";
+            this.BtnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.BtnSalvar, "Salvar dados");
+            this.BtnSalvar.UseVisualStyleBackColor = false;
+            this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
             // txtSenha
             // 
             this.txtSenha.Enabled = false;
+            this.txtSenha.ForeColor = System.Drawing.SystemColors.Highlight;
             this.txtSenha.Location = new System.Drawing.Point(379, 99);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
@@ -164,6 +304,7 @@ namespace CesaMVC
             // txtUsername
             // 
             this.txtUsername.Enabled = false;
+            this.txtUsername.ForeColor = System.Drawing.SystemColors.Highlight;
             this.txtUsername.Location = new System.Drawing.Point(121, 99);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(169, 27);
@@ -209,6 +350,7 @@ namespace CesaMVC
             // 
             this.cbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbStatus.Enabled = false;
+            this.cbStatus.ForeColor = System.Drawing.SystemColors.Highlight;
             this.cbStatus.FormattingEnabled = true;
             this.cbStatus.Items.AddRange(new object[] {
             "Ativo",
@@ -221,6 +363,7 @@ namespace CesaMVC
             // txtNome
             // 
             this.txtNome.Enabled = false;
+            this.txtNome.ForeColor = System.Drawing.SystemColors.Highlight;
             this.txtNome.Location = new System.Drawing.Point(121, 46);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(417, 27);
@@ -235,136 +378,6 @@ namespace CesaMVC
             this.label2.TabIndex = 10;
             this.label2.Text = "Nome.:";
             // 
-            // BtnEditar
-            // 
-            this.BtnEditar.BackColor = System.Drawing.SystemColors.Highlight;
-            this.BtnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnEditar.Enabled = false;
-            this.BtnEditar.ForeColor = System.Drawing.Color.White;
-            this.BtnEditar.Image = global::CesaMVC.Properties.Resources.btn_editar_24;
-            this.BtnEditar.Location = new System.Drawing.Point(201, 237);
-            this.BtnEditar.Name = "BtnEditar";
-            this.BtnEditar.Size = new System.Drawing.Size(140, 60);
-            this.BtnEditar.TabIndex = 7;
-            this.BtnEditar.Text = "  Editar";
-            this.BtnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip1.SetToolTip(this.BtnEditar, "Editar dados");
-            this.BtnEditar.UseVisualStyleBackColor = false;
-            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
-            // 
-            // BtnExcluir
-            // 
-            this.BtnExcluir.BackColor = System.Drawing.SystemColors.Highlight;
-            this.BtnExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnExcluir.Enabled = false;
-            this.BtnExcluir.ForeColor = System.Drawing.Color.White;
-            this.BtnExcluir.Image = global::CesaMVC.Properties.Resources.btn_excluir_24;
-            this.BtnExcluir.Location = new System.Drawing.Point(347, 237);
-            this.BtnExcluir.Name = "BtnExcluir";
-            this.BtnExcluir.Size = new System.Drawing.Size(140, 60);
-            this.BtnExcluir.TabIndex = 8;
-            this.BtnExcluir.Text = "  Excluir";
-            this.BtnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip1.SetToolTip(this.BtnExcluir, "Remover dados");
-            this.BtnExcluir.UseVisualStyleBackColor = false;
-            this.BtnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
-            // 
-            // BtnCancelar
-            // 
-            this.BtnCancelar.BackColor = System.Drawing.SystemColors.Highlight;
-            this.BtnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnCancelar.ForeColor = System.Drawing.Color.White;
-            this.BtnCancelar.Image = global::CesaMVC.Properties.Resources.btn_cancelar_24;
-            this.BtnCancelar.Location = new System.Drawing.Point(493, 237);
-            this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Size = new System.Drawing.Size(140, 60);
-            this.BtnCancelar.TabIndex = 9;
-            this.BtnCancelar.Text = " Cancelar";
-            this.BtnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip1.SetToolTip(this.BtnCancelar, "Cancelar ação");
-            this.BtnCancelar.UseVisualStyleBackColor = false;
-            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CesaMVC.Properties.Resources.cesa;
-            this.pictureBox1.Location = new System.Drawing.Point(575, 46);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(140, 137);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 24;
-            this.pictureBox1.TabStop = false;
-            // 
-            // BtnSalvar
-            // 
-            this.BtnSalvar.BackColor = System.Drawing.SystemColors.Highlight;
-            this.BtnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnSalvar.Enabled = false;
-            this.BtnSalvar.ForeColor = System.Drawing.Color.White;
-            this.BtnSalvar.Image = global::CesaMVC.Properties.Resources.btn_salvar_24;
-            this.BtnSalvar.Location = new System.Drawing.Point(52, 237);
-            this.BtnSalvar.Name = "BtnSalvar";
-            this.BtnSalvar.Size = new System.Drawing.Size(140, 60);
-            this.BtnSalvar.TabIndex = 6;
-            this.BtnSalvar.Text = "  Salvar";
-            this.BtnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip1.SetToolTip(this.BtnSalvar, "Salvar dados");
-            this.BtnSalvar.UseVisualStyleBackColor = false;
-            this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
-            // 
-            // BtnNovo
-            // 
-            this.BtnNovo.BackColor = System.Drawing.SystemColors.Highlight;
-            this.BtnNovo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnNovo.ForeColor = System.Drawing.Color.White;
-            this.BtnNovo.Image = global::CesaMVC.Properties.Resources.btn_novo_24;
-            this.BtnNovo.Location = new System.Drawing.Point(16, 17);
-            this.BtnNovo.Name = "BtnNovo";
-            this.BtnNovo.Size = new System.Drawing.Size(120, 55);
-            this.BtnNovo.TabIndex = 0;
-            this.BtnNovo.Text = "  Novo";
-            this.BtnNovo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip1.SetToolTip(this.BtnNovo, "Novo registro");
-            this.BtnNovo.UseVisualStyleBackColor = false;
-            this.BtnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
-            // 
-            // TxtPesquisar
-            // 
-            this.TxtPesquisar.Location = new System.Drawing.Point(513, 31);
-            this.TxtPesquisar.Name = "TxtPesquisar";
-            this.TxtPesquisar.Size = new System.Drawing.Size(221, 27);
-            this.TxtPesquisar.TabIndex = 1;
-            this.TxtPesquisar.TextChanged += new System.EventHandler(this.TxtPesquisar_TextChanged);
-            // 
-            // Grid
-            // 
-            this.Grid.AllowUserToAddRows = false;
-            this.Grid.AllowUserToDeleteRows = false;
-            this.Grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.Grid.BackgroundColor = System.Drawing.Color.White;
-            this.Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Grid.Location = new System.Drawing.Point(16, 93);
-            this.Grid.MultiSelect = false;
-            this.Grid.Name = "Grid";
-            this.Grid.ReadOnly = true;
-            this.Grid.RowHeadersVisible = false;
-            this.Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Grid.Size = new System.Drawing.Size(718, 239);
-            this.Grid.TabIndex = 23;
-            this.Grid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellDoubleClick);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Image = global::CesaMVC.Properties.Resources.pesquisar_20;
-            this.pictureBox2.Location = new System.Drawing.Point(466, 31);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(48, 27);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 24;
-            this.pictureBox2.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox2, "Pesquisar");
-            // 
             // FrmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -375,7 +388,7 @@ namespace CesaMVC
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmUsuario";
@@ -387,11 +400,12 @@ namespace CesaMVC
             this.tabUsuario.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Grid)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNivel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Grid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -403,7 +417,6 @@ namespace CesaMVC
         private System.Windows.Forms.TabControl tabUsuario;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.ComboBox cbNivel;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label6;
@@ -423,6 +436,7 @@ namespace CesaMVC
         private System.Windows.Forms.DataGridView Grid;
         private System.Windows.Forms.TextBox TxtPesquisar;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.NumericUpDown txtNivel;
     }
 }
 
