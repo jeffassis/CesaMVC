@@ -90,5 +90,11 @@ namespace CesaMVC.br.com.cesa.view
         {
             txtUsername.Focus();
         }
+
+        private void FrmLogin_Shown(object sender, EventArgs e)
+        {
+            FrmSplash form = new FrmSplash();
+            form.ShowDialog();
+        }
     }
 }

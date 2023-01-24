@@ -112,10 +112,7 @@ namespace CesaMVC
         }
 
         private void BtnCancelar_Click(object sender, EventArgs e)
-        {
-            BtnSalvar.Enabled = false;
-            BtnEditar.Enabled = false;
-            BtnExcluir.Enabled = false;
+        {            
             LimparCampos();
             Desabilitar();
             tabUsuario.SelectedTab = tabPage1;

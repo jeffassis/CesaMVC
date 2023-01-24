@@ -111,71 +111,91 @@ namespace CesaMVC.br.com.cesa.view
             // 
             // CadastrosAlunos
             // 
+            this.CadastrosAlunos.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CadastrosAlunos.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.CadastrosAlunos.Image = global::CesaMVC.Properties.Resources.aluno_20;
             this.CadastrosAlunos.Name = "CadastrosAlunos";
-            this.CadastrosAlunos.Size = new System.Drawing.Size(156, 22);
+            this.CadastrosAlunos.Size = new System.Drawing.Size(180, 24);
             this.CadastrosAlunos.Text = "Alunos";
+            this.CadastrosAlunos.Click += new System.EventHandler(this.CadastrosAlunos_Click);
             // 
             // CadastrosProfessor
             // 
+            this.CadastrosProfessor.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CadastrosProfessor.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.CadastrosProfessor.Image = global::CesaMVC.Properties.Resources.prefessor_20;
             this.CadastrosProfessor.Name = "CadastrosProfessor";
-            this.CadastrosProfessor.Size = new System.Drawing.Size(156, 22);
+            this.CadastrosProfessor.Size = new System.Drawing.Size(180, 24);
             this.CadastrosProfessor.Text = "Professor";
             // 
             // CadastrosResponsavel
             // 
+            this.CadastrosResponsavel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CadastrosResponsavel.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.CadastrosResponsavel.Image = global::CesaMVC.Properties.Resources.responsavel_20;
             this.CadastrosResponsavel.Name = "CadastrosResponsavel";
-            this.CadastrosResponsavel.Size = new System.Drawing.Size(156, 22);
+            this.CadastrosResponsavel.Size = new System.Drawing.Size(180, 24);
             this.CadastrosResponsavel.Text = "Responsável";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(153, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // CadastrosDisciplinas
             // 
+            this.CadastrosDisciplinas.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CadastrosDisciplinas.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.CadastrosDisciplinas.Image = global::CesaMVC.Properties.Resources.disciplina_20;
             this.CadastrosDisciplinas.Name = "CadastrosDisciplinas";
-            this.CadastrosDisciplinas.Size = new System.Drawing.Size(156, 22);
+            this.CadastrosDisciplinas.Size = new System.Drawing.Size(180, 24);
             this.CadastrosDisciplinas.Text = "Disciplinas";
             // 
             // CadastrosFornecedor
             // 
+            this.CadastrosFornecedor.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CadastrosFornecedor.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.CadastrosFornecedor.Image = global::CesaMVC.Properties.Resources.fornecedor_20;
             this.CadastrosFornecedor.Name = "CadastrosFornecedor";
-            this.CadastrosFornecedor.Size = new System.Drawing.Size(156, 22);
+            this.CadastrosFornecedor.Size = new System.Drawing.Size(180, 24);
             this.CadastrosFornecedor.Text = "Fornecedor";
             // 
             // CadastrosHorarios
             // 
+            this.CadastrosHorarios.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CadastrosHorarios.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.CadastrosHorarios.Image = global::CesaMVC.Properties.Resources.horario_20;
             this.CadastrosHorarios.Name = "CadastrosHorarios";
-            this.CadastrosHorarios.Size = new System.Drawing.Size(156, 22);
+            this.CadastrosHorarios.Size = new System.Drawing.Size(180, 24);
             this.CadastrosHorarios.Text = "Horários";
             // 
             // CadastrosProdutos
             // 
+            this.CadastrosProdutos.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CadastrosProdutos.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.CadastrosProdutos.Image = global::CesaMVC.Properties.Resources.produtos_20;
             this.CadastrosProdutos.Name = "CadastrosProdutos";
-            this.CadastrosProdutos.Size = new System.Drawing.Size(156, 22);
+            this.CadastrosProdutos.Size = new System.Drawing.Size(180, 24);
             this.CadastrosProdutos.Text = "Produtos";
             // 
             // CadastrosServicos
             // 
+            this.CadastrosServicos.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CadastrosServicos.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.CadastrosServicos.Image = global::CesaMVC.Properties.Resources.servicos_20;
             this.CadastrosServicos.Name = "CadastrosServicos";
-            this.CadastrosServicos.Size = new System.Drawing.Size(156, 22);
+            this.CadastrosServicos.Size = new System.Drawing.Size(180, 24);
             this.CadastrosServicos.Text = "Serviços";
             // 
             // CadastrosTurmas
             // 
+            this.CadastrosTurmas.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CadastrosTurmas.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.CadastrosTurmas.Image = global::CesaMVC.Properties.Resources.turma_20;
             this.CadastrosTurmas.Name = "CadastrosTurmas";
-            this.CadastrosTurmas.Size = new System.Drawing.Size(156, 22);
+            this.CadastrosTurmas.Size = new System.Drawing.Size(180, 24);
             this.CadastrosTurmas.Text = "Turmas";
+            this.CadastrosTurmas.Click += new System.EventHandler(this.CadastrosTurmas_Click);
             // 
             // menuPedagogico
             // 
@@ -217,10 +237,11 @@ namespace CesaMVC.br.com.cesa.view
             // 
             // UsuarioGestaoUsuario
             // 
+            this.UsuarioGestaoUsuario.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsuarioGestaoUsuario.ForeColor = System.Drawing.SystemColors.Highlight;
             this.UsuarioGestaoUsuario.Image = global::CesaMVC.Properties.Resources.gestao_20;
             this.UsuarioGestaoUsuario.Name = "UsuarioGestaoUsuario";
-            this.UsuarioGestaoUsuario.Size = new System.Drawing.Size(199, 22);
+            this.UsuarioGestaoUsuario.Size = new System.Drawing.Size(219, 24);
             this.UsuarioGestaoUsuario.Text = "Gestão de Usuários";
             this.UsuarioGestaoUsuario.Click += new System.EventHandler(this.UsuarioGestaoUsuario_Click);
             // 
@@ -239,28 +260,31 @@ namespace CesaMVC.br.com.cesa.view
             // 
             // FerramentasSobre
             // 
+            this.FerramentasSobre.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FerramentasSobre.ForeColor = System.Drawing.SystemColors.Highlight;
             this.FerramentasSobre.Image = global::CesaMVC.Properties.Resources.sobre_20;
             this.FerramentasSobre.Name = "FerramentasSobre";
-            this.FerramentasSobre.Size = new System.Drawing.Size(190, 22);
+            this.FerramentasSobre.Size = new System.Drawing.Size(207, 24);
             this.FerramentasSobre.Text = "Sobre...";
             this.FerramentasSobre.Click += new System.EventHandler(this.FerramentasSobre_Click);
             // 
             // FerramentasCapturarFoto
             // 
+            this.FerramentasCapturarFoto.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FerramentasCapturarFoto.ForeColor = System.Drawing.SystemColors.Highlight;
             this.FerramentasCapturarFoto.Image = global::CesaMVC.Properties.Resources.capturar_foto_20;
             this.FerramentasCapturarFoto.Name = "FerramentasCapturarFoto";
-            this.FerramentasCapturarFoto.Size = new System.Drawing.Size(190, 22);
+            this.FerramentasCapturarFoto.Size = new System.Drawing.Size(207, 24);
             this.FerramentasCapturarFoto.Text = "Capturar foto";
             this.FerramentasCapturarFoto.Click += new System.EventHandler(this.FerramentasCapturarFoto_Click);
             // 
             // FerramentasBackup
             // 
+            this.FerramentasBackup.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FerramentasBackup.ForeColor = System.Drawing.SystemColors.Highlight;
             this.FerramentasBackup.Image = global::CesaMVC.Properties.Resources.backup_20;
             this.FerramentasBackup.Name = "FerramentasBackup";
-            this.FerramentasBackup.Size = new System.Drawing.Size(190, 22);
+            this.FerramentasBackup.Size = new System.Drawing.Size(207, 24);
             this.FerramentasBackup.Text = "Backup de dados";
             this.FerramentasBackup.Click += new System.EventHandler(this.FerramentasBackup_Click);
             // 
@@ -278,19 +302,21 @@ namespace CesaMVC.br.com.cesa.view
             // 
             // LoginLogOn
             // 
+            this.LoginLogOn.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginLogOn.ForeColor = System.Drawing.SystemColors.Highlight;
             this.LoginLogOn.Image = global::CesaMVC.Properties.Resources.logOn_20;
             this.LoginLogOn.Name = "LoginLogOn";
-            this.LoginLogOn.Size = new System.Drawing.Size(119, 22);
+            this.LoginLogOn.Size = new System.Drawing.Size(127, 24);
             this.LoginLogOn.Text = "LogOn";
             this.LoginLogOn.Click += new System.EventHandler(this.LoginLogOn_Click);
             // 
             // LogOff
             // 
+            this.LogOff.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogOff.ForeColor = System.Drawing.SystemColors.Highlight;
             this.LogOff.Image = global::CesaMVC.Properties.Resources.logOff_20;
             this.LogOff.Name = "LogOff";
-            this.LogOff.Size = new System.Drawing.Size(119, 22);
+            this.LogOff.Size = new System.Drawing.Size(127, 24);
             this.LogOff.Text = "LogOff";
             this.LogOff.Click += new System.EventHandler(this.LogOff_Click);
             // 

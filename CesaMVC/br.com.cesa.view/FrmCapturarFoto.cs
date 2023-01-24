@@ -54,6 +54,7 @@ namespace CesaMVC.br.com.cesa.view
             // Escolhe onde vai salvar a captura da imagem da tela
             pictureCaptura.Image.Save(@"C:\cesa\img\foto-" + nome + ".png", System.Drawing.Imaging.ImageFormat.Png);
             LimparCampo();
+            MessageBox.Show("Captura feita com sucesso!", "Capturar foto", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void LimparCampo()

@@ -48,6 +48,7 @@ namespace CesaMVC.br.com.cesa.view
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calisto MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label1.Location = new System.Drawing.Point(558, 427);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(256, 24);
@@ -76,9 +77,9 @@ namespace CesaMVC.br.com.cesa.view
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CesaMVC.Properties.Resources.cesa;
-            this.pictureBox1.Location = new System.Drawing.Point(377, 328);
+            this.pictureBox1.Location = new System.Drawing.Point(387, 328);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(143, 121);
+            this.pictureBox1.Size = new System.Drawing.Size(123, 121);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;

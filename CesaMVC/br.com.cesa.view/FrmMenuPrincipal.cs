@@ -89,5 +89,17 @@ namespace CesaMVC.br.com.cesa.view
             FrmCapturarFoto form = new FrmCapturarFoto();
             AbreForm(0, form);
         }
+
+        private void CadastrosAlunos_Click(object sender, EventArgs e)
+        {
+            FrmAluno form = new FrmAluno();
+            AbreForm(1, form);
+        }
+
+        private void CadastrosTurmas_Click(object sender, EventArgs e)
+        {
+            FrmTurma form = new FrmTurma();
+            AbreForm(2, form);
+        }
     }
 }
