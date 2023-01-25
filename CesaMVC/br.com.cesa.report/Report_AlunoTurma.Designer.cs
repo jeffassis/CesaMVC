@@ -40,6 +40,7 @@ namespace CesaMVC.br.com.cesa.report
             this.montTurmaTableAdapter = new CesaMVC.cesadbDataSetTableAdapters.MontTurmaTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.montTurmaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cesadbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -105,6 +106,7 @@ namespace CesaMVC.br.com.cesa.report
             this.BtnPesquisar.Size = new System.Drawing.Size(40, 40);
             this.BtnPesquisar.TabIndex = 27;
             this.BtnPesquisar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.BtnPesquisar, "Selecionar turma");
             this.BtnPesquisar.UseVisualStyleBackColor = false;
             this.BtnPesquisar.Click += new System.EventHandler(this.BtnPesquisar_Click);
             // 
@@ -169,5 +171,6 @@ namespace CesaMVC.br.com.cesa.report
         private System.Windows.Forms.Button BtnPesquisar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

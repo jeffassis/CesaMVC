@@ -1,7 +1,7 @@
 ﻿
 namespace CesaMVC.br.com.cesa.view
 {
-    partial class FrmAluno
+    partial class FrmProfessor
     {
         /// <summary>
         /// Required designer variable.
@@ -31,10 +31,10 @@ namespace CesaMVC.br.com.cesa.view
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAluno));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProfessor));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.tabAluno = new System.Windows.Forms.TabControl();
+            this.tabProfessor = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Grid = new System.Windows.Forms.DataGridView();
@@ -42,7 +42,7 @@ namespace CesaMVC.br.com.cesa.view
             this.BtnNovo = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label15 = new System.Windows.Forms.Label();
-            this.Foto_aluno = new System.Windows.Forms.PictureBox();
+            this.Foto_Professor = new System.Windows.Forms.PictureBox();
             this.BtnFoto = new System.Windows.Forms.Button();
             this.cb_estado = new System.Windows.Forms.ComboBox();
             this.BtnCep = new System.Windows.Forms.Button();
@@ -78,12 +78,12 @@ namespace CesaMVC.br.com.cesa.view
             this.label2 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
-            this.tabAluno.SuspendLayout();
+            this.tabProfessor.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Foto_aluno)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Foto_Professor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,11 +92,12 @@ namespace CesaMVC.br.com.cesa.view
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 33);
+            this.label1.Location = new System.Drawing.Point(14, 33);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(247, 30);
+            this.label1.Size = new System.Drawing.Size(272, 30);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Cadastro de Alunos";
+            this.label1.Text = "Cadastro de Professor";
             // 
             // panel1
             // 
@@ -104,19 +105,20 @@ namespace CesaMVC.br.com.cesa.view
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(853, 100);
-            this.panel1.TabIndex = 1;
+            this.panel1.Size = new System.Drawing.Size(848, 100);
+            this.panel1.TabIndex = 2;
             // 
-            // tabAluno
+            // tabProfessor
             // 
-            this.tabAluno.Controls.Add(this.tabPage1);
-            this.tabAluno.Controls.Add(this.tabPage2);
-            this.tabAluno.Location = new System.Drawing.Point(12, 106);
-            this.tabAluno.Name = "tabAluno";
-            this.tabAluno.SelectedIndex = 0;
-            this.tabAluno.Size = new System.Drawing.Size(828, 532);
-            this.tabAluno.TabIndex = 2;
+            this.tabProfessor.Controls.Add(this.tabPage1);
+            this.tabProfessor.Controls.Add(this.tabPage2);
+            this.tabProfessor.Location = new System.Drawing.Point(12, 108);
+            this.tabProfessor.Name = "tabProfessor";
+            this.tabProfessor.SelectedIndex = 0;
+            this.tabProfessor.Size = new System.Drawing.Size(828, 532);
+            this.tabProfessor.TabIndex = 3;
             // 
             // tabPage1
             // 
@@ -143,7 +145,6 @@ namespace CesaMVC.br.com.cesa.view
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 24;
             this.pictureBox2.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox2, "Pesquisar Aluno");
             // 
             // Grid
             // 
@@ -169,7 +170,6 @@ namespace CesaMVC.br.com.cesa.view
             this.Grid.Size = new System.Drawing.Size(808, 399);
             this.Grid.TabIndex = 23;
             this.Grid.TabStop = false;
-            this.Grid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellClick);
             this.Grid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellDoubleClick);
             // 
             // TxtPesquisar
@@ -179,6 +179,7 @@ namespace CesaMVC.br.com.cesa.view
             this.TxtPesquisar.Name = "TxtPesquisar";
             this.TxtPesquisar.Size = new System.Drawing.Size(322, 27);
             this.TxtPesquisar.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.TxtPesquisar, "Pesquisar professor");
             this.TxtPesquisar.TextChanged += new System.EventHandler(this.TxtPesquisar_TextChanged);
             // 
             // BtnNovo
@@ -200,7 +201,7 @@ namespace CesaMVC.br.com.cesa.view
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.label15);
-            this.tabPage2.Controls.Add(this.Foto_aluno);
+            this.tabPage2.Controls.Add(this.Foto_Professor);
             this.tabPage2.Controls.Add(this.BtnFoto);
             this.tabPage2.Controls.Add(this.cb_estado);
             this.tabPage2.Controls.Add(this.BtnCep);
@@ -240,7 +241,7 @@ namespace CesaMVC.br.com.cesa.view
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(820, 498);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Dados Aluno";
+            this.tabPage2.Text = "Dados Professor";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // label15
@@ -253,15 +254,15 @@ namespace CesaMVC.br.com.cesa.view
             this.label15.TabIndex = 51;
             this.label15.Text = "Obs: Campos com (*) não podem ser vazios!";
             // 
-            // Foto_aluno
+            // Foto_Professor
             // 
-            this.Foto_aluno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Foto_aluno.Location = new System.Drawing.Point(453, 33);
-            this.Foto_aluno.Name = "Foto_aluno";
-            this.Foto_aluno.Size = new System.Drawing.Size(113, 113);
-            this.Foto_aluno.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Foto_aluno.TabIndex = 50;
-            this.Foto_aluno.TabStop = false;
+            this.Foto_Professor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Foto_Professor.Location = new System.Drawing.Point(453, 33);
+            this.Foto_Professor.Name = "Foto_Professor";
+            this.Foto_Professor.Size = new System.Drawing.Size(113, 113);
+            this.Foto_Professor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Foto_Professor.TabIndex = 50;
+            this.Foto_Professor.TabStop = false;
             // 
             // BtnFoto
             // 
@@ -275,7 +276,7 @@ namespace CesaMVC.br.com.cesa.view
             this.BtnFoto.Size = new System.Drawing.Size(45, 45);
             this.BtnFoto.TabIndex = 19;
             this.BtnFoto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip1.SetToolTip(this.BtnFoto, "Incluir foto");
+            this.toolTip1.SetToolTip(this.BtnFoto, "Capturar foto");
             this.BtnFoto.UseVisualStyleBackColor = false;
             this.BtnFoto.Click += new System.EventHandler(this.BtnFoto_Click);
             // 
@@ -629,7 +630,7 @@ namespace CesaMVC.br.com.cesa.view
             this.BtnEditar.TabIndex = 15;
             this.BtnEditar.Text = "  Editar";
             this.BtnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip1.SetToolTip(this.BtnEditar, "Editar dados");
+            this.toolTip1.SetToolTip(this.BtnEditar, "Atualizar dados");
             this.BtnEditar.UseVisualStyleBackColor = false;
             this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
@@ -669,35 +670,34 @@ namespace CesaMVC.br.com.cesa.view
             this.label2.TabIndex = 10;
             this.label2.Text = "Nome Completo*.:";
             // 
-            // FrmAluno
+            // FrmProfessor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(853, 648);
-            this.Controls.Add(this.tabAluno);
+            this.ClientSize = new System.Drawing.Size(848, 646);
+            this.Controls.Add(this.tabProfessor);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.SystemColors.Highlight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FrmAluno";
+            this.Name = "FrmProfessor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastro de Alunos";
-            this.Load += new System.EventHandler(this.FrmAluno_Load);
+            this.Text = "Cadastro de Professores";
+            this.Load += new System.EventHandler(this.FrmProfessor_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.tabAluno.ResumeLayout(false);
+            this.tabProfessor.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Foto_aluno)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Foto_Professor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -707,13 +707,41 @@ namespace CesaMVC.br.com.cesa.view
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TabControl tabAluno;
+        private System.Windows.Forms.TabControl tabProfessor;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.DataGridView Grid;
         private System.Windows.Forms.TextBox TxtPesquisar;
         private System.Windows.Forms.Button BtnNovo;
         private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.PictureBox Foto_Professor;
+        private System.Windows.Forms.Button BtnFoto;
+        private System.Windows.Forms.ComboBox cb_estado;
+        private System.Windows.Forms.Button BtnCep;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txtCidade;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtBairro;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtEndereco;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.MaskedTextBox txtCelular;
+        private System.Windows.Forms.MaskedTextBox txtCep;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.MaskedTextBox txtTelefone;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox cbSangue;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DateTimePicker txtNascimento;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.MaskedTextBox txtCpf;
+        private System.Windows.Forms.MaskedTextBox txtRg;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.Button BtnExcluir;
@@ -721,34 +749,6 @@ namespace CesaMVC.br.com.cesa.view
         private System.Windows.Forms.Button BtnSalvar;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.MaskedTextBox txtRg;
-        private System.Windows.Forms.MaskedTextBox txtCpf;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker txtNascimento;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cbSangue;
-        private System.Windows.Forms.MaskedTextBox txtTelefone;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.MaskedTextBox txtCelular;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.MaskedTextBox txtCep;
-        private System.Windows.Forms.TextBox txtEndereco;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtBairro;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtCidade;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button BtnCep;
-        private System.Windows.Forms.ComboBox cb_estado;
-        private System.Windows.Forms.Button BtnFoto;
-        private System.Windows.Forms.PictureBox Foto_aluno;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ToolTip toolTip1;
     }
 }

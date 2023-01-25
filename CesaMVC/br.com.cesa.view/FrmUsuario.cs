@@ -33,6 +33,12 @@ namespace CesaMVC
             // Visibilidade das Colunas
             Grid.Columns[3].Visible = false;
 
+            // Tamanho da Letra do Header antes devemos colocar VisualStyles como "FALSE"
+            Grid.EnableHeadersVisualStyles = false;
+            Grid.ColumnHeadersDefaultCellStyle.Font = new Font("Century Gothic", 10);
+            Grid.ColumnHeadersDefaultCellStyle.ForeColor = Color.Blue;
+            Grid.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.AliceBlue;
+
             // O Header so fica centralizado se desabilitar a propriedade de ordenacao
             Grid.Columns[0].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             Grid.Columns[0].SortMode = DataGridViewColumnSortMode.NotSortable;

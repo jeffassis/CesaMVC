@@ -29,6 +29,7 @@ namespace CesaMVC.br.com.cesa.view
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -48,6 +49,7 @@ namespace CesaMVC.br.com.cesa.view
             this.label3 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -112,10 +114,12 @@ namespace CesaMVC.br.com.cesa.view
             this.BtnCancelar.Image = global::CesaMVC.Properties.Resources.btn_cancelar_24;
             this.BtnCancelar.Location = new System.Drawing.Point(296, 288);
             this.BtnCancelar.Name = "BtnCancelar";
+            this.BtnCancelar.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
             this.BtnCancelar.Size = new System.Drawing.Size(110, 40);
             this.BtnCancelar.TabIndex = 41;
             this.BtnCancelar.Text = " Cancelar";
             this.BtnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.BtnCancelar, "Cancelar ação");
             this.BtnCancelar.UseVisualStyleBackColor = false;
             this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
@@ -133,6 +137,7 @@ namespace CesaMVC.br.com.cesa.view
             this.BtnExcluir.TabIndex = 40;
             this.BtnExcluir.Text = "  Excluir";
             this.BtnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.BtnExcluir, "Remover dados");
             this.BtnExcluir.UseVisualStyleBackColor = false;
             this.BtnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
             // 
@@ -150,6 +155,7 @@ namespace CesaMVC.br.com.cesa.view
             this.BtnEditar.TabIndex = 39;
             this.BtnEditar.Text = "  Editar";
             this.BtnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.BtnEditar, "Atualizar dados");
             this.BtnEditar.UseVisualStyleBackColor = false;
             this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
@@ -167,6 +173,7 @@ namespace CesaMVC.br.com.cesa.view
             this.BtnSalvar.TabIndex = 38;
             this.BtnSalvar.Text = "  Salvar";
             this.BtnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.BtnSalvar, "Salvar dados");
             this.BtnSalvar.UseVisualStyleBackColor = false;
             this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
@@ -183,6 +190,7 @@ namespace CesaMVC.br.com.cesa.view
             this.BtnNovo.TabIndex = 37;
             this.BtnNovo.Text = "  Novo";
             this.BtnNovo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.BtnNovo, "Novo registro");
             this.BtnNovo.UseVisualStyleBackColor = false;
             this.BtnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
             // 
@@ -314,5 +322,6 @@ namespace CesaMVC.br.com.cesa.view
         private System.Windows.Forms.Button BtnSalvar;
         private System.Windows.Forms.Button BtnNovo;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
