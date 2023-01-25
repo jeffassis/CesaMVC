@@ -134,11 +134,18 @@
   <ItemGroup>
     <Compile Include="br.com.cesa.connect\ConnectionFactory.cs" />
     <Compile Include="br.com.cesa.dao\AlunoDAO.cs" />
+    <Compile Include="br.com.cesa.dao\AlunoTurmaDAO.cs" />
     <Compile Include="br.com.cesa.dao\TurmaDAO.cs" />
     <Compile Include="br.com.cesa.dao\UsuarioDAO.cs" />
     <Compile Include="br.com.cesa.model\Aluno.cs" />
     <Compile Include="br.com.cesa.model\Turma.cs" />
     <Compile Include="br.com.cesa.model\Usuario.cs" />
+    <Compile Include="br.com.cesa.report\Report_AlunoTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.cesa.report\Report_AlunoTurma.Designer.cs">
+      <DependentUpon>Report_AlunoTurma.cs</DependentUpon>
+    </Compile>
     <Compile Include="br.com.cesa.view\FrmAluno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +194,12 @@
     <Compile Include="br.com.cesa.view\FrmUsuario.Designer.cs">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="br.com.cesa.view\FrmMontTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.cesa.view\FrmMontTurma.Designer.cs">
+      <DependentUpon>FrmMontTurma.cs</DependentUpon>
+    </Compile>
     <Compile Include="cesadbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -195,6 +208,10 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="br.com.cesa.report\RelTurma.rdlc" />
+    <EmbeddedResource Include="br.com.cesa.report\Report_AlunoTurma.resx">
+      <DependentUpon>Report_AlunoTurma.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="br.com.cesa.view\FrmAluno.resx">
       <DependentUpon>FrmAluno.cs</DependentUpon>
     </EmbeddedResource>
@@ -218,6 +235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.cesa.view\FrmUsuario.resx">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.cesa.view\FrmMontTurma.resx">
+      <DependentUpon>FrmMontTurma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -303,6 +323,15 @@
     <None Include="Resources\servicos_20.png" />
     <None Include="Resources\fornecedor_20.png" />
     <None Include="Resources\horario_20.png" />
+    <None Include="Resources\btn_pesquisar_24.png" />
+    <None Include="Resources\btn_imprimir_24.png" />
+    <None Include="Resources\notas.png" />
+    <None Include="Resources\mont_turma.png" />
+    <None Include="Resources\documentos_20.png" />
+    <None Include="Resources\historicos_20.png" />
+    <None Include="Resources\circular_20.png" />
+    <None Include="Resources\declaracao_20.png" />
+    <None Include="Resources\movimentacao_20.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

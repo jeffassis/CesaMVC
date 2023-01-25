@@ -291,46 +291,6 @@ namespace CesaMVC.br.com.cesa.view
             tabAluno.SelectedTab = tabPage1;
         }
 
-        private void Grid_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            idSelecionado = Grid.CurrentRow.Cells[0].Value.ToString();
-            txtNome.Text = Grid.CurrentRow.Cells[1].Value.ToString();
-            txtRg.Text = Grid.CurrentRow.Cells[2].Value.ToString();
-            txtCpf.Text = Grid.CurrentRow.Cells[3].Value.ToString();
-            txtEmail.Text = Grid.CurrentRow.Cells[4].Value.ToString();
-            txtNascimento.Text = Grid.CurrentRow.Cells[5].Value.ToString();
-            txtTelefone.Text = Grid.CurrentRow.Cells[6].Value.ToString();
-            txtCelular.Text = Grid.CurrentRow.Cells[7].Value.ToString();
-            cbSangue.Text = Grid.CurrentRow.Cells[8].Value.ToString();
-            txtEndereco.Text = Grid.CurrentRow.Cells[9].Value.ToString();
-            txtCep.Text = Grid.CurrentRow.Cells[10].Value.ToString();
-            txtBairro.Text = Grid.CurrentRow.Cells[11].Value.ToString();
-            txtCidade.Text = Grid.CurrentRow.Cells[12].Value.ToString();
-            cb_estado.Text = Grid.CurrentRow.Cells[13].Value.ToString();
-            
-            if (Grid.CurrentRow.Cells[14].Value != DBNull.Value)
-            {
-                byte[] imagem = (byte[])Grid.CurrentRow.Cells[14].Value;
-                MemoryStream ms = new MemoryStream(imagem);
-                Foto_aluno.Image = System.Drawing.Image.FromStream(ms);
-            }
-            else
-            {
-                Foto_aluno.Image = Properties.Resources.sem_foto;
-            }
-
-
-            tabAluno.SelectedTab = tabPage2;
-            Habilitar();
-            BtnCep.Enabled = true;
-            BtnFoto.Enabled = true;
-            BtnEditar.Enabled = true;
-            BtnExcluir.Enabled = true;
-
-            // Pega o nome de usuario para atualizar
-            alunoAntigo = Grid.CurrentRow.Cells[1].Value.ToString();
-        }
-
         private void TxtPesquisar_TextChanged(object sender, EventArgs e)
         {
             string nome = "%" + TxtPesquisar.Text + "%";
@@ -392,6 +352,56 @@ namespace CesaMVC.br.com.cesa.view
             catch (Exception)
             {
                 MessageBox.Show("CEP não encontrado, por favor digite manualmente.", "Erro ao pesquisar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Grid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            idSelecionado = Grid.CurrentRow.Cells[0].Value.ToString();
+            txtNome.Text = Grid.CurrentRow.Cells[1].Value.ToString();
+            txtRg.Text = Grid.CurrentRow.Cells[2].Value.ToString();
+            txtCpf.Text = Grid.CurrentRow.Cells[3].Value.ToString();
+            txtEmail.Text = Grid.CurrentRow.Cells[4].Value.ToString();
+            txtNascimento.Text = Grid.CurrentRow.Cells[5].Value.ToString();
+            txtTelefone.Text = Grid.CurrentRow.Cells[6].Value.ToString();
+            txtCelular.Text = Grid.CurrentRow.Cells[7].Value.ToString();
+            cbSangue.Text = Grid.CurrentRow.Cells[8].Value.ToString();
+            txtEndereco.Text = Grid.CurrentRow.Cells[9].Value.ToString();
+            txtCep.Text = Grid.CurrentRow.Cells[10].Value.ToString();
+            txtBairro.Text = Grid.CurrentRow.Cells[11].Value.ToString();
+            txtCidade.Text = Grid.CurrentRow.Cells[12].Value.ToString();
+            cb_estado.Text = Grid.CurrentRow.Cells[13].Value.ToString();
+
+            if (Grid.CurrentRow.Cells[14].Value != DBNull.Value)
+            {
+                byte[] imagem = (byte[])Grid.CurrentRow.Cells[14].Value;
+                MemoryStream ms = new MemoryStream(imagem);
+                Foto_aluno.Image = System.Drawing.Image.FromStream(ms);
+            }
+            else
+            {
+                Foto_aluno.Image = Properties.Resources.sem_foto;
+            }
+
+
+            tabAluno.SelectedTab = tabPage2;
+            Habilitar();
+            BtnCep.Enabled = true;
+            BtnFoto.Enabled = true;
+            BtnEditar.Enabled = true;
+            BtnExcluir.Enabled = true;
+
+            // Pega o nome de usuario para atualizar
+            alunoAntigo = Grid.CurrentRow.Cells[1].Value.ToString();
+        }
+
+        private void Grid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (Program.chamadaAlunos == "aluno")
+            {
+                Program.idAluno = Grid.CurrentRow.Cells[0].Value.ToString();
+                Program.nomeAluno = Grid.CurrentRow.Cells[1].Value.ToString();
+                Close();
             }
         }
     }

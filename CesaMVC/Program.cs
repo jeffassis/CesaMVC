@@ -19,6 +19,11 @@ namespace CesaMVC
         public static int nivel;
         public static Boolean logado = false;
 
+        // Variaveis globais cadastro Aluno
+        public static string chamadaAlunos;
+        public static string nomeAluno;
+        public static string idAluno;
+
         /// <summary>
         /// Ponto de entrada principal para o aplicativo.
         /// </summary>
