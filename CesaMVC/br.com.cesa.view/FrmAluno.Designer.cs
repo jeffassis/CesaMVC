@@ -170,6 +170,7 @@ namespace CesaMVC.br.com.cesa.view
             this.Grid.TabIndex = 23;
             this.Grid.TabStop = false;
             this.Grid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellClick);
+            this.Grid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellDoubleClick);
             // 
             // TxtPesquisar
             // 

@@ -44,8 +44,20 @@ namespace CesaMVC.br.com.cesa.view
             this.CadastrosServicos = new System.Windows.Forms.ToolStripMenuItem();
             this.CadastrosTurmas = new System.Windows.Forms.ToolStripMenuItem();
             this.menuPedagogico = new System.Windows.Forms.ToolStripMenuItem();
+            this.PedagogicoHorarios = new System.Windows.Forms.ToolStripMenuItem();
+            this.notasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PedagogicoTurma = new System.Windows.Forms.ToolStripMenuItem();
+            this.TurmaMontagemTurma = new System.Windows.Forms.ToolStripMenuItem();
             this.menuFinanceiro = new System.Windows.Forms.ToolStripMenuItem();
+            this.FinanceiroMovimentacao = new System.Windows.Forms.ToolStripMenuItem();
             this.menuRelatorio = new System.Windows.Forms.ToolStripMenuItem();
+            this.RelatoriosDocumentos = new System.Windows.Forms.ToolStripMenuItem();
+            this.RelatoriosDocumentosCircular = new System.Windows.Forms.ToolStripMenuItem();
+            this.RelatoriosDocumentosDeclaracao = new System.Windows.Forms.ToolStripMenuItem();
+            this.RelatoriosDocumentosHistoricos = new System.Windows.Forms.ToolStripMenuItem();
+            this.RelatoriosHorarios = new System.Windows.Forms.ToolStripMenuItem();
+            this.RelatoriosHorariosProfessor = new System.Windows.Forms.ToolStripMenuItem();
+            this.RelatoriosTurmas = new System.Windows.Forms.ToolStripMenuItem();
             this.menuUsuario = new System.Windows.Forms.ToolStripMenuItem();
             this.UsuarioGestaoUsuario = new System.Windows.Forms.ToolStripMenuItem();
             this.menuFerramentas = new System.Windows.Forms.ToolStripMenuItem();
@@ -115,7 +127,7 @@ namespace CesaMVC.br.com.cesa.view
             this.CadastrosAlunos.ForeColor = System.Drawing.SystemColors.Highlight;
             this.CadastrosAlunos.Image = global::CesaMVC.Properties.Resources.aluno_20;
             this.CadastrosAlunos.Name = "CadastrosAlunos";
-            this.CadastrosAlunos.Size = new System.Drawing.Size(180, 24);
+            this.CadastrosAlunos.Size = new System.Drawing.Size(170, 24);
             this.CadastrosAlunos.Text = "Alunos";
             this.CadastrosAlunos.Click += new System.EventHandler(this.CadastrosAlunos_Click);
             // 
@@ -125,7 +137,7 @@ namespace CesaMVC.br.com.cesa.view
             this.CadastrosProfessor.ForeColor = System.Drawing.SystemColors.Highlight;
             this.CadastrosProfessor.Image = global::CesaMVC.Properties.Resources.prefessor_20;
             this.CadastrosProfessor.Name = "CadastrosProfessor";
-            this.CadastrosProfessor.Size = new System.Drawing.Size(180, 24);
+            this.CadastrosProfessor.Size = new System.Drawing.Size(170, 24);
             this.CadastrosProfessor.Text = "Professor";
             // 
             // CadastrosResponsavel
@@ -134,13 +146,13 @@ namespace CesaMVC.br.com.cesa.view
             this.CadastrosResponsavel.ForeColor = System.Drawing.SystemColors.Highlight;
             this.CadastrosResponsavel.Image = global::CesaMVC.Properties.Resources.responsavel_20;
             this.CadastrosResponsavel.Name = "CadastrosResponsavel";
-            this.CadastrosResponsavel.Size = new System.Drawing.Size(180, 24);
+            this.CadastrosResponsavel.Size = new System.Drawing.Size(170, 24);
             this.CadastrosResponsavel.Text = "Responsável";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(167, 6);
             // 
             // CadastrosDisciplinas
             // 
@@ -148,7 +160,7 @@ namespace CesaMVC.br.com.cesa.view
             this.CadastrosDisciplinas.ForeColor = System.Drawing.SystemColors.Highlight;
             this.CadastrosDisciplinas.Image = global::CesaMVC.Properties.Resources.disciplina_20;
             this.CadastrosDisciplinas.Name = "CadastrosDisciplinas";
-            this.CadastrosDisciplinas.Size = new System.Drawing.Size(180, 24);
+            this.CadastrosDisciplinas.Size = new System.Drawing.Size(170, 24);
             this.CadastrosDisciplinas.Text = "Disciplinas";
             // 
             // CadastrosFornecedor
@@ -157,7 +169,7 @@ namespace CesaMVC.br.com.cesa.view
             this.CadastrosFornecedor.ForeColor = System.Drawing.SystemColors.Highlight;
             this.CadastrosFornecedor.Image = global::CesaMVC.Properties.Resources.fornecedor_20;
             this.CadastrosFornecedor.Name = "CadastrosFornecedor";
-            this.CadastrosFornecedor.Size = new System.Drawing.Size(180, 24);
+            this.CadastrosFornecedor.Size = new System.Drawing.Size(170, 24);
             this.CadastrosFornecedor.Text = "Fornecedor";
             // 
             // CadastrosHorarios
@@ -166,7 +178,7 @@ namespace CesaMVC.br.com.cesa.view
             this.CadastrosHorarios.ForeColor = System.Drawing.SystemColors.Highlight;
             this.CadastrosHorarios.Image = global::CesaMVC.Properties.Resources.horario_20;
             this.CadastrosHorarios.Name = "CadastrosHorarios";
-            this.CadastrosHorarios.Size = new System.Drawing.Size(180, 24);
+            this.CadastrosHorarios.Size = new System.Drawing.Size(170, 24);
             this.CadastrosHorarios.Text = "Horários";
             // 
             // CadastrosProdutos
@@ -175,7 +187,7 @@ namespace CesaMVC.br.com.cesa.view
             this.CadastrosProdutos.ForeColor = System.Drawing.SystemColors.Highlight;
             this.CadastrosProdutos.Image = global::CesaMVC.Properties.Resources.produtos_20;
             this.CadastrosProdutos.Name = "CadastrosProdutos";
-            this.CadastrosProdutos.Size = new System.Drawing.Size(180, 24);
+            this.CadastrosProdutos.Size = new System.Drawing.Size(170, 24);
             this.CadastrosProdutos.Text = "Produtos";
             // 
             // CadastrosServicos
@@ -184,7 +196,7 @@ namespace CesaMVC.br.com.cesa.view
             this.CadastrosServicos.ForeColor = System.Drawing.SystemColors.Highlight;
             this.CadastrosServicos.Image = global::CesaMVC.Properties.Resources.servicos_20;
             this.CadastrosServicos.Name = "CadastrosServicos";
-            this.CadastrosServicos.Size = new System.Drawing.Size(180, 24);
+            this.CadastrosServicos.Size = new System.Drawing.Size(170, 24);
             this.CadastrosServicos.Text = "Serviços";
             // 
             // CadastrosTurmas
@@ -193,12 +205,16 @@ namespace CesaMVC.br.com.cesa.view
             this.CadastrosTurmas.ForeColor = System.Drawing.SystemColors.Highlight;
             this.CadastrosTurmas.Image = global::CesaMVC.Properties.Resources.turma_20;
             this.CadastrosTurmas.Name = "CadastrosTurmas";
-            this.CadastrosTurmas.Size = new System.Drawing.Size(180, 24);
+            this.CadastrosTurmas.Size = new System.Drawing.Size(170, 24);
             this.CadastrosTurmas.Text = "Turmas";
             this.CadastrosTurmas.Click += new System.EventHandler(this.CadastrosTurmas_Click);
             // 
             // menuPedagogico
             // 
+            this.menuPedagogico.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.PedagogicoHorarios,
+            this.notasToolStripMenuItem,
+            this.PedagogicoTurma});
             this.menuPedagogico.ForeColor = System.Drawing.SystemColors.Highlight;
             this.menuPedagogico.Image = global::CesaMVC.Properties.Resources.pedagogico_48;
             this.menuPedagogico.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -206,8 +222,48 @@ namespace CesaMVC.br.com.cesa.view
             this.menuPedagogico.Size = new System.Drawing.Size(149, 52);
             this.menuPedagogico.Text = "Pedagógico";
             // 
+            // PedagogicoHorarios
+            // 
+            this.PedagogicoHorarios.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PedagogicoHorarios.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.PedagogicoHorarios.Image = global::CesaMVC.Properties.Resources.horario_20;
+            this.PedagogicoHorarios.Name = "PedagogicoHorarios";
+            this.PedagogicoHorarios.Size = new System.Drawing.Size(136, 24);
+            this.PedagogicoHorarios.Text = "Horários";
+            // 
+            // notasToolStripMenuItem
+            // 
+            this.notasToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.notasToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.notasToolStripMenuItem.Image = global::CesaMVC.Properties.Resources.notas;
+            this.notasToolStripMenuItem.Name = "notasToolStripMenuItem";
+            this.notasToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
+            this.notasToolStripMenuItem.Text = "Notas";
+            // 
+            // PedagogicoTurma
+            // 
+            this.PedagogicoTurma.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TurmaMontagemTurma});
+            this.PedagogicoTurma.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PedagogicoTurma.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.PedagogicoTurma.Image = global::CesaMVC.Properties.Resources.turma_20;
+            this.PedagogicoTurma.Name = "PedagogicoTurma";
+            this.PedagogicoTurma.Size = new System.Drawing.Size(136, 24);
+            this.PedagogicoTurma.Text = "Turmas";
+            // 
+            // TurmaMontagemTurma
+            // 
+            this.TurmaMontagemTurma.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.TurmaMontagemTurma.Image = global::CesaMVC.Properties.Resources.mont_turma;
+            this.TurmaMontagemTurma.Name = "TurmaMontagemTurma";
+            this.TurmaMontagemTurma.Size = new System.Drawing.Size(236, 24);
+            this.TurmaMontagemTurma.Text = "Montagem de Turmas";
+            this.TurmaMontagemTurma.Click += new System.EventHandler(this.TurmaMontagemTurma_Click);
+            // 
             // menuFinanceiro
             // 
+            this.menuFinanceiro.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.FinanceiroMovimentacao});
             this.menuFinanceiro.ForeColor = System.Drawing.SystemColors.Highlight;
             this.menuFinanceiro.Image = global::CesaMVC.Properties.Resources.financeiro_48;
             this.menuFinanceiro.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -215,14 +271,93 @@ namespace CesaMVC.br.com.cesa.view
             this.menuFinanceiro.Size = new System.Drawing.Size(134, 52);
             this.menuFinanceiro.Text = "Financeiro";
             // 
+            // FinanceiroMovimentacao
+            // 
+            this.FinanceiroMovimentacao.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FinanceiroMovimentacao.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.FinanceiroMovimentacao.Image = global::CesaMVC.Properties.Resources.movimentacao_20;
+            this.FinanceiroMovimentacao.Name = "FinanceiroMovimentacao";
+            this.FinanceiroMovimentacao.Size = new System.Drawing.Size(192, 24);
+            this.FinanceiroMovimentacao.Text = "Movimentação";
+            // 
             // menuRelatorio
             // 
+            this.menuRelatorio.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.RelatoriosDocumentos,
+            this.RelatoriosHorarios,
+            this.RelatoriosTurmas});
             this.menuRelatorio.ForeColor = System.Drawing.SystemColors.Highlight;
             this.menuRelatorio.Image = global::CesaMVC.Properties.Resources.relatorio_48;
             this.menuRelatorio.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menuRelatorio.Name = "menuRelatorio";
             this.menuRelatorio.Size = new System.Drawing.Size(131, 52);
             this.menuRelatorio.Text = "Relátorios";
+            // 
+            // RelatoriosDocumentos
+            // 
+            this.RelatoriosDocumentos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.RelatoriosDocumentosCircular,
+            this.RelatoriosDocumentosDeclaracao,
+            this.RelatoriosDocumentosHistoricos});
+            this.RelatoriosDocumentos.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RelatoriosDocumentos.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.RelatoriosDocumentos.Image = global::CesaMVC.Properties.Resources.documentos_20;
+            this.RelatoriosDocumentos.Name = "RelatoriosDocumentos";
+            this.RelatoriosDocumentos.Size = new System.Drawing.Size(170, 24);
+            this.RelatoriosDocumentos.Text = "Documentos";
+            // 
+            // RelatoriosDocumentosCircular
+            // 
+            this.RelatoriosDocumentosCircular.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.RelatoriosDocumentosCircular.Image = global::CesaMVC.Properties.Resources.circular_20;
+            this.RelatoriosDocumentosCircular.Name = "RelatoriosDocumentosCircular";
+            this.RelatoriosDocumentosCircular.Size = new System.Drawing.Size(173, 24);
+            this.RelatoriosDocumentosCircular.Text = "Circular";
+            // 
+            // RelatoriosDocumentosDeclaracao
+            // 
+            this.RelatoriosDocumentosDeclaracao.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.RelatoriosDocumentosDeclaracao.Image = global::CesaMVC.Properties.Resources.declaracao_20;
+            this.RelatoriosDocumentosDeclaracao.Name = "RelatoriosDocumentosDeclaracao";
+            this.RelatoriosDocumentosDeclaracao.Size = new System.Drawing.Size(173, 24);
+            this.RelatoriosDocumentosDeclaracao.Text = "Declarações";
+            // 
+            // RelatoriosDocumentosHistoricos
+            // 
+            this.RelatoriosDocumentosHistoricos.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.RelatoriosDocumentosHistoricos.Image = global::CesaMVC.Properties.Resources.historicos_20;
+            this.RelatoriosDocumentosHistoricos.Name = "RelatoriosDocumentosHistoricos";
+            this.RelatoriosDocumentosHistoricos.Size = new System.Drawing.Size(173, 24);
+            this.RelatoriosDocumentosHistoricos.Text = "Históricos";
+            // 
+            // RelatoriosHorarios
+            // 
+            this.RelatoriosHorarios.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.RelatoriosHorariosProfessor});
+            this.RelatoriosHorarios.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RelatoriosHorarios.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.RelatoriosHorarios.Image = global::CesaMVC.Properties.Resources.horario_20;
+            this.RelatoriosHorarios.Name = "RelatoriosHorarios";
+            this.RelatoriosHorarios.Size = new System.Drawing.Size(170, 24);
+            this.RelatoriosHorarios.Text = "Horários";
+            // 
+            // RelatoriosHorariosProfessor
+            // 
+            this.RelatoriosHorariosProfessor.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.RelatoriosHorariosProfessor.Image = global::CesaMVC.Properties.Resources.prefessor_20;
+            this.RelatoriosHorariosProfessor.Name = "RelatoriosHorariosProfessor";
+            this.RelatoriosHorariosProfessor.Size = new System.Drawing.Size(160, 24);
+            this.RelatoriosHorariosProfessor.Text = "Professores";
+            // 
+            // RelatoriosTurmas
+            // 
+            this.RelatoriosTurmas.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RelatoriosTurmas.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.RelatoriosTurmas.Image = global::CesaMVC.Properties.Resources.turma_20;
+            this.RelatoriosTurmas.Name = "RelatoriosTurmas";
+            this.RelatoriosTurmas.Size = new System.Drawing.Size(170, 24);
+            this.RelatoriosTurmas.Text = "Turmas";
+            this.RelatoriosTurmas.Click += new System.EventHandler(this.RelatoriosTurmas_Click);
             // 
             // menuUsuario
             // 
@@ -479,5 +614,17 @@ namespace CesaMVC.br.com.cesa.view
         private System.Windows.Forms.ToolStripMenuItem FerramentasSobre;
         private System.Windows.Forms.ToolStripMenuItem FerramentasBackup;
         private System.Windows.Forms.ToolStripMenuItem FerramentasCapturarFoto;
+        private System.Windows.Forms.ToolStripMenuItem PedagogicoTurma;
+        private System.Windows.Forms.ToolStripMenuItem TurmaMontagemTurma;
+        private System.Windows.Forms.ToolStripMenuItem notasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem RelatoriosTurmas;
+        private System.Windows.Forms.ToolStripMenuItem RelatoriosDocumentos;
+        private System.Windows.Forms.ToolStripMenuItem RelatoriosDocumentosCircular;
+        private System.Windows.Forms.ToolStripMenuItem RelatoriosDocumentosDeclaracao;
+        private System.Windows.Forms.ToolStripMenuItem RelatoriosDocumentosHistoricos;
+        private System.Windows.Forms.ToolStripMenuItem RelatoriosHorarios;
+        private System.Windows.Forms.ToolStripMenuItem RelatoriosHorariosProfessor;
+        private System.Windows.Forms.ToolStripMenuItem PedagogicoHorarios;
+        private System.Windows.Forms.ToolStripMenuItem FinanceiroMovimentacao;
     }
 }

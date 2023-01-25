@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CesaMVC.br.com.cesa.report;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -92,6 +93,7 @@ namespace CesaMVC.br.com.cesa.view
 
         private void CadastrosAlunos_Click(object sender, EventArgs e)
         {
+            Program.chamadaAlunos = "NovoAluno";
             FrmAluno form = new FrmAluno();
             AbreForm(1, form);
         }
@@ -100,6 +102,18 @@ namespace CesaMVC.br.com.cesa.view
         {
             FrmTurma form = new FrmTurma();
             AbreForm(2, form);
+        }
+
+        private void TurmaMontagemTurma_Click(object sender, EventArgs e)
+        {
+            FrmMontTurma form = new FrmMontTurma();
+            AbreForm(2, form);
+        }
+
+        private void RelatoriosTurmas_Click(object sender, EventArgs e)
+        {
+            Report_AlunoTurma form = new Report_AlunoTurma();
+            AbreForm(0, form);
         }
     }
 }
