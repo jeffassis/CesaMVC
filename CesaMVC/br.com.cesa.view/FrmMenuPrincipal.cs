@@ -115,5 +115,11 @@ namespace CesaMVC.br.com.cesa.view
             Report_AlunoTurma form = new Report_AlunoTurma();
             AbreForm(0, form);
         }
+
+        private void CadastrosDisciplinas_Click(object sender, EventArgs e)
+        {
+            FrmDisciplina form = new FrmDisciplina();
+            AbreForm(2, form);
+        }
     }
 }

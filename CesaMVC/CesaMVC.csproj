@@ -135,9 +135,11 @@
     <Compile Include="br.com.cesa.connect\ConnectionFactory.cs" />
     <Compile Include="br.com.cesa.dao\AlunoDAO.cs" />
     <Compile Include="br.com.cesa.dao\AlunoTurmaDAO.cs" />
+    <Compile Include="br.com.cesa.dao\DisciplinaDAO.cs" />
     <Compile Include="br.com.cesa.dao\TurmaDAO.cs" />
     <Compile Include="br.com.cesa.dao\UsuarioDAO.cs" />
     <Compile Include="br.com.cesa.model\Aluno.cs" />
+    <Compile Include="br.com.cesa.model\Disciplina.cs" />
     <Compile Include="br.com.cesa.model\Turma.cs" />
     <Compile Include="br.com.cesa.model\Usuario.cs" />
     <Compile Include="br.com.cesa.report\Report_AlunoTurma.cs">
@@ -163,6 +165,12 @@
     </Compile>
     <Compile Include="br.com.cesa.view\FrmCapturarFoto.Designer.cs">
       <DependentUpon>FrmCapturarFoto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="br.com.cesa.view\FrmDisciplina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.cesa.view\FrmDisciplina.Designer.cs">
+      <DependentUpon>FrmDisciplina.cs</DependentUpon>
     </Compile>
     <Compile Include="br.com.cesa.view\FrmLogin.cs">
       <SubType>Form</SubType>
@@ -220,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.cesa.view\FrmCapturarFoto.resx">
       <DependentUpon>FrmCapturarFoto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.cesa.view\FrmDisciplina.resx">
+      <DependentUpon>FrmDisciplina.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.cesa.view\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
