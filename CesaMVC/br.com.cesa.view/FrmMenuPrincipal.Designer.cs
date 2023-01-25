@@ -139,6 +139,7 @@ namespace CesaMVC.br.com.cesa.view
             this.CadastrosProfessor.Name = "CadastrosProfessor";
             this.CadastrosProfessor.Size = new System.Drawing.Size(180, 24);
             this.CadastrosProfessor.Text = "Professor";
+            this.CadastrosProfessor.Click += new System.EventHandler(this.CadastrosProfessor_Click);
             // 
             // CadastrosResponsavel
             // 
@@ -148,6 +149,7 @@ namespace CesaMVC.br.com.cesa.view
             this.CadastrosResponsavel.Name = "CadastrosResponsavel";
             this.CadastrosResponsavel.Size = new System.Drawing.Size(180, 24);
             this.CadastrosResponsavel.Text = "Responsável";
+            this.CadastrosResponsavel.Click += new System.EventHandler(this.CadastrosResponsavel_Click);
             // 
             // toolStripSeparator1
             // 

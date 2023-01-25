@@ -13,13 +13,13 @@ using System.Windows.Forms;
 
 namespace CesaMVC.br.com.cesa.view
 {
-    public partial class FrmAluno : Form
-    {        
+    public partial class FrmProfessor : Form
+    {
         string foto;
         string alterou;
         string idSelecionado;
-        string alunoAntigo;
-        public FrmAluno()
+        string ProfessorAntigo;
+        public FrmProfessor()
         {
             InitializeComponent();
         }
@@ -87,8 +87,8 @@ namespace CesaMVC.br.com.cesa.view
         private void Listar()
         {
             // Preenchendo o DataGridView
-            AlunoDAO dao = new AlunoDAO();
-            Grid.DataSource = dao.ListarAluno();
+            ProfessorDAO dao = new ProfessorDAO();
+            Grid.DataSource = dao.ListarProfessor();
 
             FormatarDG();
         }
@@ -110,7 +110,7 @@ namespace CesaMVC.br.com.cesa.view
             cb_estado.SelectedIndex = 0;
             LimparFoto();
         }
-            
+
 
         private void Habilitar()
         {
@@ -154,7 +154,8 @@ namespace CesaMVC.br.com.cesa.view
             cb_estado.Enabled = false;
         }
 
-        private void FrmAluno_Load(object sender, EventArgs e)
+
+        private void FrmProfessor_Load(object sender, EventArgs e)
         {
             TxtPesquisar.Focus();
             LimparFoto();
@@ -170,14 +171,14 @@ namespace CesaMVC.br.com.cesa.view
             BtnExcluir.Enabled = false;
             LimparCampos();
             Habilitar();
-            tabAluno.SelectedTab = tabPage2;
+            tabProfessor.SelectedTab = tabPage2;
         }
 
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
             LimparCampos();
             Desabilitar();
-            tabAluno.SelectedTab = tabPage1;
+            tabProfessor.SelectedTab = tabPage1;
             TxtPesquisar.Focus();
         }
 
@@ -191,7 +192,7 @@ namespace CesaMVC.br.com.cesa.view
                 return;
             }
             // Adiciona o Aluno
-            Aluno obj = new Aluno
+            Professor obj = new Professor
             {
                 Nome = txtNome.Text,
                 Rg = txtRg.Text,
@@ -207,24 +208,24 @@ namespace CesaMVC.br.com.cesa.view
                 Cidade = txtCidade.Text,
                 Estado = cb_estado.Text
             };
-            AlunoDAO dao = new AlunoDAO();
+            ProfessorDAO dao = new ProfessorDAO();
 
             // Verifica se o username ja existe
-            DataTable dt = dao.VerficarAluno(txtNome.Text);
+            DataTable dt = dao.VerficarProfessor(txtNome.Text);
             if (dt.Rows.Count > 0)
             {
-                MessageBox.Show("Aluno já cadastrado!!", "Erro ao adicionar dados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Professor já cadastrado!!", "Erro ao adicionar dados", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtNome.Text = "";
                 txtNome.Focus();
                 return;
             }
-            
-            // Adiciona aluno
-            dao.AddAluno(obj, Img());
+
+            // Adiciona
+            dao.AddProfessor(obj, Img());
             Desabilitar();
             LimparCampos();
             Listar();
-            tabAluno.SelectedTab = tabPage1;
+            tabProfessor.SelectedTab = tabPage1;
         }
 
         private void BtnEditar_Click(object sender, EventArgs e)
@@ -236,8 +237,7 @@ namespace CesaMVC.br.com.cesa.view
                 txtNome.Focus();
                 return;
             }
-            // Atualiza o Aluno
-            Aluno obj = new Aluno
+            Professor obj = new Professor
             {
                 Nome = txtNome.Text,
                 Rg = txtRg.Text,
@@ -253,15 +253,15 @@ namespace CesaMVC.br.com.cesa.view
                 Cidade = txtCidade.Text,
                 Estado = cb_estado.Text
             };
-            AlunoDAO dao = new AlunoDAO();
+            ProfessorDAO dao = new ProfessorDAO();
 
             // Verifica se o nome ja existe
-            if (txtNome.Text != alunoAntigo)
+            if (txtNome.Text != ProfessorAntigo)
             {
-                DataTable dt = dao.VerficarAluno(txtNome.Text);
+                DataTable dt = dao.VerficarProfessor(txtNome.Text);
                 if (dt.Rows.Count > 0)
                 {
-                    MessageBox.Show("Aluno já cadastrado!!", "Erro ao atualizar dados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Professor já cadastrado!!", "Erro ao atualizar dados", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtNome.Text = "";
                     txtNome.Focus();
                     return;
@@ -270,17 +270,17 @@ namespace CesaMVC.br.com.cesa.view
             // Atualizacao com foto ou sem foto
             if (alterou == "1")
             {
-                dao.UpdateAlunoComImagem(obj, idSelecionado, Img());
+                dao.UpdateProfessorComImagem(obj, idSelecionado, Img());
             }
-            else 
+            else
             {
-                dao.UpdateAluno(obj, idSelecionado);
+                dao.UpdateProfessor(obj, idSelecionado);
             }
             Desabilitar();
             LimparCampos();
             Listar();
             alterou = "";
-            tabAluno.SelectedTab = tabPage1;
+            tabProfessor.SelectedTab = tabPage1;
         }
 
         private void BtnExcluir_Click(object sender, EventArgs e)
@@ -288,21 +288,21 @@ namespace CesaMVC.br.com.cesa.view
             DialogResult result = MessageBox.Show("Confirma a exclusão?", "Excluir?", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
-                AlunoDAO dao = new AlunoDAO();
-                dao.DeleteAluno(idSelecionado);
+                ProfessorDAO dao = new ProfessorDAO();
+                dao.DeleteProfessor(idSelecionado);
                 Grid.Rows.Remove(Grid.CurrentRow);
             }
             Desabilitar();
             LimparCampos();
-            tabAluno.SelectedTab = tabPage1;
+            tabProfessor.SelectedTab = tabPage1;
         }
 
         private void TxtPesquisar_TextChanged(object sender, EventArgs e)
         {
             string nome = "%" + TxtPesquisar.Text + "%";
 
-            AlunoDAO dao = new AlunoDAO();
-            Grid.DataSource = dao.ListarAlunoPorNome(nome);
+            ProfessorDAO dao = new ProfessorDAO();
+            Grid.DataSource = dao.ListarProfessorPorNome(nome);
         }
 
         private byte[] Img()
@@ -321,10 +321,9 @@ namespace CesaMVC.br.com.cesa.view
 
         private void LimparFoto()
         {
-            Foto_aluno.Image = Properties.Resources.sem_foto;
+            Foto_Professor.Image = Properties.Resources.sem_foto;
             foto = "img/sem-foto.jpg";
         }
-        
 
         private void BtnFoto_Click(object sender, EventArgs e)
         {
@@ -335,7 +334,7 @@ namespace CesaMVC.br.com.cesa.view
             if (dialog.ShowDialog() == DialogResult.OK)
             {
                 foto = dialog.FileName.ToString();
-                Foto_aluno.ImageLocation = foto;
+                Foto_Professor.ImageLocation = foto;
                 alterou = "1";
             }
         }
@@ -351,7 +350,7 @@ namespace CesaMVC.br.com.cesa.view
                 dados.ReadXml(xml);
 
                 txtEndereco.Text = dados.Tables[0].Rows[0]["logradouro"].ToString();
-                txtBairro.Text = dados.Tables[0].Rows[0]["bairro"].ToString();                
+                txtBairro.Text = dados.Tables[0].Rows[0]["bairro"].ToString();
                 txtCidade.Text = dados.Tables[0].Rows[0]["localidade"].ToString();
                 cb_estado.Text = dados.Tables[0].Rows[0]["uf"].ToString();
             }
@@ -382,33 +381,22 @@ namespace CesaMVC.br.com.cesa.view
             {
                 byte[] imagem = (byte[])Grid.CurrentRow.Cells[14].Value;
                 MemoryStream ms = new MemoryStream(imagem);
-                Foto_aluno.Image = System.Drawing.Image.FromStream(ms);
+                Foto_Professor.Image = System.Drawing.Image.FromStream(ms);
             }
             else
             {
-                Foto_aluno.Image = Properties.Resources.sem_foto;
+                Foto_Professor.Image = Properties.Resources.sem_foto;
             }
 
-
-            tabAluno.SelectedTab = tabPage2;
+            tabProfessor.SelectedTab = tabPage2;
             Habilitar();
             BtnCep.Enabled = true;
             BtnFoto.Enabled = true;
             BtnEditar.Enabled = true;
             BtnExcluir.Enabled = true;
 
-            // Pega o nome de usuario para atualizar
-            alunoAntigo = Grid.CurrentRow.Cells[1].Value.ToString();
-        }
-
-        private void Grid_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (Program.chamadaAlunos == "aluno")
-            {
-                Program.idAluno = Grid.CurrentRow.Cells[0].Value.ToString();
-                Program.nomeAluno = Grid.CurrentRow.Cells[1].Value.ToString();
-                Close();
-            }
+            // Pega o nome para atualizar
+            ProfessorAntigo = Grid.CurrentRow.Cells[1].Value.ToString();
         }
     }
 }

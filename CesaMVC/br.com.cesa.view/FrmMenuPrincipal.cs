@@ -121,5 +121,17 @@ namespace CesaMVC.br.com.cesa.view
             FrmDisciplina form = new FrmDisciplina();
             AbreForm(2, form);
         }
+
+        private void CadastrosProfessor_Click(object sender, EventArgs e)
+        {
+            FrmProfessor form = new FrmProfessor();
+            AbreForm(1, form);
+        }
+
+        private void CadastrosResponsavel_Click(object sender, EventArgs e)
+        {
+            FrmResponsavel form = new FrmResponsavel();
+            AbreForm(1, form);
+        }
     }
 }
