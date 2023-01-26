@@ -133,5 +133,17 @@ namespace CesaMVC.br.com.cesa.view
             FrmResponsavel form = new FrmResponsavel();
             AbreForm(1, form);
         }
+
+        private void PedagogicoNotasLancamento_Click(object sender, EventArgs e)
+        {
+            FrmNotas form = new FrmNotas();
+            AbreForm(0, form);
+        }
+
+        private void PedagogicoNotasBoletimAluno_Click(object sender, EventArgs e)
+        {
+            FrmBoletimAluno form = new FrmBoletimAluno();
+            AbreForm(0, form);
+        }
     }
 }

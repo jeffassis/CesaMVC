@@ -413,6 +413,16 @@ namespace CesaMVC.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap notas_20 {
+            get {
+                object obj = ResourceManager.GetObject("notas_20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pedagogico_48 {
             get {
                 object obj = ResourceManager.GetObject("pedagogico_48", resourceCulture);

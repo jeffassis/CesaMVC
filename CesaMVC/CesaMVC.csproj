@@ -135,13 +135,17 @@
     <Compile Include="br.com.cesa.connect\ConnectionFactory.cs" />
     <Compile Include="br.com.cesa.dao\AlunoDAO.cs" />
     <Compile Include="br.com.cesa.dao\AlunoTurmaDAO.cs" />
+    <Compile Include="br.com.cesa.dao\BimestreDAO.cs" />
     <Compile Include="br.com.cesa.dao\DisciplinaDAO.cs" />
+    <Compile Include="br.com.cesa.dao\NotasDAO.cs" />
     <Compile Include="br.com.cesa.dao\ProfessorDAO.cs" />
     <Compile Include="br.com.cesa.dao\ResponsavelDAO.cs" />
     <Compile Include="br.com.cesa.dao\TurmaDAO.cs" />
     <Compile Include="br.com.cesa.dao\UsuarioDAO.cs" />
     <Compile Include="br.com.cesa.model\Aluno.cs" />
+    <Compile Include="br.com.cesa.model\Bimestre.cs" />
     <Compile Include="br.com.cesa.model\Disciplina.cs" />
+    <Compile Include="br.com.cesa.model\Notas.cs" />
     <Compile Include="br.com.cesa.model\Professor.cs" />
     <Compile Include="br.com.cesa.model\Responsavel.cs" />
     <Compile Include="br.com.cesa.model\Turma.cs" />
@@ -163,6 +167,12 @@
     </Compile>
     <Compile Include="br.com.cesa.view\FrmBackup.Designer.cs">
       <DependentUpon>FrmBackup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="br.com.cesa.view\FrmBoletimAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.cesa.view\FrmBoletimAluno.Designer.cs">
+      <DependentUpon>FrmBoletimAluno.cs</DependentUpon>
     </Compile>
     <Compile Include="br.com.cesa.view\FrmCapturarFoto.cs">
       <SubType>Form</SubType>
@@ -187,6 +197,12 @@
     </Compile>
     <Compile Include="br.com.cesa.view\FrmMenuPrincipal.Designer.cs">
       <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="br.com.cesa.view\FrmNotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.cesa.view\FrmNotas.Designer.cs">
+      <DependentUpon>FrmNotas.cs</DependentUpon>
     </Compile>
     <Compile Include="br.com.cesa.view\FrmProfessor.cs">
       <SubType>Form</SubType>
@@ -242,6 +258,9 @@
     <EmbeddedResource Include="br.com.cesa.view\FrmBackup.resx">
       <DependentUpon>FrmBackup.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="br.com.cesa.view\FrmBoletimAluno.resx">
+      <DependentUpon>FrmBoletimAluno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="br.com.cesa.view\FrmCapturarFoto.resx">
       <DependentUpon>FrmCapturarFoto.cs</DependentUpon>
     </EmbeddedResource>
@@ -253,6 +272,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.cesa.view\FrmMenuPrincipal.resx">
       <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.cesa.view\FrmNotas.resx">
+      <DependentUpon>FrmNotas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.cesa.view\FrmProfessor.resx">
       <DependentUpon>FrmProfessor.cs</DependentUpon>
@@ -365,6 +387,7 @@
     <None Include="Resources\circular_20.png" />
     <None Include="Resources\declaracao_20.png" />
     <None Include="Resources\movimentacao_20.png" />
+    <None Include="Resources\notas_20.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

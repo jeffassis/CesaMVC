@@ -215,5 +215,33 @@ namespace CesaMVC.br.com.cesa.dao
                 return null;
             }
         }
+
+        public DataTable ListarAlunoPorTurma(string turma)
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                string sql = @"SELECT id_aluno, a.nome, id_turma FROM tb_aluno_turma tba
+                                INNER JOIN tb_aluno a ON a.id_aluno=tba.aluno_id
+                                INNER JOIN tb_turma t ON t.id_turma=tba.turma_id
+                                WHERE id_turma=@turma
+                                ORDER BY a.nome";
+                MySqlCommand cmd = new MySqlCommand(sql, vcon);
+                cmd.Parameters.AddWithValue("@turma", turma);
+                vcon.Open();
+                cmd.ExecuteNonQuery();
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                da.Fill(dt);
+                vcon.Close();
+                vcon.Dispose();
+                vcon.ClearAllPoolsAsync();
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao executar a lista: " + ex);
+                return null;
+            }
+        }
     }
 }
