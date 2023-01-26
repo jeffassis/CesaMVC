@@ -1,4 +1,5 @@
-﻿using CesaMVC.br.com.cesa.view;
+﻿using CesaMVC.br.com.cesa.report;
+using CesaMVC.br.com.cesa.view;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,6 @@ namespace CesaMVC
 {
     static class Program
     {
-
         // Variavel global de Conexao de dados
         public static string caminhoBanco = "SERVER=localhost; DATABASE=cesadb; UID=root; PWD=; PORT=;";
         //public static string caminhoBanco = "SERVER=mysql835.umbler.com; DATABASE=project_escola; UID=jeffassis; PWD=jean1420; PORT=41890;";
@@ -23,6 +23,7 @@ namespace CesaMVC
         public static string chamadaAlunos;
         public static string nomeAluno;
         public static string idAluno;
+              
 
         /// <summary>
         /// Ponto de entrada principal para o aplicativo.

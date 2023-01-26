@@ -74,8 +74,8 @@ namespace CesaMVC.br.com.cesa.view
         {
             // Preenchendo o DataGridView
             NotasDAO dao = new NotasDAO();
-            Grid.DataSource = dao.ListarNotas(CbAluno.SelectedValue.ToString());
-
+            Grid.DataSource = dao.ListarNotas(CbAluno.SelectedValue.ToString(),
+                                              CbTurma.SelectedValue.ToString());
             FormatarDG();
         }
 
@@ -153,11 +153,6 @@ namespace CesaMVC.br.com.cesa.view
             CbAluno.ValueMember = "id_aluno";
         }
 
-        private void CbAluno_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            Listar();
-        }
-
         private void BtnNovo_Click(object sender, EventArgs e)
         {
             Habilitar();
@@ -171,6 +166,11 @@ namespace CesaMVC.br.com.cesa.view
         {
             Desabilitar();
             Limpar();
+            CbAluno.SelectedIndex = -1;
+
+            // Codigo para limpar o DataGridView quando o aluno estiver vazio
+            var dt = Grid.DataSource as DataTable;
+            dt.Rows.Clear();            
         }
 
         private void BtnSalvar_Click(object sender, EventArgs e)
@@ -178,7 +178,7 @@ namespace CesaMVC.br.com.cesa.view
             // Verifica se está vazio
             if (CbAluno.Text == "" || txtNota.Text == "" || CbDisciplina.Text == "")
             {
-                MessageBox.Show("Os campos não podem ser vazios", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Os campos não podem ser vazios", "ERROR campo vazio!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 CbAluno.Focus();
                 return;
             }
@@ -192,7 +192,12 @@ namespace CesaMVC.br.com.cesa.view
                 Nota = decimal.Parse(txtNota.Text)
             };
             NotasDAO dao = new NotasDAO();
-            DataTable dt = dao.VerficarNotas(CbAluno.SelectedValue.ToString(),CbDisciplina.SelectedValue.ToString(),cbBimestre.Text);
+
+            // Verifica se a nota já foi lancada
+            DataTable dt = dao.VerficarNotas(CbAluno.SelectedValue.ToString(),
+                                             CbDisciplina.SelectedValue.ToString(),
+                                             cbBimestre.SelectedValue.ToString(), 
+                                             CbTurma.SelectedValue.ToString());
             if (dt.Rows.Count > 0)
             {
                 MessageBox.Show("Nota já lançada!!", "Erro lançamento de notas", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -256,6 +261,11 @@ namespace CesaMVC.br.com.cesa.view
             BtnEditar.Enabled = true;
             BtnExcluir.Enabled = true;
             BtnSalvar.Enabled = false;           
-        }        
+        }
+
+        private void BtnPesquisar_Click(object sender, EventArgs e)
+        {
+            Listar();
+        }
     }
 }

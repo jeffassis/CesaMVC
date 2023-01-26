@@ -40,13 +40,13 @@ namespace CesaMVC.br.com.cesa.view
             this.CbAluno = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cbBimestre = new System.Windows.Forms.ComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Grid = new System.Windows.Forms.DataGridView();
             this.BtnPesquisar = new System.Windows.Forms.Button();
             this.BtnImprimir = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -131,16 +131,6 @@ namespace CesaMVC.br.com.cesa.view
             this.cbBimestre.Size = new System.Drawing.Size(126, 28);
             this.cbBimestre.TabIndex = 52;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CesaMVC.Properties.Resources.cesa;
-            this.pictureBox1.Location = new System.Drawing.Point(367, 110);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(112, 111);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 56;
-            this.pictureBox1.TabStop = false;
-            // 
             // Grid
             // 
             this.Grid.AllowUserToAddRows = false;
@@ -193,6 +183,17 @@ namespace CesaMVC.br.com.cesa.view
             this.BtnImprimir.TabIndex = 58;
             this.BtnImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnImprimir.UseVisualStyleBackColor = false;
+            this.BtnImprimir.Click += new System.EventHandler(this.BtnImprimir_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CesaMVC.Properties.Resources.cesa;
+            this.pictureBox1.Location = new System.Drawing.Point(367, 110);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(112, 111);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 56;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmBoletimAluno
             // 
@@ -215,7 +216,7 @@ namespace CesaMVC.br.com.cesa.view
             this.ForeColor = System.Drawing.SystemColors.Highlight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmBoletimAluno";
@@ -224,8 +225,8 @@ namespace CesaMVC.br.com.cesa.view
             this.Load += new System.EventHandler(this.FrmBoletimAluno_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

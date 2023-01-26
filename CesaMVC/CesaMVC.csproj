@@ -156,6 +156,12 @@
     <Compile Include="br.com.cesa.report\Report_AlunoTurma.Designer.cs">
       <DependentUpon>Report_AlunoTurma.cs</DependentUpon>
     </Compile>
+    <Compile Include="br.com.cesa.report\Report_BoletimAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.cesa.report\Report_BoletimAluno.Designer.cs">
+      <DependentUpon>Report_BoletimAluno.cs</DependentUpon>
+    </Compile>
     <Compile Include="br.com.cesa.view\FrmAluno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,9 +254,13 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="br.com.cesa.report\RelBoletimAluno.rdlc" />
     <EmbeddedResource Include="br.com.cesa.report\RelTurma.rdlc" />
     <EmbeddedResource Include="br.com.cesa.report\Report_AlunoTurma.resx">
       <DependentUpon>Report_AlunoTurma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.cesa.report\Report_BoletimAluno.resx">
+      <DependentUpon>Report_BoletimAluno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.cesa.view\FrmAluno.resx">
       <DependentUpon>FrmAluno.cs</DependentUpon>
@@ -388,6 +398,9 @@
     <None Include="Resources\declaracao_20.png" />
     <None Include="Resources\movimentacao_20.png" />
     <None Include="Resources\notas_20.png" />
+    <None Include="Resources\boletim_bimestral_20.png" />
+    <None Include="Resources\boletim_anual_20.png" />
+    <None Include="Resources\boletim_20.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
