@@ -29,12 +29,14 @@ namespace CesaMVC.br.com.cesa.view
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNotas));
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnPesquisar = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnExcluir = new System.Windows.Forms.Button();
             this.BtnEditar = new System.Windows.Forms.Button();
@@ -54,6 +56,7 @@ namespace CesaMVC.br.com.cesa.view
             this.CbTurma = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.CbAluno = new System.Windows.Forms.ComboBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -83,6 +86,7 @@ namespace CesaMVC.br.com.cesa.view
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.BtnPesquisar);
             this.panel1.Controls.Add(this.BtnCancelar);
             this.panel1.Controls.Add(this.BtnExcluir);
             this.panel1.Controls.Add(this.BtnEditar);
@@ -107,6 +111,21 @@ namespace CesaMVC.br.com.cesa.view
             this.panel1.Size = new System.Drawing.Size(749, 460);
             this.panel1.TabIndex = 3;
             // 
+            // BtnPesquisar
+            // 
+            this.BtnPesquisar.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BtnPesquisar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnPesquisar.ForeColor = System.Drawing.Color.White;
+            this.BtnPesquisar.Image = global::CesaMVC.Properties.Resources.btn_pesquisar_24;
+            this.BtnPesquisar.Location = new System.Drawing.Point(246, 87);
+            this.BtnPesquisar.Name = "BtnPesquisar";
+            this.BtnPesquisar.Size = new System.Drawing.Size(40, 40);
+            this.BtnPesquisar.TabIndex = 61;
+            this.BtnPesquisar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.BtnPesquisar, "Consultar notas");
+            this.BtnPesquisar.UseVisualStyleBackColor = false;
+            this.BtnPesquisar.Click += new System.EventHandler(this.BtnPesquisar_Click);
+            // 
             // BtnCancelar
             // 
             this.BtnCancelar.BackColor = System.Drawing.SystemColors.Highlight;
@@ -121,6 +140,7 @@ namespace CesaMVC.br.com.cesa.view
             this.BtnCancelar.TabIndex = 60;
             this.BtnCancelar.Text = " Cancelar";
             this.BtnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.BtnCancelar, "Cancelar ação");
             this.BtnCancelar.UseVisualStyleBackColor = false;
             this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
@@ -138,6 +158,7 @@ namespace CesaMVC.br.com.cesa.view
             this.BtnExcluir.TabIndex = 59;
             this.BtnExcluir.Text = "  Excluir";
             this.BtnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.BtnExcluir, "Remover nota");
             this.BtnExcluir.UseVisualStyleBackColor = false;
             this.BtnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
             // 
@@ -155,6 +176,7 @@ namespace CesaMVC.br.com.cesa.view
             this.BtnEditar.TabIndex = 58;
             this.BtnEditar.Text = "  Editar";
             this.BtnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.BtnEditar, "Editar nota");
             this.BtnEditar.UseVisualStyleBackColor = false;
             this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
@@ -172,6 +194,7 @@ namespace CesaMVC.br.com.cesa.view
             this.BtnSalvar.TabIndex = 57;
             this.BtnSalvar.Text = "  Salvar";
             this.BtnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.BtnSalvar, "Lançar nota");
             this.BtnSalvar.UseVisualStyleBackColor = false;
             this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
@@ -188,6 +211,7 @@ namespace CesaMVC.br.com.cesa.view
             this.BtnNovo.TabIndex = 56;
             this.BtnNovo.Text = "  Novo";
             this.BtnNovo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.BtnNovo, "Novo registro");
             this.BtnNovo.UseVisualStyleBackColor = false;
             this.BtnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
             // 
@@ -350,9 +374,8 @@ namespace CesaMVC.br.com.cesa.view
             this.CbAluno.FormattingEnabled = true;
             this.CbAluno.Location = new System.Drawing.Point(16, 93);
             this.CbAluno.Name = "CbAluno";
-            this.CbAluno.Size = new System.Drawing.Size(264, 28);
+            this.CbAluno.Size = new System.Drawing.Size(224, 28);
             this.CbAluno.TabIndex = 2;
-            this.CbAluno.SelectionChangeCommitted += new System.EventHandler(this.CbAluno_SelectionChangeCommitted);
             // 
             // FrmNotas
             // 
@@ -407,5 +430,7 @@ namespace CesaMVC.br.com.cesa.view
         private System.Windows.Forms.Button BtnEditar;
         private System.Windows.Forms.Button BtnSalvar;
         private System.Windows.Forms.Button BtnNovo;
+        private System.Windows.Forms.Button BtnPesquisar;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

@@ -145,5 +145,11 @@ namespace CesaMVC.br.com.cesa.view
             FrmBoletimAluno form = new FrmBoletimAluno();
             AbreForm(0, form);
         }
+
+        private void RelatoriosBoletimBimestral_Click(object sender, EventArgs e)
+        {
+            Report_BoletimAluno form = new Report_BoletimAluno();
+            AbreForm(0, form);
+        }
     }
 }

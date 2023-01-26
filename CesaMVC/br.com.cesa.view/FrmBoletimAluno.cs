@@ -1,4 +1,5 @@
 ﻿using CesaMVC.br.com.cesa.dao;
+using CesaMVC.br.com.cesa.report;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,10 +25,20 @@ namespace CesaMVC.br.com.cesa.view
             Grid.Columns[1].HeaderText = "BIMESTRE";
             Grid.Columns[2].HeaderText = "NOTA";
 
+            // O Header so fica centralizado se desabilitar a propriedade de ordenacao
+            Grid.Columns[2].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            Grid.Columns[2].SortMode = DataGridViewColumnSortMode.NotSortable;
+
+            // Colocar valores centralizados na celula
+            Grid.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            //FORMATAR COLUNA PARA DECIMAL
+            Grid.Columns[2].DefaultCellStyle.Format = "N2";
+
+            // Define tamanho da Coluna
             Grid.Columns[0].Width = 160;
             Grid.Columns[1].Width = 110;
             Grid.Columns[2].Width = 90;
-
         }
 
         private void Listar()
@@ -37,7 +48,6 @@ namespace CesaMVC.br.com.cesa.view
             Grid.DataSource = dao.ListarBoletimAluno(int.Parse(CbAluno.SelectedValue.ToString()), 
                                                     int.Parse(cbBimestre.SelectedValue.ToString()),
                                                     int.Parse(CbTurma.SelectedValue.ToString()));
-
             FormatarDG();
         }
 
@@ -59,6 +69,7 @@ namespace CesaMVC.br.com.cesa.view
         {
             if (CbTurma.SelectedValue != null)
             {
+                CbAluno.SelectedIndex = -1;
                 ComboAluno();
                 CbAluno.Enabled = true;
                 cbBimestre.Enabled = true;
@@ -87,6 +98,11 @@ namespace CesaMVC.br.com.cesa.view
             {
                 MessageBox.Show("Selecione aluno e bimestre!", "Erro de consulta", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 CbAluno.Focus();
+
+                // Codigo para limpar o DataGridView quando o aluno estiver vazio
+                var dt = Grid.DataSource as DataTable;
+                dt.Rows.Clear();
+
                 return;
             }
             else
@@ -95,6 +111,12 @@ namespace CesaMVC.br.com.cesa.view
                 CbAluno.Enabled = false;
                 cbBimestre.Enabled = false;
             }
+        }
+
+        private void BtnImprimir_Click(object sender, EventArgs e)
+        {
+            Report_BoletimAluno form = new Report_BoletimAluno();
+            form.ShowDialog();
         }
     }
 }

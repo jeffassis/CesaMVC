@@ -94,7 +94,7 @@ namespace CesaMVC.br.com.cesa.dao
             }
         }
 
-        public DataTable ListarNotas(string aluno)
+        public DataTable ListarNotas(string aluno, string turma)
         {
             try
             {
@@ -105,10 +105,11 @@ namespace CesaMVC.br.com.cesa.dao
                                 INNER JOIN tb_disciplina as tbd ON tbd.id_disciplina=tbn.disciplina_id
                                 INNER JOIN tb_turma as tbt ON tbt.id_turma=tbn.turma_id
                                 INNER JOIN tb_bimestre as tbb ON tbb.id_bimestre=tbn.bimestre_id
-                                WHERE tba.id_aluno like @aluno
+                                WHERE tbn.aluno_id=@aluno and tbn.turma_id=@turma
                                 ORDER BY tba.nome";
                 MySqlCommand cmd = new MySqlCommand(sql, vcon);
                 cmd.Parameters.AddWithValue("@aluno", aluno);
+                cmd.Parameters.AddWithValue("@turma", turma);
                 vcon.Open();
                 cmd.ExecuteNonQuery();
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
@@ -125,16 +126,17 @@ namespace CesaMVC.br.com.cesa.dao
             }
         }
 
-        public DataTable VerficarNotas(string aluno, string disciplina, string bimestre)
+        public DataTable VerficarNotas(string aluno, string disciplina, string bimestre, string turma)
         {
             try
             {
                 DataTable dt = new DataTable();
-                string sql = "SELECT aluno_id FROM tb_nota WHERE aluno_id=@aluno and disciplina_id=@disciplina and bimestre_id=@bimestre";
+                string sql = "SELECT aluno_id FROM tb_nota WHERE aluno_id=@aluno and disciplina_id=@disciplina and bimestre_id=@bimestre and turma_id=@turma";
                 MySqlCommand cmd = new MySqlCommand(sql, vcon);
                 cmd.Parameters.AddWithValue("@aluno", aluno);
                 cmd.Parameters.AddWithValue("@disciplina", disciplina);
                 cmd.Parameters.AddWithValue("@bimestre", bimestre);
+                cmd.Parameters.AddWithValue("@turma", turma);
                 vcon.Open();
                 cmd.ExecuteNonQuery();
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
