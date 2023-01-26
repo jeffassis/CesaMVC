@@ -45,9 +45,11 @@ namespace CesaMVC.br.com.cesa.view
             this.CadastrosTurmas = new System.Windows.Forms.ToolStripMenuItem();
             this.menuPedagogico = new System.Windows.Forms.ToolStripMenuItem();
             this.PedagogicoHorarios = new System.Windows.Forms.ToolStripMenuItem();
+            this.PedagogicoHorarioProfessor = new System.Windows.Forms.ToolStripMenuItem();
             this.notasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PedagogicoNotasLancamento = new System.Windows.Forms.ToolStripMenuItem();
             this.PedagogicoNotasBoletimAluno = new System.Windows.Forms.ToolStripMenuItem();
+            this.PedagogicoNotaAnual = new System.Windows.Forms.ToolStripMenuItem();
             this.PedagogicoTurma = new System.Windows.Forms.ToolStripMenuItem();
             this.TurmaMontagemTurma = new System.Windows.Forms.ToolStripMenuItem();
             this.menuFinanceiro = new System.Windows.Forms.ToolStripMenuItem();
@@ -188,6 +190,7 @@ namespace CesaMVC.br.com.cesa.view
             this.CadastrosHorarios.Name = "CadastrosHorarios";
             this.CadastrosHorarios.Size = new System.Drawing.Size(170, 24);
             this.CadastrosHorarios.Text = "Horários";
+            this.CadastrosHorarios.Click += new System.EventHandler(this.CadastrosHorarios_Click);
             // 
             // CadastrosProdutos
             // 
@@ -232,23 +235,35 @@ namespace CesaMVC.br.com.cesa.view
             // 
             // PedagogicoHorarios
             // 
+            this.PedagogicoHorarios.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.PedagogicoHorarioProfessor});
             this.PedagogicoHorarios.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PedagogicoHorarios.ForeColor = System.Drawing.SystemColors.Highlight;
             this.PedagogicoHorarios.Image = global::CesaMVC.Properties.Resources.horario_20;
             this.PedagogicoHorarios.Name = "PedagogicoHorarios";
-            this.PedagogicoHorarios.Size = new System.Drawing.Size(180, 24);
+            this.PedagogicoHorarios.Size = new System.Drawing.Size(136, 24);
             this.PedagogicoHorarios.Text = "Horários";
+            // 
+            // PedagogicoHorarioProfessor
+            // 
+            this.PedagogicoHorarioProfessor.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.PedagogicoHorarioProfessor.Image = global::CesaMVC.Properties.Resources.prefessor_20;
+            this.PedagogicoHorarioProfessor.Name = "PedagogicoHorarioProfessor";
+            this.PedagogicoHorarioProfessor.Size = new System.Drawing.Size(201, 24);
+            this.PedagogicoHorarioProfessor.Text = "Horário Professor";
+            this.PedagogicoHorarioProfessor.Click += new System.EventHandler(this.PedagogicoHorarioProfessor_Click);
             // 
             // notasToolStripMenuItem
             // 
             this.notasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.PedagogicoNotasLancamento,
-            this.PedagogicoNotasBoletimAluno});
+            this.PedagogicoNotasBoletimAluno,
+            this.PedagogicoNotaAnual});
             this.notasToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.notasToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Highlight;
             this.notasToolStripMenuItem.Image = global::CesaMVC.Properties.Resources.notas;
             this.notasToolStripMenuItem.Name = "notasToolStripMenuItem";
-            this.notasToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.notasToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
             this.notasToolStripMenuItem.Text = "Notas";
             // 
             // PedagogicoNotasLancamento
@@ -269,6 +284,14 @@ namespace CesaMVC.br.com.cesa.view
             this.PedagogicoNotasBoletimAluno.Text = "Boletim do Aluno";
             this.PedagogicoNotasBoletimAluno.Click += new System.EventHandler(this.PedagogicoNotasBoletimAluno_Click);
             // 
+            // PedagogicoNotaAnual
+            // 
+            this.PedagogicoNotaAnual.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.PedagogicoNotaAnual.Image = global::CesaMVC.Properties.Resources.boletim_anual_20;
+            this.PedagogicoNotaAnual.Name = "PedagogicoNotaAnual";
+            this.PedagogicoNotaAnual.Size = new System.Drawing.Size(241, 24);
+            this.PedagogicoNotaAnual.Text = "Boletim Final";
+            // 
             // PedagogicoTurma
             // 
             this.PedagogicoTurma.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -277,7 +300,7 @@ namespace CesaMVC.br.com.cesa.view
             this.PedagogicoTurma.ForeColor = System.Drawing.SystemColors.Highlight;
             this.PedagogicoTurma.Image = global::CesaMVC.Properties.Resources.turma_20;
             this.PedagogicoTurma.Name = "PedagogicoTurma";
-            this.PedagogicoTurma.Size = new System.Drawing.Size(180, 24);
+            this.PedagogicoTurma.Size = new System.Drawing.Size(136, 24);
             this.PedagogicoTurma.Text = "Turmas";
             // 
             // TurmaMontagemTurma
@@ -340,7 +363,7 @@ namespace CesaMVC.br.com.cesa.view
             this.RelatoriosBoletimBimestral.ForeColor = System.Drawing.SystemColors.Highlight;
             this.RelatoriosBoletimBimestral.Image = global::CesaMVC.Properties.Resources.boletim_bimestral_20;
             this.RelatoriosBoletimBimestral.Name = "RelatoriosBoletimBimestral";
-            this.RelatoriosBoletimBimestral.Size = new System.Drawing.Size(180, 24);
+            this.RelatoriosBoletimBimestral.Size = new System.Drawing.Size(142, 24);
             this.RelatoriosBoletimBimestral.Text = "Bimestral";
             this.RelatoriosBoletimBimestral.Click += new System.EventHandler(this.RelatoriosBoletimBimestral_Click);
             // 
@@ -349,7 +372,7 @@ namespace CesaMVC.br.com.cesa.view
             this.RelatoriosBoletimAnual.ForeColor = System.Drawing.SystemColors.Highlight;
             this.RelatoriosBoletimAnual.Image = global::CesaMVC.Properties.Resources.boletim_anual_20;
             this.RelatoriosBoletimAnual.Name = "RelatoriosBoletimAnual";
-            this.RelatoriosBoletimAnual.Size = new System.Drawing.Size(180, 24);
+            this.RelatoriosBoletimAnual.Size = new System.Drawing.Size(142, 24);
             this.RelatoriosBoletimAnual.Text = "Anual";
             // 
             // RelatoriosDocumentos
@@ -405,8 +428,9 @@ namespace CesaMVC.br.com.cesa.view
             this.RelatoriosHorariosProfessor.ForeColor = System.Drawing.SystemColors.Highlight;
             this.RelatoriosHorariosProfessor.Image = global::CesaMVC.Properties.Resources.prefessor_20;
             this.RelatoriosHorariosProfessor.Name = "RelatoriosHorariosProfessor";
-            this.RelatoriosHorariosProfessor.Size = new System.Drawing.Size(160, 24);
+            this.RelatoriosHorariosProfessor.Size = new System.Drawing.Size(180, 24);
             this.RelatoriosHorariosProfessor.Text = "Professores";
+            this.RelatoriosHorariosProfessor.Click += new System.EventHandler(this.RelatoriosHorariosProfessor_Click);
             // 
             // RelatoriosTurmas
             // 
@@ -690,5 +714,7 @@ namespace CesaMVC.br.com.cesa.view
         private System.Windows.Forms.ToolStripMenuItem RelatoriosBoletim;
         private System.Windows.Forms.ToolStripMenuItem RelatoriosBoletimBimestral;
         private System.Windows.Forms.ToolStripMenuItem RelatoriosBoletimAnual;
+        private System.Windows.Forms.ToolStripMenuItem PedagogicoHorarioProfessor;
+        private System.Windows.Forms.ToolStripMenuItem PedagogicoNotaAnual;
     }
 }

@@ -151,5 +151,24 @@ namespace CesaMVC.br.com.cesa.view
             Report_BoletimAluno form = new Report_BoletimAluno();
             AbreForm(0, form);
         }
+
+        private void CadastrosHorarios_Click(object sender, EventArgs e)
+        {
+            FrmHorario form = new FrmHorario();
+            AbreForm(2, form);
+        }
+
+        private void PedagogicoHorarioProfessor_Click(object sender, EventArgs e)
+        {
+            Program.chamadaHorario = "NovaHora";
+            FrmHoraProfessor form = new FrmHoraProfessor();
+            AbreForm(1, form);
+        }
+
+        private void RelatoriosHorariosProfessor_Click(object sender, EventArgs e)
+        {
+            Report_HoraProfessor form = new Report_HoraProfessor();
+            AbreForm(0, form);
+        }
     }
 }

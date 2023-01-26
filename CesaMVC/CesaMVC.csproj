@@ -137,6 +137,8 @@
     <Compile Include="br.com.cesa.dao\AlunoTurmaDAO.cs" />
     <Compile Include="br.com.cesa.dao\BimestreDAO.cs" />
     <Compile Include="br.com.cesa.dao\DisciplinaDAO.cs" />
+    <Compile Include="br.com.cesa.dao\HoraProfessorDAO.cs" />
+    <Compile Include="br.com.cesa.dao\HorarioDAO.cs" />
     <Compile Include="br.com.cesa.dao\NotasDAO.cs" />
     <Compile Include="br.com.cesa.dao\ProfessorDAO.cs" />
     <Compile Include="br.com.cesa.dao\ResponsavelDAO.cs" />
@@ -145,6 +147,8 @@
     <Compile Include="br.com.cesa.model\Aluno.cs" />
     <Compile Include="br.com.cesa.model\Bimestre.cs" />
     <Compile Include="br.com.cesa.model\Disciplina.cs" />
+    <Compile Include="br.com.cesa.model\HoraProfessor.cs" />
+    <Compile Include="br.com.cesa.model\Horario.cs" />
     <Compile Include="br.com.cesa.model\Notas.cs" />
     <Compile Include="br.com.cesa.model\Professor.cs" />
     <Compile Include="br.com.cesa.model\Responsavel.cs" />
@@ -161,6 +165,12 @@
     </Compile>
     <Compile Include="br.com.cesa.report\Report_BoletimAluno.Designer.cs">
       <DependentUpon>Report_BoletimAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="br.com.cesa.report\Report_HoraProfessor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.cesa.report\Report_HoraProfessor.Designer.cs">
+      <DependentUpon>Report_HoraProfessor.cs</DependentUpon>
     </Compile>
     <Compile Include="br.com.cesa.view\FrmAluno.cs">
       <SubType>Form</SubType>
@@ -191,6 +201,18 @@
     </Compile>
     <Compile Include="br.com.cesa.view\FrmDisciplina.Designer.cs">
       <DependentUpon>FrmDisciplina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="br.com.cesa.view\FrmHoraProfessor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.cesa.view\FrmHoraProfessor.Designer.cs">
+      <DependentUpon>FrmHoraProfessor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="br.com.cesa.view\FrmHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.cesa.view\FrmHorario.Designer.cs">
+      <DependentUpon>FrmHorario.cs</DependentUpon>
     </Compile>
     <Compile Include="br.com.cesa.view\FrmLogin.cs">
       <SubType>Form</SubType>
@@ -255,12 +277,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="br.com.cesa.report\RelBoletimAluno.rdlc" />
+    <EmbeddedResource Include="br.com.cesa.report\RelHoraProfessor.rdlc" />
     <EmbeddedResource Include="br.com.cesa.report\RelTurma.rdlc" />
     <EmbeddedResource Include="br.com.cesa.report\Report_AlunoTurma.resx">
       <DependentUpon>Report_AlunoTurma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.cesa.report\Report_BoletimAluno.resx">
       <DependentUpon>Report_BoletimAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.cesa.report\Report_HoraProfessor.resx">
+      <DependentUpon>Report_HoraProfessor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.cesa.view\FrmAluno.resx">
       <DependentUpon>FrmAluno.cs</DependentUpon>
@@ -276,6 +302,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.cesa.view\FrmDisciplina.resx">
       <DependentUpon>FrmDisciplina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.cesa.view\FrmHoraProfessor.resx">
+      <DependentUpon>FrmHoraProfessor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.cesa.view\FrmHorario.resx">
+      <DependentUpon>FrmHorario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.cesa.view\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
