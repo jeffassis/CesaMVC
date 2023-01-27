@@ -170,5 +170,11 @@ namespace CesaMVC.br.com.cesa.view
             Report_HoraProfessor form = new Report_HoraProfessor();
             AbreForm(0, form);
         }
+
+        private void CadastrosServicos_Click(object sender, EventArgs e)
+        {
+            FrmServico form = new FrmServico();
+            AbreForm(2, form);
+        }
     }
 }

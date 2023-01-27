@@ -142,6 +142,7 @@
     <Compile Include="br.com.cesa.dao\NotasDAO.cs" />
     <Compile Include="br.com.cesa.dao\ProfessorDAO.cs" />
     <Compile Include="br.com.cesa.dao\ResponsavelDAO.cs" />
+    <Compile Include="br.com.cesa.dao\ServicosDAO.cs" />
     <Compile Include="br.com.cesa.dao\TurmaDAO.cs" />
     <Compile Include="br.com.cesa.dao\UsuarioDAO.cs" />
     <Compile Include="br.com.cesa.model\Aluno.cs" />
@@ -152,6 +153,7 @@
     <Compile Include="br.com.cesa.model\Notas.cs" />
     <Compile Include="br.com.cesa.model\Professor.cs" />
     <Compile Include="br.com.cesa.model\Responsavel.cs" />
+    <Compile Include="br.com.cesa.model\Servicos.cs" />
     <Compile Include="br.com.cesa.model\Turma.cs" />
     <Compile Include="br.com.cesa.model\Usuario.cs" />
     <Compile Include="br.com.cesa.report\Report_AlunoTurma.cs">
@@ -244,6 +246,12 @@
     <Compile Include="br.com.cesa.view\FrmResponsavel.Designer.cs">
       <DependentUpon>FrmResponsavel.cs</DependentUpon>
     </Compile>
+    <Compile Include="br.com.cesa.view\FrmServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.cesa.view\FrmServico.Designer.cs">
+      <DependentUpon>FrmServico.cs</DependentUpon>
+    </Compile>
     <Compile Include="br.com.cesa.view\FrmSplash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -323,6 +331,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.cesa.view\FrmResponsavel.resx">
       <DependentUpon>FrmResponsavel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.cesa.view\FrmServico.resx">
+      <DependentUpon>FrmServico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.cesa.view\FrmSplash.resx">
       <DependentUpon>FrmSplash.cs</DependentUpon>
@@ -433,6 +444,8 @@
     <None Include="Resources\boletim_bimestral_20.png" />
     <None Include="Resources\boletim_anual_20.png" />
     <None Include="Resources\boletim_20.png" />
+    <None Include="Resources\estoque_48.png" />
+    <None Include="Resources\produto_201.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
