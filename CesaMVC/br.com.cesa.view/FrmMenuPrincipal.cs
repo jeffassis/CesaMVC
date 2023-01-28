@@ -188,5 +188,11 @@ namespace CesaMVC.br.com.cesa.view
             FrmMovimentacao form = new FrmMovimentacao();
             AbreForm(2, form);
         }
+
+        private void EstoqueFornecedor_Click(object sender, EventArgs e)
+        {
+            FrmFornecedor form = new FrmFornecedor();
+            AbreForm(2, form);
+        }
     }
 }

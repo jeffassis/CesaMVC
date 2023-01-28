@@ -11,23 +11,24 @@ using System.Windows.Forms;
 
 namespace CesaMVC.br.com.cesa.dao
 {
-    public class HorarioDAO
+    public class FornecedorDAO
     {
         private readonly MySqlConnection vcon;
 
-        public HorarioDAO()
+        public FornecedorDAO()
         {
             this.vcon = new ConnectionFactory().GetConnection();
         }
 
-        public void AddHorario(Horario obj)
+        public void AddFornecedor(Fornecedor obj)
         {
             try
             {
-                string sql = @"INSERT INTO tb_horario(descricao, dia_id) VALUES(@descricao, @dia_id)";
+                string sql = @"INSERT INTO tb_fornecedor(nome, endereco, telefone) VALUES(@nome, @endereco, @telefone)";
                 MySqlCommand cmd = new MySqlCommand(sql, vcon);
-                cmd.Parameters.AddWithValue("@descricao", obj.Descricao);
-                cmd.Parameters.AddWithValue("@dia_id", obj.DiaId);
+                cmd.Parameters.AddWithValue("@nome", obj.Nome);
+                cmd.Parameters.AddWithValue("@endereco", obj.Endereco);
+                cmd.Parameters.AddWithValue("@telefone", obj.Telefone);
                 vcon.Open();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Adicionado com sucesso!", "Adicionar dados!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -41,18 +42,19 @@ namespace CesaMVC.br.com.cesa.dao
             }
         }
 
-        public void UpdateHorario(Horario obj, string id)
+        public void UpdateFornecedor(Fornecedor obj, string id)
         {
             try
             {
-                string sql = @"UPDATE tb_horario SET descricao=@descricao, dia_id=@dia_id WHERE id_horario=@id";
+                string sql = @"UPDATE tb_fornecedor SET nome=@nome, endereco=@endereco, telefone=@telefone WHERE id_fornecedor=@id";
                 MySqlCommand cmd = new MySqlCommand(sql, vcon);
-                cmd.Parameters.AddWithValue("@descricao", obj.Descricao);
-                cmd.Parameters.AddWithValue("@dia_id", obj.DiaId);
+                cmd.Parameters.AddWithValue("@nome", obj.Nome);
+                cmd.Parameters.AddWithValue("@endereco", obj.Endereco);
+                cmd.Parameters.AddWithValue("@telefone", obj.Telefone);
                 cmd.Parameters.AddWithValue("@id", id);
                 vcon.Open();
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Atualizada com sucesso!", "Sucesso ao atualizar!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Atualizado com sucesso!", "Sucesso ao atualizar!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 vcon.Close();
                 vcon.Dispose();
                 vcon.ClearAllPoolsAsync();
@@ -67,12 +69,12 @@ namespace CesaMVC.br.com.cesa.dao
         {
             try
             {
-                string sql = "DELETE FROM tb_horario WHERE id_horario=@id";
+                string sql = "DELETE FROM tb_fornecedor WHERE id_fornecedor=@id";
                 MySqlCommand cmd = new MySqlCommand(sql, vcon);
                 cmd.Parameters.AddWithValue("@id", id);
                 vcon.Open();
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Excluida com sucesso!", "Sucesso ao excluir!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Excluido com sucesso!", "Sucesso ao excluir!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 vcon.Close();
                 vcon.Dispose();
                 vcon.ClearAllPoolsAsync();
@@ -83,12 +85,12 @@ namespace CesaMVC.br.com.cesa.dao
             }
         }
 
-        public DataTable ListarDiaSemana()
+        public DataTable ListarFornecedor()
         {
             try
             {
                 DataTable dt = new DataTable();
-                string sql = "SELECT * FROM tb_dia_semana";
+                string sql = "SELECT * FROM tb_fornecedor";
                 MySqlCommand cmd = new MySqlCommand(sql, vcon);
                 vcon.Open();
                 cmd.ExecuteNonQuery();
@@ -106,38 +108,14 @@ namespace CesaMVC.br.com.cesa.dao
             }
         }
 
-        public DataTable ListarHorario()
+        public DataTable VerficarFornecedor(string nome)
         {
             try
             {
                 DataTable dt = new DataTable();
-                string sql = "SELECT id_horario, descricao, tbd.dia FROM tb_horario INNER JOIN tb_dia_semana as tbd ON tbd.id_dia=dia_id";
+                string sql = "SELECT nome FROM tb_fornecedor WHERE nome=@nome";
                 MySqlCommand cmd = new MySqlCommand(sql, vcon);
-                vcon.Open();
-                cmd.ExecuteNonQuery();
-                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-                da.Fill(dt);
-                vcon.Close();
-                vcon.Dispose();
-                vcon.ClearAllPoolsAsync();
-                return dt;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao executar a lista: " + ex);
-                return null;
-            }
-        }
-
-        public DataTable VerficarHorario(string descricao, string dia)
-        {
-            try
-            {
-                DataTable dt = new DataTable();
-                string sql = "SELECT descricao FROM tb_horario WHERE descricao=@descricao and dia_id=@dia_id";
-                MySqlCommand cmd = new MySqlCommand(sql, vcon);
-                cmd.Parameters.AddWithValue("@descricao", descricao);
-                cmd.Parameters.AddWithValue("@dia_id", dia);
+                cmd.Parameters.AddWithValue("@nome", nome);                
                 vcon.Open();
                 cmd.ExecuteNonQuery();
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
@@ -150,6 +128,30 @@ namespace CesaMVC.br.com.cesa.dao
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao verificar: " + ex);
+                return null;
+            }
+        }
+
+        public DataTable ListarFornecedorPorNome(string nome)
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                string sql = "SELECT * FROM tb_fornecedor WHERE nome like @nome";
+                MySqlCommand cmd = new MySqlCommand(sql, vcon);
+                cmd.Parameters.AddWithValue("@nome", nome);
+                vcon.Open();
+                cmd.ExecuteNonQuery();
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                da.Fill(dt);
+                vcon.Close();
+                vcon.Dispose();
+                vcon.ClearAllPoolsAsync();
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao listar: " + ex);
                 return null;
             }
         }

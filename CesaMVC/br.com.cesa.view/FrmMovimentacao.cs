@@ -76,8 +76,8 @@ namespace CesaMVC.br.com.cesa.view
         private void FrmMovimentacao_Load(object sender, EventArgs e)
         {
             CbBuscar.SelectedIndex = 0;
-            txtDataInicial.Value = DateTime.Today;
-            txtDataFinal.Value = DateTime.Today;
+            TxtDataInicial.Value = DateTime.Today;
+            TxtDataFinal.Value = DateTime.Today;
             BuscarData();
         }
 
@@ -128,12 +128,12 @@ namespace CesaMVC.br.com.cesa.view
             }
         }
 
-        private void txtDataInicial_ValueChanged(object sender, EventArgs e)
+        private void TxtDataInicial_ValueChanged(object sender, EventArgs e)
         {
             BuscarData();
         }
 
-        private void txtDataFinal_ValueChanged(object sender, EventArgs e)
+        private void TxtDataFinal_ValueChanged(object sender, EventArgs e)
         {
             BuscarData();
         }
@@ -148,12 +148,12 @@ namespace CesaMVC.br.com.cesa.view
             if (CbBuscar.SelectedIndex == 0)
             {
                 MovimentacaoDAO dao = new MovimentacaoDAO();
-                Grid.DataSource = dao.BuscarData(Convert.ToDateTime(txtDataInicial.Text), Convert.ToDateTime(txtDataFinal.Text));
+                Grid.DataSource = dao.BuscarData(Convert.ToDateTime(TxtDataInicial.Text), Convert.ToDateTime(TxtDataFinal.Text));
             }
             else
             {
                 MovimentacaoDAO dao = new MovimentacaoDAO();
-                Grid.DataSource = dao.BuscarDataTipo(Convert.ToDateTime(txtDataInicial.Text), Convert.ToDateTime(txtDataFinal.Text), CbBuscar.Text);
+                Grid.DataSource = dao.BuscarDataTipo(Convert.ToDateTime(TxtDataInicial.Text), Convert.ToDateTime(TxtDataFinal.Text), CbBuscar.Text);
             }
             FormatarDG();
         }

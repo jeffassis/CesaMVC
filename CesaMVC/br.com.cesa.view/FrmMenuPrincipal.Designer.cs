@@ -357,8 +357,9 @@ namespace CesaMVC.br.com.cesa.view
             this.EstoqueFornecedor.ForeColor = System.Drawing.SystemColors.Highlight;
             this.EstoqueFornecedor.Image = global::CesaMVC.Properties.Resources.fornecedor_20;
             this.EstoqueFornecedor.Name = "EstoqueFornecedor";
-            this.EstoqueFornecedor.Size = new System.Drawing.Size(163, 24);
+            this.EstoqueFornecedor.Size = new System.Drawing.Size(180, 24);
             this.EstoqueFornecedor.Text = "Fornecedor";
+            this.EstoqueFornecedor.Click += new System.EventHandler(this.EstoqueFornecedor_Click);
             // 
             // EstoqueProdutos
             // 
@@ -366,7 +367,7 @@ namespace CesaMVC.br.com.cesa.view
             this.EstoqueProdutos.ForeColor = System.Drawing.SystemColors.Highlight;
             this.EstoqueProdutos.Image = global::CesaMVC.Properties.Resources.produto_20;
             this.EstoqueProdutos.Name = "EstoqueProdutos";
-            this.EstoqueProdutos.Size = new System.Drawing.Size(163, 24);
+            this.EstoqueProdutos.Size = new System.Drawing.Size(180, 24);
             this.EstoqueProdutos.Text = "Produtos";
             // 
             // menuRelatorio
@@ -664,9 +665,9 @@ namespace CesaMVC.br.com.cesa.view
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::CesaMVC.Properties.Resources.led_red_20;
-            this.pictureBox1.Location = new System.Drawing.Point(11, 679);
+            this.pictureBox1.Location = new System.Drawing.Point(1310, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(22, 23);
             this.pictureBox1.TabIndex = 2;

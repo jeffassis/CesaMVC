@@ -77,7 +77,7 @@ namespace CesaMVC.br.com.cesa.view
         {
             // Preenchendo o DataGridView
             GastoDAO dao = new GastoDAO();
-            Grid.DataSource = dao.BuscarGastoPorData(Convert.ToDateTime(txtData.Text));
+            Grid.DataSource = dao.BuscarGastoPorData(Convert.ToDateTime(TxtData.Text));
 
             FormatarDG();
         }
@@ -85,7 +85,7 @@ namespace CesaMVC.br.com.cesa.view
         private void LimparCampos()
         {
             txtDescricao.Text = txtValor.Text = string.Empty;
-            txtData.Value = DateTime.Today;
+            TxtData.Value = DateTime.Today;
         }
 
         private void Habilitar()
@@ -153,7 +153,7 @@ namespace CesaMVC.br.com.cesa.view
             };
             GastoDAO dao = new GastoDAO();
             // Verifica se a Gasto ja existe
-            DataTable dt = dao.VerificarGastoPorData(txtDescricao.Text, txtValor.Text, Convert.ToDateTime(txtData.Text));
+            DataTable dt = dao.VerificarGastoPorData(txtDescricao.Text, txtValor.Text, Convert.ToDateTime(TxtData.Text));
             if (dt.Rows.Count > 0)
             {
                 MessageBox.Show("Gasto já cadastrado!", "Erro ao adicionar gasto!", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -266,7 +266,7 @@ namespace CesaMVC.br.com.cesa.view
             BtnSalvar.Enabled = false;
         }
 
-        private void txtData_ValueChanged(object sender, EventArgs e)
+        private void TxtData_ValueChanged(object sender, EventArgs e)
         {
             Listar();
         }
