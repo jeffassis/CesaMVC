@@ -182,5 +182,11 @@ namespace CesaMVC.br.com.cesa.view
             FrmGasto form = new FrmGasto();
             AbreForm(2, form);
         }
+
+        private void FinanceiroMovimentacao_Click(object sender, EventArgs e)
+        {
+            FrmMovimentacao form = new FrmMovimentacao();
+            AbreForm(2, form);
+        }
     }
 }

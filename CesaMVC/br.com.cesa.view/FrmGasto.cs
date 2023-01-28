@@ -15,6 +15,7 @@ namespace CesaMVC.br.com.cesa.view
     public partial class FrmGasto : Form
     {
         string idSelecionado;
+        int ultimoIdGasto;        
         public FrmGasto()
         {
             InitializeComponent();
@@ -162,6 +163,26 @@ namespace CesaMVC.br.com.cesa.view
             }
             // Adiciona Gasto
             dao.AddGasto(obj);
+            
+
+            // ----------------------------------------------------------------------------------------------------------------
+
+            // RECUPERAR O ULTIMO ID DO GASTO
+            ultimoIdGasto = dao.UltimoIdGasto();
+
+            // LANÇAR O GASTO NAS MOVIMENTAÇÕES
+            Movimentacao mov = new Movimentacao 
+            {
+                Tipo = "Saida",
+                Movimento = "Gasto",
+                Valor = decimal.Parse(txtValor.Text),
+                Funcionario = Program.nomeUsuario,
+                IdMovimento = ultimoIdGasto
+            };
+            MovimentacaoDAO movDao = new MovimentacaoDAO();
+            movDao.AddMovimentacao(mov);
+
+            // FINALIZA A FUNCAO
             Desabilitar();
             LimparCampos();
             Listar();
@@ -195,6 +216,20 @@ namespace CesaMVC.br.com.cesa.view
             GastoDAO dao = new GastoDAO();
             // Atualiza Gasto
             dao.UpdateGasto(obj, idSelecionado);
+
+            // ----------------------------------------------------------------------------------------------------------------
+
+            // ATUALIZAR O VALOR NA MOVIMENTAÇÃO
+            Movimentacao mov = new Movimentacao
+            {
+                Valor = decimal.Parse(txtValor.Text),
+                Funcionario = Program.nomeUsuario,                
+                Movimento = "Gasto"
+            };
+            MovimentacaoDAO movDao = new MovimentacaoDAO();
+            movDao.UpdateMovimentacao(mov, idSelecionado);
+
+            // FINALIZA A FUNCAO
             Desabilitar();
             LimparCampos();
             Listar();
@@ -208,6 +243,12 @@ namespace CesaMVC.br.com.cesa.view
                 GastoDAO dao = new GastoDAO();
                 dao.DeleteGasto(idSelecionado);
                 Grid.Rows.Remove(Grid.CurrentRow);
+
+                // ----------------------------------------------------------------------------------------------------------------
+                // EXCLUSAO DO MOVIMENTO DO GASTO
+                string movimento = "Gasto";
+                MovimentacaoDAO movDao = new MovimentacaoDAO();
+                movDao.DeleteMovimentacao(idSelecionado, movimento);
             }
             Desabilitar();
             LimparCampos();

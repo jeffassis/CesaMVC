@@ -36,20 +36,21 @@ namespace CesaMVC.br.com.cesa.view
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtDescricao = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtValor = new System.Windows.Forms.TextBox();
-            this.txtData = new System.Windows.Forms.DateTimePicker();
-            this.Grid = new System.Windows.Forms.DataGridView();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.BtnCancelar = new System.Windows.Forms.Button();
+            this.Grid = new System.Windows.Forms.DataGridView();
+            this.txtData = new System.Windows.Forms.DateTimePicker();
             this.BtnExcluir = new System.Windows.Forms.Button();
+            this.txtValor = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.BtnEditar = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.BtnSalvar = new System.Windows.Forms.Button();
             this.BtnNovo = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblTotal = new System.Windows.Forms.Label();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
@@ -69,6 +70,7 @@ namespace CesaMVC.br.com.cesa.view
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel2.Controls.Add(this.txtId);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -97,67 +99,44 @@ namespace CesaMVC.br.com.cesa.view
             this.panel1.Size = new System.Drawing.Size(827, 394);
             this.panel1.TabIndex = 4;
             // 
-            // txtDescricao
+            // lblTotal
             // 
-            this.txtDescricao.Enabled = false;
-            this.txtDescricao.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.txtDescricao.Location = new System.Drawing.Point(116, 14);
-            this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(239, 26);
-            this.txtDescricao.TabIndex = 33;
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblTotal.Location = new System.Drawing.Point(729, 297);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(18, 19);
+            this.lblTotal.TabIndex = 48;
+            this.lblTotal.Text = "0";
             // 
-            // label2
+            // label5
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label2.Location = new System.Drawing.Point(16, 17);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 19);
-            this.label2.TabIndex = 34;
-            this.label2.Text = "Descrição.:";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label5.Location = new System.Drawing.Point(665, 297);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(63, 19);
+            this.label5.TabIndex = 47;
+            this.label5.Text = "TOTAL.:";
             // 
-            // label3
+            // BtnCancelar
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label3.Location = new System.Drawing.Point(361, 17);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 19);
-            this.label3.TabIndex = 35;
-            this.label3.Text = "Valor.:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label4.Location = new System.Drawing.Point(582, 17);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 19);
-            this.label4.TabIndex = 36;
-            this.label4.Text = "Data.:";
-            // 
-            // txtValor
-            // 
-            this.txtValor.Enabled = false;
-            this.txtValor.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.txtValor.Location = new System.Drawing.Point(425, 14);
-            this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(72, 26);
-            this.txtValor.TabIndex = 37;
-            // 
-            // txtData
-            // 
-            this.txtData.CalendarForeColor = System.Drawing.SystemColors.Highlight;
-            this.txtData.CalendarTitleForeColor = System.Drawing.SystemColors.Highlight;
-            this.txtData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txtData.Location = new System.Drawing.Point(642, 14);
-            this.txtData.Name = "txtData";
-            this.txtData.Size = new System.Drawing.Size(162, 26);
-            this.txtData.TabIndex = 38;
-            this.txtData.ValueChanged += new System.EventHandler(this.txtData_ValueChanged);
+            this.BtnCancelar.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BtnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCancelar.ForeColor = System.Drawing.Color.White;
+            this.BtnCancelar.Image = global::CesaMVC.Properties.Resources.btn_cancelar_24;
+            this.BtnCancelar.Location = new System.Drawing.Point(608, 333);
+            this.BtnCancelar.Name = "BtnCancelar";
+            this.BtnCancelar.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
+            this.BtnCancelar.Size = new System.Drawing.Size(130, 50);
+            this.BtnCancelar.TabIndex = 46;
+            this.BtnCancelar.Text = " Cancelar";
+            this.BtnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnCancelar.UseVisualStyleBackColor = false;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // Grid
             // 
@@ -194,22 +173,16 @@ namespace CesaMVC.br.com.cesa.view
             this.Grid.TabIndex = 39;
             this.Grid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellDoubleClick);
             // 
-            // BtnCancelar
+            // txtData
             // 
-            this.BtnCancelar.BackColor = System.Drawing.SystemColors.Highlight;
-            this.BtnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCancelar.ForeColor = System.Drawing.Color.White;
-            this.BtnCancelar.Image = global::CesaMVC.Properties.Resources.btn_cancelar_24;
-            this.BtnCancelar.Location = new System.Drawing.Point(608, 333);
-            this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
-            this.BtnCancelar.Size = new System.Drawing.Size(130, 50);
-            this.BtnCancelar.TabIndex = 46;
-            this.BtnCancelar.Text = " Cancelar";
-            this.BtnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnCancelar.UseVisualStyleBackColor = false;
-            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
+            this.txtData.CalendarForeColor = System.Drawing.SystemColors.Highlight;
+            this.txtData.CalendarTitleForeColor = System.Drawing.SystemColors.Highlight;
+            this.txtData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txtData.Location = new System.Drawing.Point(642, 14);
+            this.txtData.Name = "txtData";
+            this.txtData.Size = new System.Drawing.Size(162, 26);
+            this.txtData.TabIndex = 38;
+            this.txtData.ValueChanged += new System.EventHandler(this.txtData_ValueChanged);
             // 
             // BtnExcluir
             // 
@@ -228,6 +201,26 @@ namespace CesaMVC.br.com.cesa.view
             this.BtnExcluir.UseVisualStyleBackColor = false;
             this.BtnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
             // 
+            // txtValor
+            // 
+            this.txtValor.Enabled = false;
+            this.txtValor.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.txtValor.Location = new System.Drawing.Point(425, 14);
+            this.txtValor.Name = "txtValor";
+            this.txtValor.Size = new System.Drawing.Size(72, 26);
+            this.txtValor.TabIndex = 37;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label4.Location = new System.Drawing.Point(582, 17);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(54, 19);
+            this.label4.TabIndex = 36;
+            this.label4.Text = "Data.:";
+            // 
             // BtnEditar
             // 
             this.BtnEditar.BackColor = System.Drawing.SystemColors.Highlight;
@@ -244,6 +237,17 @@ namespace CesaMVC.br.com.cesa.view
             this.BtnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnEditar.UseVisualStyleBackColor = false;
             this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label3.Location = new System.Drawing.Point(361, 17);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 19);
+            this.label3.TabIndex = 35;
+            this.label3.Text = "Valor.:";
             // 
             // BtnSalvar
             // 
@@ -278,27 +282,33 @@ namespace CesaMVC.br.com.cesa.view
             this.BtnNovo.UseVisualStyleBackColor = false;
             this.BtnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
             // 
-            // label5
+            // txtDescricao
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label5.Location = new System.Drawing.Point(665, 297);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 19);
-            this.label5.TabIndex = 47;
-            this.label5.Text = "TOTAL.:";
+            this.txtDescricao.Enabled = false;
+            this.txtDescricao.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.txtDescricao.Location = new System.Drawing.Point(116, 14);
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(239, 26);
+            this.txtDescricao.TabIndex = 33;
             // 
-            // lblTotal
+            // label2
             // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblTotal.Location = new System.Drawing.Point(729, 297);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(18, 19);
-            this.lblTotal.TabIndex = 48;
-            this.lblTotal.Text = "0";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label2.Location = new System.Drawing.Point(16, 17);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 19);
+            this.label2.TabIndex = 34;
+            this.label2.Text = "Descrição.:";
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(620, 42);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 26);
+            this.txtId.TabIndex = 1;
+            this.txtId.Visible = false;
             // 
             // FrmGasto
             // 
@@ -346,5 +356,6 @@ namespace CesaMVC.br.com.cesa.view
         private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.TextBox txtId;
     }
 }
