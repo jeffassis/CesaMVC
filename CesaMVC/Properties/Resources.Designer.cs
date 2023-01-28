@@ -323,6 +323,16 @@ namespace CesaMVC.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap gastos_20 {
+            get {
+                object obj = ResourceManager.GetObject("gastos_20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gestao_20 {
             get {
                 object obj = ResourceManager.GetObject("gestao_20", resourceCulture);
@@ -416,6 +426,16 @@ namespace CesaMVC.Properties {
         internal static System.Drawing.Bitmap logOn_20 {
             get {
                 object obj = ResourceManager.GetObject("logOn_20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mensalidade_20 {
+            get {
+                object obj = ResourceManager.GetObject("mensalidade_20", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -185,5 +185,10 @@ namespace CesaMVC.br.com.cesa.view
             Desabilitar();
             LimparCampos();
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

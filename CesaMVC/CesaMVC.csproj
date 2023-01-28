@@ -137,6 +137,7 @@
     <Compile Include="br.com.cesa.dao\AlunoTurmaDAO.cs" />
     <Compile Include="br.com.cesa.dao\BimestreDAO.cs" />
     <Compile Include="br.com.cesa.dao\DisciplinaDAO.cs" />
+    <Compile Include="br.com.cesa.dao\GastoDAO.cs" />
     <Compile Include="br.com.cesa.dao\HoraProfessorDAO.cs" />
     <Compile Include="br.com.cesa.dao\HorarioDAO.cs" />
     <Compile Include="br.com.cesa.dao\NotasDAO.cs" />
@@ -148,6 +149,7 @@
     <Compile Include="br.com.cesa.model\Aluno.cs" />
     <Compile Include="br.com.cesa.model\Bimestre.cs" />
     <Compile Include="br.com.cesa.model\Disciplina.cs" />
+    <Compile Include="br.com.cesa.model\Gasto.cs" />
     <Compile Include="br.com.cesa.model\HoraProfessor.cs" />
     <Compile Include="br.com.cesa.model\Horario.cs" />
     <Compile Include="br.com.cesa.model\Notas.cs" />
@@ -203,6 +205,12 @@
     </Compile>
     <Compile Include="br.com.cesa.view\FrmDisciplina.Designer.cs">
       <DependentUpon>FrmDisciplina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="br.com.cesa.view\FrmGasto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.cesa.view\FrmGasto.Designer.cs">
+      <DependentUpon>FrmGasto.cs</DependentUpon>
     </Compile>
     <Compile Include="br.com.cesa.view\FrmHoraProfessor.cs">
       <SubType>Form</SubType>
@@ -310,6 +318,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.cesa.view\FrmDisciplina.resx">
       <DependentUpon>FrmDisciplina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.cesa.view\FrmGasto.resx">
+      <DependentUpon>FrmGasto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.cesa.view\FrmHoraProfessor.resx">
       <DependentUpon>FrmHoraProfessor.cs</DependentUpon>
@@ -446,6 +457,8 @@
     <None Include="Resources\boletim_20.png" />
     <None Include="Resources\estoque_48.png" />
     <None Include="Resources\produto_201.png" />
+    <None Include="Resources\mensalidade_20.png" />
+    <None Include="Resources\gastos_20.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

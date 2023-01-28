@@ -51,7 +51,9 @@ namespace CesaMVC.br.com.cesa.view
             this.PedagogicoTurma = new System.Windows.Forms.ToolStripMenuItem();
             this.TurmaMontagemTurma = new System.Windows.Forms.ToolStripMenuItem();
             this.menuFinanceiro = new System.Windows.Forms.ToolStripMenuItem();
+            this.FinanceiroMensalidades = new System.Windows.Forms.ToolStripMenuItem();
             this.FinanceiroMovimentacao = new System.Windows.Forms.ToolStripMenuItem();
+            this.FinanceiroGastos = new System.Windows.Forms.ToolStripMenuItem();
             this.menuEstoque = new System.Windows.Forms.ToolStripMenuItem();
             this.EstoqueFornecedor = new System.Windows.Forms.ToolStripMenuItem();
             this.EstoqueProdutos = new System.Windows.Forms.ToolStripMenuItem();
@@ -134,7 +136,7 @@ namespace CesaMVC.br.com.cesa.view
             this.CadastrosAlunos.ForeColor = System.Drawing.SystemColors.Highlight;
             this.CadastrosAlunos.Image = global::CesaMVC.Properties.Resources.aluno_20;
             this.CadastrosAlunos.Name = "CadastrosAlunos";
-            this.CadastrosAlunos.Size = new System.Drawing.Size(180, 24);
+            this.CadastrosAlunos.Size = new System.Drawing.Size(170, 24);
             this.CadastrosAlunos.Text = "Alunos";
             this.CadastrosAlunos.Click += new System.EventHandler(this.CadastrosAlunos_Click);
             // 
@@ -144,7 +146,7 @@ namespace CesaMVC.br.com.cesa.view
             this.CadastrosProfessor.ForeColor = System.Drawing.SystemColors.Highlight;
             this.CadastrosProfessor.Image = global::CesaMVC.Properties.Resources.prefessor_20;
             this.CadastrosProfessor.Name = "CadastrosProfessor";
-            this.CadastrosProfessor.Size = new System.Drawing.Size(180, 24);
+            this.CadastrosProfessor.Size = new System.Drawing.Size(170, 24);
             this.CadastrosProfessor.Text = "Professor";
             this.CadastrosProfessor.Click += new System.EventHandler(this.CadastrosProfessor_Click);
             // 
@@ -154,14 +156,14 @@ namespace CesaMVC.br.com.cesa.view
             this.CadastrosResponsavel.ForeColor = System.Drawing.SystemColors.Highlight;
             this.CadastrosResponsavel.Image = global::CesaMVC.Properties.Resources.responsavel_20;
             this.CadastrosResponsavel.Name = "CadastrosResponsavel";
-            this.CadastrosResponsavel.Size = new System.Drawing.Size(180, 24);
+            this.CadastrosResponsavel.Size = new System.Drawing.Size(170, 24);
             this.CadastrosResponsavel.Text = "Responsável";
             this.CadastrosResponsavel.Click += new System.EventHandler(this.CadastrosResponsavel_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(167, 6);
             // 
             // CadastrosDisciplinas
             // 
@@ -169,7 +171,7 @@ namespace CesaMVC.br.com.cesa.view
             this.CadastrosDisciplinas.ForeColor = System.Drawing.SystemColors.Highlight;
             this.CadastrosDisciplinas.Image = global::CesaMVC.Properties.Resources.disciplina_20;
             this.CadastrosDisciplinas.Name = "CadastrosDisciplinas";
-            this.CadastrosDisciplinas.Size = new System.Drawing.Size(180, 24);
+            this.CadastrosDisciplinas.Size = new System.Drawing.Size(170, 24);
             this.CadastrosDisciplinas.Text = "Disciplinas";
             this.CadastrosDisciplinas.Click += new System.EventHandler(this.CadastrosDisciplinas_Click);
             // 
@@ -179,7 +181,7 @@ namespace CesaMVC.br.com.cesa.view
             this.CadastrosHorarios.ForeColor = System.Drawing.SystemColors.Highlight;
             this.CadastrosHorarios.Image = global::CesaMVC.Properties.Resources.horario_20;
             this.CadastrosHorarios.Name = "CadastrosHorarios";
-            this.CadastrosHorarios.Size = new System.Drawing.Size(180, 24);
+            this.CadastrosHorarios.Size = new System.Drawing.Size(170, 24);
             this.CadastrosHorarios.Text = "Horários";
             this.CadastrosHorarios.Click += new System.EventHandler(this.CadastrosHorarios_Click);
             // 
@@ -189,7 +191,7 @@ namespace CesaMVC.br.com.cesa.view
             this.CadastrosServicos.ForeColor = System.Drawing.SystemColors.Highlight;
             this.CadastrosServicos.Image = global::CesaMVC.Properties.Resources.servicos_20;
             this.CadastrosServicos.Name = "CadastrosServicos";
-            this.CadastrosServicos.Size = new System.Drawing.Size(180, 24);
+            this.CadastrosServicos.Size = new System.Drawing.Size(170, 24);
             this.CadastrosServicos.Text = "Serviços";
             this.CadastrosServicos.Click += new System.EventHandler(this.CadastrosServicos_Click);
             // 
@@ -199,7 +201,7 @@ namespace CesaMVC.br.com.cesa.view
             this.CadastrosTurmas.ForeColor = System.Drawing.SystemColors.Highlight;
             this.CadastrosTurmas.Image = global::CesaMVC.Properties.Resources.turma_20;
             this.CadastrosTurmas.Name = "CadastrosTurmas";
-            this.CadastrosTurmas.Size = new System.Drawing.Size(180, 24);
+            this.CadastrosTurmas.Size = new System.Drawing.Size(170, 24);
             this.CadastrosTurmas.Text = "Turmas";
             this.CadastrosTurmas.Click += new System.EventHandler(this.CadastrosTurmas_Click);
             // 
@@ -298,13 +300,24 @@ namespace CesaMVC.br.com.cesa.view
             // menuFinanceiro
             // 
             this.menuFinanceiro.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.FinanceiroMovimentacao});
+            this.FinanceiroMensalidades,
+            this.FinanceiroMovimentacao,
+            this.FinanceiroGastos});
             this.menuFinanceiro.ForeColor = System.Drawing.SystemColors.Highlight;
             this.menuFinanceiro.Image = global::CesaMVC.Properties.Resources.financeiro_48;
             this.menuFinanceiro.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menuFinanceiro.Name = "menuFinanceiro";
             this.menuFinanceiro.Size = new System.Drawing.Size(134, 52);
             this.menuFinanceiro.Text = "Financeiro";
+            // 
+            // FinanceiroMensalidades
+            // 
+            this.FinanceiroMensalidades.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FinanceiroMensalidades.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.FinanceiroMensalidades.Image = global::CesaMVC.Properties.Resources.mensalidade_20;
+            this.FinanceiroMensalidades.Name = "FinanceiroMensalidades";
+            this.FinanceiroMensalidades.Size = new System.Drawing.Size(192, 24);
+            this.FinanceiroMensalidades.Text = "Mensalidades";
             // 
             // FinanceiroMovimentacao
             // 
@@ -314,6 +327,16 @@ namespace CesaMVC.br.com.cesa.view
             this.FinanceiroMovimentacao.Name = "FinanceiroMovimentacao";
             this.FinanceiroMovimentacao.Size = new System.Drawing.Size(192, 24);
             this.FinanceiroMovimentacao.Text = "Movimentação";
+            // 
+            // FinanceiroGastos
+            // 
+            this.FinanceiroGastos.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FinanceiroGastos.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.FinanceiroGastos.Image = global::CesaMVC.Properties.Resources.gastos_20;
+            this.FinanceiroGastos.Name = "FinanceiroGastos";
+            this.FinanceiroGastos.Size = new System.Drawing.Size(192, 24);
+            this.FinanceiroGastos.Text = "Gastos";
+            this.FinanceiroGastos.Click += new System.EventHandler(this.FinanceiroGastos_Click);
             // 
             // menuEstoque
             // 
@@ -730,5 +753,7 @@ namespace CesaMVC.br.com.cesa.view
         private System.Windows.Forms.ToolStripMenuItem menuEstoque;
         private System.Windows.Forms.ToolStripMenuItem EstoqueFornecedor;
         private System.Windows.Forms.ToolStripMenuItem EstoqueProdutos;
+        private System.Windows.Forms.ToolStripMenuItem FinanceiroMensalidades;
+        private System.Windows.Forms.ToolStripMenuItem FinanceiroGastos;
     }
 }
