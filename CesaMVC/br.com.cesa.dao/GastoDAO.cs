@@ -158,5 +158,30 @@ namespace CesaMVC.br.com.cesa.dao
                 return null;
             }
         }
+
+        public int UltimoIdGasto()
+        {
+            try
+            {
+                int idGasto = 0;
+                string sql = "SELECT MAX(id_gasto) id_gasto FROM tb_gasto";
+                MySqlCommand cmd = new MySqlCommand(sql, vcon);
+                vcon.Open();
+                MySqlDataReader read = cmd.ExecuteReader();
+                if (read.Read())
+                {
+                    idGasto = read.GetInt32("id_gasto");                    
+                }
+                vcon.Close();
+                vcon.Dispose();
+                vcon.ClearAllPoolsAsync();
+                return idGasto;                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Aconteceu o erro: " + ex);
+                return 0;
+            }
+        }
     }
 }

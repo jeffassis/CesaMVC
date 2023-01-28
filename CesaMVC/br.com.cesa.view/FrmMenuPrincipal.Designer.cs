@@ -327,6 +327,7 @@ namespace CesaMVC.br.com.cesa.view
             this.FinanceiroMovimentacao.Name = "FinanceiroMovimentacao";
             this.FinanceiroMovimentacao.Size = new System.Drawing.Size(192, 24);
             this.FinanceiroMovimentacao.Text = "Movimentação";
+            this.FinanceiroMovimentacao.Click += new System.EventHandler(this.FinanceiroMovimentacao_Click);
             // 
             // FinanceiroGastos
             // 
