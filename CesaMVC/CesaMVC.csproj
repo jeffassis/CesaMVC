@@ -137,11 +137,13 @@
     <Compile Include="br.com.cesa.dao\AlunoTurmaDAO.cs" />
     <Compile Include="br.com.cesa.dao\BimestreDAO.cs" />
     <Compile Include="br.com.cesa.dao\DisciplinaDAO.cs" />
+    <Compile Include="br.com.cesa.dao\FornecedorDAO.cs" />
     <Compile Include="br.com.cesa.dao\GastoDAO.cs" />
     <Compile Include="br.com.cesa.dao\HoraProfessorDAO.cs" />
     <Compile Include="br.com.cesa.dao\HorarioDAO.cs" />
     <Compile Include="br.com.cesa.dao\MovimentacaoDAO.cs" />
     <Compile Include="br.com.cesa.dao\NotasDAO.cs" />
+    <Compile Include="br.com.cesa.dao\ProdutoDAO.cs" />
     <Compile Include="br.com.cesa.dao\ProfessorDAO.cs" />
     <Compile Include="br.com.cesa.dao\ResponsavelDAO.cs" />
     <Compile Include="br.com.cesa.dao\ServicosDAO.cs" />
@@ -150,11 +152,13 @@
     <Compile Include="br.com.cesa.model\Aluno.cs" />
     <Compile Include="br.com.cesa.model\Bimestre.cs" />
     <Compile Include="br.com.cesa.model\Disciplina.cs" />
+    <Compile Include="br.com.cesa.model\Fornecedor.cs" />
     <Compile Include="br.com.cesa.model\Gasto.cs" />
     <Compile Include="br.com.cesa.model\HoraProfessor.cs" />
     <Compile Include="br.com.cesa.model\Horario.cs" />
     <Compile Include="br.com.cesa.model\Movimentacao.cs" />
     <Compile Include="br.com.cesa.model\Notas.cs" />
+    <Compile Include="br.com.cesa.model\Produto.cs" />
     <Compile Include="br.com.cesa.model\Professor.cs" />
     <Compile Include="br.com.cesa.model\Responsavel.cs" />
     <Compile Include="br.com.cesa.model\Servicos.cs" />
@@ -207,6 +211,12 @@
     </Compile>
     <Compile Include="br.com.cesa.view\FrmDisciplina.Designer.cs">
       <DependentUpon>FrmDisciplina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="br.com.cesa.view\FrmFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.cesa.view\FrmFornecedor.Designer.cs">
+      <DependentUpon>FrmFornecedor.cs</DependentUpon>
     </Compile>
     <Compile Include="br.com.cesa.view\FrmGasto.cs">
       <SubType>Form</SubType>
@@ -326,6 +336,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.cesa.view\FrmDisciplina.resx">
       <DependentUpon>FrmDisciplina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.cesa.view\FrmFornecedor.resx">
+      <DependentUpon>FrmFornecedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.cesa.view\FrmGasto.resx">
       <DependentUpon>FrmGasto.cs</DependentUpon>

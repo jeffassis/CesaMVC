@@ -36,19 +36,19 @@ namespace CesaMVC.br.com.cesa.view
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtDataFinal = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtDataInicial = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.CbBuscar = new System.Windows.Forms.ComboBox();
-            this.Grid = new System.Windows.Forms.DataGridView();
+            this.lblSaidas = new System.Windows.Forms.Label();
+            this.lblEntradas = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lblEntradas = new System.Windows.Forms.Label();
-            this.lblSaidas = new System.Windows.Forms.Label();
+            this.Grid = new System.Windows.Forms.DataGridView();
+            this.CbBuscar = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.TxtDataInicial = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.TxtDataFinal = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
@@ -86,83 +86,80 @@ namespace CesaMVC.br.com.cesa.view
             this.panel1.Controls.Add(this.Grid);
             this.panel1.Controls.Add(this.CbBuscar);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.txtDataInicial);
+            this.panel1.Controls.Add(this.TxtDataInicial);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.txtDataFinal);
+            this.panel1.Controls.Add(this.TxtDataFinal);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Location = new System.Drawing.Point(12, 106);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(853, 373);
             this.panel1.TabIndex = 5;
             // 
-            // txtDataFinal
+            // lblSaidas
             // 
-            this.txtDataFinal.CalendarForeColor = System.Drawing.SystemColors.Highlight;
-            this.txtDataFinal.CalendarTitleForeColor = System.Drawing.SystemColors.Highlight;
-            this.txtDataFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txtDataFinal.Location = new System.Drawing.Point(670, 42);
-            this.txtDataFinal.Name = "txtDataFinal";
-            this.txtDataFinal.Size = new System.Drawing.Size(162, 26);
-            this.txtDataFinal.TabIndex = 3;
-            this.txtDataFinal.ValueChanged += new System.EventHandler(this.txtDataFinal_ValueChanged);
+            this.lblSaidas.AutoSize = true;
+            this.lblSaidas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSaidas.ForeColor = System.Drawing.Color.Red;
+            this.lblSaidas.Location = new System.Drawing.Point(290, 331);
+            this.lblSaidas.Name = "lblSaidas";
+            this.lblSaidas.Size = new System.Drawing.Size(18, 19);
+            this.lblSaidas.TabIndex = 54;
+            this.lblSaidas.Text = "0";
             // 
-            // label4
+            // lblEntradas
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label4.Location = new System.Drawing.Point(666, 17);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(95, 19);
-            this.label4.TabIndex = 39;
-            this.label4.Text = "Data Final.:";
+            this.lblEntradas.AutoSize = true;
+            this.lblEntradas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEntradas.ForeColor = System.Drawing.Color.Green;
+            this.lblEntradas.Location = new System.Drawing.Point(113, 331);
+            this.lblEntradas.Name = "lblEntradas";
+            this.lblEntradas.Size = new System.Drawing.Size(18, 19);
+            this.lblEntradas.TabIndex = 53;
+            this.lblEntradas.Text = "0";
             // 
-            // txtDataInicial
+            // label7
             // 
-            this.txtDataInicial.CalendarForeColor = System.Drawing.SystemColors.Highlight;
-            this.txtDataInicial.CalendarTitleForeColor = System.Drawing.SystemColors.Highlight;
-            this.txtDataInicial.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txtDataInicial.Location = new System.Drawing.Point(485, 42);
-            this.txtDataInicial.Name = "txtDataInicial";
-            this.txtDataInicial.Size = new System.Drawing.Size(162, 26);
-            this.txtDataInicial.TabIndex = 2;
-            this.txtDataInicial.ValueChanged += new System.EventHandler(this.txtDataInicial_ValueChanged);
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label7.Location = new System.Drawing.Point(219, 331);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(68, 19);
+            this.label7.TabIndex = 52;
+            this.label7.Text = "Saídas.:";
             // 
-            // label2
+            // label6
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label2.Location = new System.Drawing.Point(481, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 19);
-            this.label2.TabIndex = 41;
-            this.label2.Text = "Data Inicial.:";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label6.Location = new System.Drawing.Point(27, 331);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(83, 19);
+            this.label6.TabIndex = 51;
+            this.label6.Text = "Entradas.:";
             // 
-            // label3
+            // lblTotal
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label3.Location = new System.Drawing.Point(17, 15);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(149, 19);
-            this.label3.TabIndex = 43;
-            this.label3.Text = "Entradas / Saídas.:";
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblTotal.Location = new System.Drawing.Point(764, 331);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(18, 19);
+            this.lblTotal.TabIndex = 50;
+            this.lblTotal.Text = "0";
             // 
-            // CbBuscar
+            // label5
             // 
-            this.CbBuscar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CbBuscar.FormattingEnabled = true;
-            this.CbBuscar.Items.AddRange(new object[] {
-            "Tudo",
-            "Entrada",
-            "Saida"});
-            this.CbBuscar.Location = new System.Drawing.Point(21, 40);
-            this.CbBuscar.Name = "CbBuscar";
-            this.CbBuscar.Size = new System.Drawing.Size(153, 28);
-            this.CbBuscar.TabIndex = 1;
-            this.CbBuscar.SelectedIndexChanged += new System.EventHandler(this.CbBuscar_SelectedIndexChanged);
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label5.Location = new System.Drawing.Point(708, 331);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(53, 19);
+            this.label5.TabIndex = 49;
+            this.label5.Text = "Total.:";
             // 
             // Grid
             // 
@@ -198,71 +195,74 @@ namespace CesaMVC.br.com.cesa.view
             this.Grid.Size = new System.Drawing.Size(811, 249);
             this.Grid.TabIndex = 45;
             // 
-            // lblTotal
+            // CbBuscar
             // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblTotal.Location = new System.Drawing.Point(764, 331);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(18, 19);
-            this.lblTotal.TabIndex = 50;
-            this.lblTotal.Text = "0";
+            this.CbBuscar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbBuscar.FormattingEnabled = true;
+            this.CbBuscar.Items.AddRange(new object[] {
+            "Tudo",
+            "Entrada",
+            "Saida"});
+            this.CbBuscar.Location = new System.Drawing.Point(21, 40);
+            this.CbBuscar.Name = "CbBuscar";
+            this.CbBuscar.Size = new System.Drawing.Size(153, 28);
+            this.CbBuscar.TabIndex = 1;
+            this.CbBuscar.SelectedIndexChanged += new System.EventHandler(this.CbBuscar_SelectedIndexChanged);
             // 
-            // label5
+            // label3
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label5.Location = new System.Drawing.Point(708, 331);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 19);
-            this.label5.TabIndex = 49;
-            this.label5.Text = "Total.:";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label3.Location = new System.Drawing.Point(17, 15);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(149, 19);
+            this.label3.TabIndex = 43;
+            this.label3.Text = "Entradas / Saídas.:";
             // 
-            // label6
+            // TxtDataInicial
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label6.Location = new System.Drawing.Point(27, 331);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(83, 19);
-            this.label6.TabIndex = 51;
-            this.label6.Text = "Entradas.:";
+            this.TxtDataInicial.CalendarForeColor = System.Drawing.SystemColors.Highlight;
+            this.TxtDataInicial.CalendarTitleForeColor = System.Drawing.SystemColors.Highlight;
+            this.TxtDataInicial.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.TxtDataInicial.Location = new System.Drawing.Point(485, 42);
+            this.TxtDataInicial.Name = "TxtDataInicial";
+            this.TxtDataInicial.Size = new System.Drawing.Size(162, 26);
+            this.TxtDataInicial.TabIndex = 2;
+            this.TxtDataInicial.ValueChanged += new System.EventHandler(this.TxtDataInicial_ValueChanged);
             // 
-            // label7
+            // label2
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label7.Location = new System.Drawing.Point(219, 331);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(68, 19);
-            this.label7.TabIndex = 52;
-            this.label7.Text = "Saídas.:";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label2.Location = new System.Drawing.Point(481, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(105, 19);
+            this.label2.TabIndex = 41;
+            this.label2.Text = "Data Inicial.:";
             // 
-            // lblEntradas
+            // TxtDataFinal
             // 
-            this.lblEntradas.AutoSize = true;
-            this.lblEntradas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEntradas.ForeColor = System.Drawing.Color.Green;
-            this.lblEntradas.Location = new System.Drawing.Point(113, 331);
-            this.lblEntradas.Name = "lblEntradas";
-            this.lblEntradas.Size = new System.Drawing.Size(18, 19);
-            this.lblEntradas.TabIndex = 53;
-            this.lblEntradas.Text = "0";
+            this.TxtDataFinal.CalendarForeColor = System.Drawing.SystemColors.Highlight;
+            this.TxtDataFinal.CalendarTitleForeColor = System.Drawing.SystemColors.Highlight;
+            this.TxtDataFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.TxtDataFinal.Location = new System.Drawing.Point(670, 42);
+            this.TxtDataFinal.Name = "TxtDataFinal";
+            this.TxtDataFinal.Size = new System.Drawing.Size(162, 26);
+            this.TxtDataFinal.TabIndex = 3;
+            this.TxtDataFinal.ValueChanged += new System.EventHandler(this.TxtDataFinal_ValueChanged);
             // 
-            // lblSaidas
+            // label4
             // 
-            this.lblSaidas.AutoSize = true;
-            this.lblSaidas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSaidas.ForeColor = System.Drawing.Color.Red;
-            this.lblSaidas.Location = new System.Drawing.Point(290, 331);
-            this.lblSaidas.Name = "lblSaidas";
-            this.lblSaidas.Size = new System.Drawing.Size(18, 19);
-            this.lblSaidas.TabIndex = 54;
-            this.lblSaidas.Text = "0";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label4.Location = new System.Drawing.Point(666, 17);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(95, 19);
+            this.label4.TabIndex = 39;
+            this.label4.Text = "Data Final.:";
             // 
             // FrmMovimentacao
             // 
@@ -297,9 +297,9 @@ namespace CesaMVC.br.com.cesa.view
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DateTimePicker txtDataFinal;
+        private System.Windows.Forms.DateTimePicker TxtDataFinal;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker txtDataInicial;
+        private System.Windows.Forms.DateTimePicker TxtDataInicial;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox CbBuscar;

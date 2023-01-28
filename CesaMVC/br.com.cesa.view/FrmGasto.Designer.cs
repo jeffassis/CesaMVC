@@ -35,12 +35,13 @@ namespace CesaMVC.br.com.cesa.view
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGasto));
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTotal = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.Grid = new System.Windows.Forms.DataGridView();
-            this.txtData = new System.Windows.Forms.DateTimePicker();
+            this.TxtData = new System.Windows.Forms.DateTimePicker();
             this.BtnExcluir = new System.Windows.Forms.Button();
             this.txtValor = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,7 +51,6 @@ namespace CesaMVC.br.com.cesa.view
             this.BtnNovo = new System.Windows.Forms.Button();
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
@@ -78,13 +78,21 @@ namespace CesaMVC.br.com.cesa.view
             this.panel2.Size = new System.Drawing.Size(854, 100);
             this.panel2.TabIndex = 3;
             // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(620, 42);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 26);
+            this.txtId.TabIndex = 1;
+            this.txtId.Visible = false;
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.lblTotal);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.BtnCancelar);
             this.panel1.Controls.Add(this.Grid);
-            this.panel1.Controls.Add(this.txtData);
+            this.panel1.Controls.Add(this.TxtData);
             this.panel1.Controls.Add(this.BtnExcluir);
             this.panel1.Controls.Add(this.txtValor);
             this.panel1.Controls.Add(this.label4);
@@ -173,16 +181,16 @@ namespace CesaMVC.br.com.cesa.view
             this.Grid.TabIndex = 39;
             this.Grid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellDoubleClick);
             // 
-            // txtData
+            // TxtData
             // 
-            this.txtData.CalendarForeColor = System.Drawing.SystemColors.Highlight;
-            this.txtData.CalendarTitleForeColor = System.Drawing.SystemColors.Highlight;
-            this.txtData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txtData.Location = new System.Drawing.Point(642, 14);
-            this.txtData.Name = "txtData";
-            this.txtData.Size = new System.Drawing.Size(162, 26);
-            this.txtData.TabIndex = 38;
-            this.txtData.ValueChanged += new System.EventHandler(this.txtData_ValueChanged);
+            this.TxtData.CalendarForeColor = System.Drawing.SystemColors.Highlight;
+            this.TxtData.CalendarTitleForeColor = System.Drawing.SystemColors.Highlight;
+            this.TxtData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.TxtData.Location = new System.Drawing.Point(642, 14);
+            this.TxtData.Name = "TxtData";
+            this.TxtData.Size = new System.Drawing.Size(162, 26);
+            this.TxtData.TabIndex = 38;
+            this.TxtData.ValueChanged += new System.EventHandler(this.TxtData_ValueChanged);
             // 
             // BtnExcluir
             // 
@@ -302,14 +310,6 @@ namespace CesaMVC.br.com.cesa.view
             this.label2.TabIndex = 34;
             this.label2.Text = "Descrição.:";
             // 
-            // txtId
-            // 
-            this.txtId.Location = new System.Drawing.Point(620, 42);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(100, 26);
-            this.txtId.TabIndex = 1;
-            this.txtId.Visible = false;
-            // 
             // FrmGasto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -347,7 +347,7 @@ namespace CesaMVC.br.com.cesa.view
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtValor;
-        private System.Windows.Forms.DateTimePicker txtData;
+        private System.Windows.Forms.DateTimePicker TxtData;
         private System.Windows.Forms.DataGridView Grid;
         private System.Windows.Forms.Button BtnExcluir;
         private System.Windows.Forms.Button BtnEditar;
