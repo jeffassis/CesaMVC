@@ -48,6 +48,7 @@ namespace CesaMVC.br.com.cesa.view
             this.PedagogicoNotasLancamento = new System.Windows.Forms.ToolStripMenuItem();
             this.PedagogicoNotasBoletimAluno = new System.Windows.Forms.ToolStripMenuItem();
             this.PedagogicoNotaAnual = new System.Windows.Forms.ToolStripMenuItem();
+            this.PedagogicoNotasDisciplina = new System.Windows.Forms.ToolStripMenuItem();
             this.PedagogicoTurma = new System.Windows.Forms.ToolStripMenuItem();
             this.TurmaMontagemTurma = new System.Windows.Forms.ToolStripMenuItem();
             this.menuFinanceiro = new System.Windows.Forms.ToolStripMenuItem();
@@ -243,7 +244,8 @@ namespace CesaMVC.br.com.cesa.view
             this.notasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.PedagogicoNotasLancamento,
             this.PedagogicoNotasBoletimAluno,
-            this.PedagogicoNotaAnual});
+            this.PedagogicoNotaAnual,
+            this.PedagogicoNotasDisciplina});
             this.notasToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.notasToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Highlight;
             this.notasToolStripMenuItem.Image = global::CesaMVC.Properties.Resources.notas;
@@ -277,6 +279,15 @@ namespace CesaMVC.br.com.cesa.view
             this.PedagogicoNotaAnual.Size = new System.Drawing.Size(241, 24);
             this.PedagogicoNotaAnual.Text = "Boletim Final";
             this.PedagogicoNotaAnual.Click += new System.EventHandler(this.PedagogicoNotaAnual_Click);
+            // 
+            // PedagogicoNotasDisciplina
+            // 
+            this.PedagogicoNotasDisciplina.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.PedagogicoNotasDisciplina.Image = global::CesaMVC.Properties.Resources.notas_disciplina_20;
+            this.PedagogicoNotasDisciplina.Name = "PedagogicoNotasDisciplina";
+            this.PedagogicoNotasDisciplina.Size = new System.Drawing.Size(241, 24);
+            this.PedagogicoNotasDisciplina.Text = "Notas por Disciplina";
+            this.PedagogicoNotasDisciplina.Click += new System.EventHandler(this.PedagogicoNotasDisciplina_Click);
             // 
             // PedagogicoTurma
             // 
@@ -759,5 +770,6 @@ namespace CesaMVC.br.com.cesa.view
         private System.Windows.Forms.ToolStripMenuItem EstoqueProdutos;
         private System.Windows.Forms.ToolStripMenuItem FinanceiroMensalidades;
         private System.Windows.Forms.ToolStripMenuItem FinanceiroGastos;
+        private System.Windows.Forms.ToolStripMenuItem PedagogicoNotasDisciplina;
     }
 }

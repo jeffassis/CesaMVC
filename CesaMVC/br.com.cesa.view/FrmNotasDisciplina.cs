@@ -11,16 +11,16 @@ using System.Windows.Forms;
 
 namespace CesaMVC.br.com.cesa.view
 {
-    public partial class FrmBoletimFinal : Form
+    public partial class FrmNotasDisciplina : Form
     {
-        public FrmBoletimFinal()
+        public FrmNotasDisciplina()
         {
             InitializeComponent();
         }
 
         private void FormatarDG()
         {
-            Grid.Columns[0].HeaderText = "DISCIPLINA";
+            Grid.Columns[0].HeaderText = "ALUNO";
             Grid.Columns[1].HeaderText = "BIMESTRE 1";
             Grid.Columns[2].HeaderText = "BIMESTRE 2";
             Grid.Columns[3].HeaderText = "BIMESTRE 3";
@@ -58,19 +58,19 @@ namespace CesaMVC.br.com.cesa.view
             Grid.Columns[5].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             // Define o tamanho das celulas
-            Grid.Columns[0].Width = 120;
-            Grid.Columns[1].Width = 95;
-            Grid.Columns[2].Width = 95;
-            Grid.Columns[3].Width = 95;
-            Grid.Columns[4].Width = 95;
-            Grid.Columns[5].Width = 95;
+            Grid.Columns[0].Width = 150;
+            Grid.Columns[1].Width = 85;
+            Grid.Columns[2].Width = 85;
+            Grid.Columns[3].Width = 85;
+            Grid.Columns[4].Width = 85;
+            Grid.Columns[5].Width = 85;
         }
 
         private void Listar()
         {
             // Preenchendo o DataGridView
             NotasDAO dao = new NotasDAO();
-            Grid.DataSource = dao.ListarBoletimFinal(int.Parse(CbAluno.SelectedValue.ToString()),                                                    
+            Grid.DataSource = dao.ListarNotasDisciplina(int.Parse(CbDisciplina.SelectedValue.ToString()),
                                                     int.Parse(CbTurma.SelectedValue.ToString()));
             FormatarDG();
         }
@@ -83,15 +83,15 @@ namespace CesaMVC.br.com.cesa.view
             CbTurma.ValueMember = "id_turma";
         }
 
-        private void ComboAluno()
+        private void ComboDisciplina()
         {
-            AlunoDAO dao = new AlunoDAO();
-            CbAluno.DataSource = dao.ListarAlunoPorTurma(CbTurma.SelectedValue.ToString());
-            CbAluno.DisplayMember = "nome";
-            CbAluno.ValueMember = "id_aluno";
+            DisciplinaDAO dao = new DisciplinaDAO();
+            CbDisciplina.DataSource = dao.ListarDisciplinaPorTurma(CbTurma.SelectedValue.ToString());
+            CbDisciplina.DisplayMember = "nome";
+            CbDisciplina.ValueMember = "id_disciplina";
         }
 
-        private void FrmBoletimFinal_Load(object sender, EventArgs e)
+        private void FrmNotasDisciplina_Load(object sender, EventArgs e)
         {
             ComboTurma();
         }
@@ -100,18 +100,18 @@ namespace CesaMVC.br.com.cesa.view
         {
             if (CbTurma.SelectedValue != null)
             {
-                CbAluno.SelectedIndex = -1;
-                ComboAluno();
-                CbAluno.Enabled = true;                
+                CbDisciplina.SelectedIndex = -1;
+                ComboDisciplina();
+                CbDisciplina.Enabled = true;
             }
         }
 
         private void BtnPesquisar_Click(object sender, EventArgs e)
         {
-            if (CbAluno.Text == "")
+            if (CbDisciplina.Text == "")
             {
-                MessageBox.Show("Selecione um aluno!", "Erro de consulta", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                CbAluno.Focus();
+                MessageBox.Show("Selecione uma disciplina!", "Erro de consulta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                CbDisciplina.Focus();
 
                 // Codigo para limpar o DataGridView quando o aluno estiver vazio
                 var dt = Grid.DataSource as DataTable;
@@ -124,7 +124,7 @@ namespace CesaMVC.br.com.cesa.view
             else
             {
                 Listar();
-                CbAluno.Enabled = false;                
+                CbDisciplina.Enabled = false;
             }
         }
 

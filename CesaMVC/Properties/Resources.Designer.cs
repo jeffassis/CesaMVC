@@ -143,6 +143,16 @@ namespace CesaMVC.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap btn_excel_24 {
+            get {
+                object obj = ResourceManager.GetObject("btn_excel_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btn_excluir_24 {
             get {
                 object obj = ResourceManager.GetObject("btn_excluir_24", resourceCulture);
@@ -476,6 +486,16 @@ namespace CesaMVC.Properties {
         internal static System.Drawing.Bitmap notas_20 {
             get {
                 object obj = ResourceManager.GetObject("notas_20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap notas_disciplina_20 {
+            get {
+                object obj = ResourceManager.GetObject("notas_disciplina_20", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

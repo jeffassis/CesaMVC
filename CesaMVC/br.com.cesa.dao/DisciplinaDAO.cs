@@ -129,5 +129,33 @@ namespace CesaMVC.br.com.cesa.dao
                 return null;
             }
         }
+
+        public DataTable ListarDisciplinaPorTurma(string turma)
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                string sql = @"SELECT DISTINCT(tbd.nome), tbd.id_disciplina, tbn.turma_id FROM tb_nota tbn
+                                INNER JOIN tb_disciplina tbd ON tbd.id_disciplina=tbn.disciplina_id
+                                INNER JOIN tb_turma tbt ON tbt.id_turma=tbn.turma_id
+                                WHERE turma_id=@turma
+                                ORDER BY tbd.nome";
+                MySqlCommand cmd = new MySqlCommand(sql, vcon);
+                cmd.Parameters.AddWithValue("@turma", turma);
+                vcon.Open();
+                cmd.ExecuteNonQuery();
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                da.Fill(dt);
+                vcon.Close();
+                vcon.Dispose();
+                vcon.ClearAllPoolsAsync();
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao executar a lista: " + ex);
+                return null;
+            }
+        }
     }
 }

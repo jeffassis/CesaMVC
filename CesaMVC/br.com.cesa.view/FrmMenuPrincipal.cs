@@ -205,5 +205,11 @@ namespace CesaMVC.br.com.cesa.view
             FrmBoletimFinal form = new FrmBoletimFinal();
             AbreForm(0, form);
         }
+
+        private void PedagogicoNotasDisciplina_Click(object sender, EventArgs e)
+        {
+            FrmNotasDisciplina form = new FrmNotasDisciplina();
+            AbreForm(0, form);
+        }
     }
 }
