@@ -236,5 +236,53 @@ namespace CesaMVC.br.com.cesa.dao
                 return null;
             }
         }
+
+        public DataTable ListarNotasDisciplina(int disciplina, int turma)
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                string sql = @"SELECT DISTINCT(tba.nome) as 'ALUNO',
+                (SELECT AVG(nota) FROM tb_nota AS n1 WHERE n1.aluno_id=tba.id_aluno AND n1.disciplina_id=tbd.id_disciplina AND n1.turma_id=tbt.id_turma AND n1.bimestre_id=1) as 'BIMESTRE 1',
+                (SELECT AVG(nota) FROM tb_nota AS n1 WHERE n1.aluno_id=tba.id_aluno AND n1.disciplina_id=tbd.id_disciplina AND n1.turma_id=tbt.id_turma AND n1.bimestre_id=2) as 'BIMESTRE 2',
+                (SELECT AVG(nota) FROM tb_nota AS n1 WHERE n1.aluno_id=tba.id_aluno AND n1.disciplina_id=tbd.id_disciplina AND n1.turma_id=tbt.id_turma AND n1.bimestre_id=3) as 'BIMESTRE 3',
+                (SELECT AVG(nota) FROM tb_nota AS n1 WHERE n1.aluno_id=tba.id_aluno AND n1.disciplina_id=tbd.id_disciplina AND n1.turma_id=tbt.id_turma AND n1.bimestre_id=4) as 'BIMESTRE 4',
+    	            ((SELECT AVG(nota) FROM tb_nota AS n1 WHERE n1.aluno_id=tba.id_aluno AND n1.disciplina_id=tbd.id_disciplina AND n1.turma_id=tbt.id_turma AND n1.bimestre_id=1) +
+                     (SELECT AVG(nota) FROM tb_nota AS n1 WHERE n1.aluno_id=tba.id_aluno AND n1.disciplina_id=tbd.id_disciplina AND n1.turma_id=tbt.id_turma AND n1.bimestre_id=2) +
+                     (SELECT AVG(nota) FROM tb_nota AS n1 WHERE n1.aluno_id=tba.id_aluno AND n1.disciplina_id=tbd.id_disciplina AND n1.turma_id=tbt.id_turma AND n1.bimestre_id=3) +
+                     (SELECT AVG(nota) FROM tb_nota AS n1 WHERE n1.aluno_id=tba.id_aluno AND n1.disciplina_id=tbd.id_disciplina AND n1.turma_id=tbt.id_turma AND n1.bimestre_id=4))/4 AS 'MEDIA',
+                        turma_id as 'TURMA'
+                FROM
+                    tb_nota as tbn
+                INNER JOIN
+                    tb_aluno tba ON tba.id_aluno=tbn.aluno_id 
+                INNER JOIN
+                    tb_disciplina as tbd ON tbd.id_disciplina=tbn.disciplina_id 
+                INNER JOIN
+                    tb_bimestre as tbb ON tbb.id_bimestre=tbn.bimestre_id
+                INNER JOIN
+                    tb_turma as tbt ON tbt.id_turma=tbn.turma_id
+                WHERE
+                    tbn.disciplina_id=@disciplina and tbn.turma_id=@turma
+                GROUP BY
+                    tbd.nome, tba.id_aluno,tbd.id_disciplina,tbn.bimestre_id";
+                MySqlCommand cmd = new MySqlCommand(sql, vcon);
+                cmd.Parameters.AddWithValue("@disciplina", disciplina);
+                cmd.Parameters.AddWithValue("@turma", turma);
+                vcon.Open();
+                cmd.ExecuteNonQuery();
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                da.Fill(dt);
+                vcon.Close();
+                vcon.Dispose();
+                vcon.ClearAllPoolsAsync();
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao executar a lista: " + ex);
+                return null;
+            }
+        }
     }
 }
