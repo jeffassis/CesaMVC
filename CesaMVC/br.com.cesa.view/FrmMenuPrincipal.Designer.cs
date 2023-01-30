@@ -226,7 +226,7 @@ namespace CesaMVC.br.com.cesa.view
             this.PedagogicoHorarios.ForeColor = System.Drawing.SystemColors.Highlight;
             this.PedagogicoHorarios.Image = global::CesaMVC.Properties.Resources.horario_20;
             this.PedagogicoHorarios.Name = "PedagogicoHorarios";
-            this.PedagogicoHorarios.Size = new System.Drawing.Size(136, 24);
+            this.PedagogicoHorarios.Size = new System.Drawing.Size(180, 24);
             this.PedagogicoHorarios.Text = "Horários";
             // 
             // PedagogicoHorarioProfessor
@@ -248,7 +248,7 @@ namespace CesaMVC.br.com.cesa.view
             this.notasToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Highlight;
             this.notasToolStripMenuItem.Image = global::CesaMVC.Properties.Resources.notas;
             this.notasToolStripMenuItem.Name = "notasToolStripMenuItem";
-            this.notasToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
+            this.notasToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.notasToolStripMenuItem.Text = "Notas";
             // 
             // PedagogicoNotasLancamento
@@ -276,6 +276,7 @@ namespace CesaMVC.br.com.cesa.view
             this.PedagogicoNotaAnual.Name = "PedagogicoNotaAnual";
             this.PedagogicoNotaAnual.Size = new System.Drawing.Size(241, 24);
             this.PedagogicoNotaAnual.Text = "Boletim Final";
+            this.PedagogicoNotaAnual.Click += new System.EventHandler(this.PedagogicoNotaAnual_Click);
             // 
             // PedagogicoTurma
             // 
@@ -285,7 +286,7 @@ namespace CesaMVC.br.com.cesa.view
             this.PedagogicoTurma.ForeColor = System.Drawing.SystemColors.Highlight;
             this.PedagogicoTurma.Image = global::CesaMVC.Properties.Resources.turma_20;
             this.PedagogicoTurma.Name = "PedagogicoTurma";
-            this.PedagogicoTurma.Size = new System.Drawing.Size(136, 24);
+            this.PedagogicoTurma.Size = new System.Drawing.Size(180, 24);
             this.PedagogicoTurma.Text = "Turmas";
             // 
             // TurmaMontagemTurma
@@ -357,7 +358,7 @@ namespace CesaMVC.br.com.cesa.view
             this.EstoqueFornecedor.ForeColor = System.Drawing.SystemColors.Highlight;
             this.EstoqueFornecedor.Image = global::CesaMVC.Properties.Resources.fornecedor_20;
             this.EstoqueFornecedor.Name = "EstoqueFornecedor";
-            this.EstoqueFornecedor.Size = new System.Drawing.Size(180, 24);
+            this.EstoqueFornecedor.Size = new System.Drawing.Size(163, 24);
             this.EstoqueFornecedor.Text = "Fornecedor";
             this.EstoqueFornecedor.Click += new System.EventHandler(this.EstoqueFornecedor_Click);
             // 
@@ -367,8 +368,9 @@ namespace CesaMVC.br.com.cesa.view
             this.EstoqueProdutos.ForeColor = System.Drawing.SystemColors.Highlight;
             this.EstoqueProdutos.Image = global::CesaMVC.Properties.Resources.produto_20;
             this.EstoqueProdutos.Name = "EstoqueProdutos";
-            this.EstoqueProdutos.Size = new System.Drawing.Size(180, 24);
+            this.EstoqueProdutos.Size = new System.Drawing.Size(163, 24);
             this.EstoqueProdutos.Text = "Produtos";
+            this.EstoqueProdutos.Click += new System.EventHandler(this.EstoqueProdutos_Click);
             // 
             // menuRelatorio
             // 

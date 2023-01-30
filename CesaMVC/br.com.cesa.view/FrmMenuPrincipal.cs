@@ -88,7 +88,7 @@ namespace CesaMVC.br.com.cesa.view
         private void FerramentasCapturarFoto_Click(object sender, EventArgs e)
         {
             FrmCapturarFoto form = new FrmCapturarFoto();
-            AbreForm(0, form);
+            AbreForm(1, form);
         }
 
         private void CadastrosAlunos_Click(object sender, EventArgs e)
@@ -113,7 +113,7 @@ namespace CesaMVC.br.com.cesa.view
         private void RelatoriosTurmas_Click(object sender, EventArgs e)
         {
             Report_AlunoTurma form = new Report_AlunoTurma();
-            AbreForm(0, form);
+            AbreForm(1, form);
         }
 
         private void CadastrosDisciplinas_Click(object sender, EventArgs e)
@@ -155,14 +155,14 @@ namespace CesaMVC.br.com.cesa.view
         private void CadastrosHorarios_Click(object sender, EventArgs e)
         {
             FrmHorario form = new FrmHorario();
-            AbreForm(2, form);
+            AbreForm(3, form);
         }
 
         private void PedagogicoHorarioProfessor_Click(object sender, EventArgs e)
         {
             Program.chamadaHorario = "NovaHora";
             FrmHoraProfessor form = new FrmHoraProfessor();
-            AbreForm(1, form);
+            AbreForm(2, form);
         }
 
         private void RelatoriosHorariosProfessor_Click(object sender, EventArgs e)
@@ -193,6 +193,17 @@ namespace CesaMVC.br.com.cesa.view
         {
             FrmFornecedor form = new FrmFornecedor();
             AbreForm(2, form);
+        }
+
+        private void EstoqueProdutos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PedagogicoNotaAnual_Click(object sender, EventArgs e)
+        {
+            FrmBoletimFinal form = new FrmBoletimFinal();
+            AbreForm(0, form);
         }
     }
 }
