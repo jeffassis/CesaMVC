@@ -195,14 +195,14 @@ namespace CesaMVC.br.com.cesa.dao
             {
                 DataTable dt = new DataTable();
                 string sql = @"SELECT DISTINCT(tbd.nome) as 'DISCIPLINA',
-                (SELECT AVG(nota) FROM tb_nota AS n1 WHERE n1.aluno_id=tba.id_aluno AND n1.disciplina_id=tbd.id_disciplina AND n1.bimestre_id=1) as 'BIMESTRE 1',
-                (SELECT AVG(nota) FROM tb_nota AS n1 WHERE n1.aluno_id=tba.id_aluno AND n1.disciplina_id=tbd.id_disciplina AND n1.bimestre_id=2) as 'BIMESTRE 2',
-                (SELECT AVG(nota) FROM tb_nota AS n1 WHERE n1.aluno_id=tba.id_aluno AND n1.disciplina_id=tbd.id_disciplina AND n1.bimestre_id=3) as 'BIMESTRE 3',
-                (SELECT AVG(nota) FROM tb_nota AS n1 WHERE n1.aluno_id=tba.id_aluno AND n1.disciplina_id=tbd.id_disciplina AND n1.bimestre_id=4) as 'BIMESTRE 4',
-    	            ((SELECT AVG(nota) FROM tb_nota AS n1 WHERE n1.aluno_id=tba.id_aluno AND n1.disciplina_id=tbd.id_disciplina AND n1.bimestre_id=1) +
-                     (SELECT AVG(nota) FROM tb_nota AS n1 WHERE n1.aluno_id=tba.id_aluno AND n1.disciplina_id=tbd.id_disciplina AND n1.bimestre_id=2) +
-                     (SELECT AVG(nota) FROM tb_nota AS n1 WHERE n1.aluno_id=tba.id_aluno AND n1.disciplina_id=tbd.id_disciplina AND n1.bimestre_id=3) +
-                     (SELECT AVG(nota) FROM tb_nota AS n1 WHERE n1.aluno_id=tba.id_aluno AND n1.disciplina_id=tbd.id_disciplina AND n1.bimestre_id=4))/4 AS 'MEDIA',
+                (SELECT AVG(nota) FROM tb_nota AS n1 WHERE n1.aluno_id=tba.id_aluno AND n1.disciplina_id=tbd.id_disciplina AND n1.turma_id=tbt.id_turma AND n1.bimestre_id=1) as 'BIMESTRE 1',
+                (SELECT AVG(nota) FROM tb_nota AS n1 WHERE n1.aluno_id=tba.id_aluno AND n1.disciplina_id=tbd.id_disciplina AND n1.turma_id=tbt.id_turma AND n1.bimestre_id=2) as 'BIMESTRE 2',
+                (SELECT AVG(nota) FROM tb_nota AS n1 WHERE n1.aluno_id=tba.id_aluno AND n1.disciplina_id=tbd.id_disciplina AND n1.turma_id=tbt.id_turma AND n1.bimestre_id=3) as 'BIMESTRE 3',
+                (SELECT AVG(nota) FROM tb_nota AS n1 WHERE n1.aluno_id=tba.id_aluno AND n1.disciplina_id=tbd.id_disciplina AND n1.turma_id=tbt.id_turma AND n1.bimestre_id=4) as 'BIMESTRE 4',
+    	            ((SELECT AVG(nota) FROM tb_nota AS n1 WHERE n1.aluno_id=tba.id_aluno AND n1.disciplina_id=tbd.id_disciplina AND n1.turma_id=tbt.id_turma AND n1.bimestre_id=1) +
+                     (SELECT AVG(nota) FROM tb_nota AS n1 WHERE n1.aluno_id=tba.id_aluno AND n1.disciplina_id=tbd.id_disciplina AND n1.turma_id=tbt.id_turma AND n1.bimestre_id=2) +
+                     (SELECT AVG(nota) FROM tb_nota AS n1 WHERE n1.aluno_id=tba.id_aluno AND n1.disciplina_id=tbd.id_disciplina AND n1.turma_id=tbt.id_turma AND n1.bimestre_id=3) +
+                     (SELECT AVG(nota) FROM tb_nota AS n1 WHERE n1.aluno_id=tba.id_aluno AND n1.disciplina_id=tbd.id_disciplina AND n1.turma_id=tbt.id_turma AND n1.bimestre_id=4))/4 AS 'MEDIA',
                         turma_id
                 FROM
                     tb_nota as tbn
