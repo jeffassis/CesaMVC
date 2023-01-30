@@ -200,6 +200,12 @@
     <Compile Include="br.com.cesa.view\FrmBoletimAluno.Designer.cs">
       <DependentUpon>FrmBoletimAluno.cs</DependentUpon>
     </Compile>
+    <Compile Include="br.com.cesa.view\FrmBoletimFinal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.cesa.view\FrmBoletimFinal.Designer.cs">
+      <DependentUpon>FrmBoletimFinal.cs</DependentUpon>
+    </Compile>
     <Compile Include="br.com.cesa.view\FrmCapturarFoto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -330,6 +336,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.cesa.view\FrmBoletimAluno.resx">
       <DependentUpon>FrmBoletimAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.cesa.view\FrmBoletimFinal.resx">
+      <DependentUpon>FrmBoletimFinal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.cesa.view\FrmCapturarFoto.resx">
       <DependentUpon>FrmCapturarFoto.cs</DependentUpon>

@@ -29,6 +29,7 @@ namespace CesaMVC.br.com.cesa.view
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBoletimAluno));
@@ -44,6 +45,7 @@ namespace CesaMVC.br.com.cesa.view
             this.BtnPesquisar = new System.Windows.Forms.Button();
             this.BtnImprimir = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -168,6 +170,7 @@ namespace CesaMVC.br.com.cesa.view
             this.BtnPesquisar.Size = new System.Drawing.Size(40, 40);
             this.BtnPesquisar.TabIndex = 59;
             this.BtnPesquisar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.BtnPesquisar, "Buscar dados");
             this.BtnPesquisar.UseVisualStyleBackColor = false;
             this.BtnPesquisar.Click += new System.EventHandler(this.BtnPesquisar_Click);
             // 
@@ -182,6 +185,7 @@ namespace CesaMVC.br.com.cesa.view
             this.BtnImprimir.Size = new System.Drawing.Size(40, 40);
             this.BtnImprimir.TabIndex = 58;
             this.BtnImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.BtnImprimir, "Imprimir");
             this.BtnImprimir.UseVisualStyleBackColor = false;
             this.BtnImprimir.Click += new System.EventHandler(this.BtnImprimir_Click);
             // 
@@ -246,5 +250,6 @@ namespace CesaMVC.br.com.cesa.view
         private System.Windows.Forms.DataGridView Grid;
         private System.Windows.Forms.Button BtnPesquisar;
         private System.Windows.Forms.Button BtnImprimir;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

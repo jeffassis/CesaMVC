@@ -128,6 +128,14 @@ namespace CesaMVC.br.com.cesa.view
         {
             Limpar();
             Desabilitar();
+            
+            // Codigo para limpar o DataGridView quando o aluno estiver vazio
+            var dt = Grid.DataSource as DataTable;
+            if (dt != null)
+            {
+                dt.Rows.Clear();
+            }
+
             tabProfessor.SelectedTab = tabPage1;
         }
 
