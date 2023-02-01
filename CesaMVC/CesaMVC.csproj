@@ -250,6 +250,12 @@
     <Compile Include="br.com.cesa.view\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="br.com.cesa.view\FrmMensalidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.cesa.view\FrmMensalidade.Designer.cs">
+      <DependentUpon>FrmMensalidade.cs</DependentUpon>
+    </Compile>
     <Compile Include="br.com.cesa.view\FrmMenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -374,6 +380,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.cesa.view\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.cesa.view\FrmMensalidade.resx">
+      <DependentUpon>FrmMensalidade.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.cesa.view\FrmMenuPrincipal.resx">
       <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
@@ -514,6 +523,7 @@
     <None Include="Resources\gastos_20.png" />
     <None Include="Resources\btn_excel_241.png" />
     <None Include="Resources\notas_disciplina_20.png" />
+    <None Include="Resources\btn_servico_24.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

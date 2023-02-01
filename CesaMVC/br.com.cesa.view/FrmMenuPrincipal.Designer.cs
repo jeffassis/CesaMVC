@@ -227,7 +227,7 @@ namespace CesaMVC.br.com.cesa.view
             this.PedagogicoHorarios.ForeColor = System.Drawing.SystemColors.Highlight;
             this.PedagogicoHorarios.Image = global::CesaMVC.Properties.Resources.horario_20;
             this.PedagogicoHorarios.Name = "PedagogicoHorarios";
-            this.PedagogicoHorarios.Size = new System.Drawing.Size(180, 24);
+            this.PedagogicoHorarios.Size = new System.Drawing.Size(136, 24);
             this.PedagogicoHorarios.Text = "Horários";
             // 
             // PedagogicoHorarioProfessor
@@ -250,7 +250,7 @@ namespace CesaMVC.br.com.cesa.view
             this.notasToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Highlight;
             this.notasToolStripMenuItem.Image = global::CesaMVC.Properties.Resources.notas;
             this.notasToolStripMenuItem.Name = "notasToolStripMenuItem";
-            this.notasToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.notasToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
             this.notasToolStripMenuItem.Text = "Notas";
             // 
             // PedagogicoNotasLancamento
@@ -297,7 +297,7 @@ namespace CesaMVC.br.com.cesa.view
             this.PedagogicoTurma.ForeColor = System.Drawing.SystemColors.Highlight;
             this.PedagogicoTurma.Image = global::CesaMVC.Properties.Resources.turma_20;
             this.PedagogicoTurma.Name = "PedagogicoTurma";
-            this.PedagogicoTurma.Size = new System.Drawing.Size(180, 24);
+            this.PedagogicoTurma.Size = new System.Drawing.Size(136, 24);
             this.PedagogicoTurma.Text = "Turmas";
             // 
             // TurmaMontagemTurma
@@ -330,6 +330,7 @@ namespace CesaMVC.br.com.cesa.view
             this.FinanceiroMensalidades.Name = "FinanceiroMensalidades";
             this.FinanceiroMensalidades.Size = new System.Drawing.Size(192, 24);
             this.FinanceiroMensalidades.Text = "Mensalidades";
+            this.FinanceiroMensalidades.Click += new System.EventHandler(this.FinanceiroMensalidades_Click);
             // 
             // FinanceiroMovimentacao
             // 

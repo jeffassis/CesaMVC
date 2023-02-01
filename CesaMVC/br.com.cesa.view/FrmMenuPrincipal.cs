@@ -174,6 +174,7 @@ namespace CesaMVC.br.com.cesa.view
 
         private void CadastrosServicos_Click(object sender, EventArgs e)
         {
+            Program.chamadaServico = "NovoServico";
             FrmServico form = new FrmServico();
             AbreForm(2, form);
         }
@@ -212,6 +213,12 @@ namespace CesaMVC.br.com.cesa.view
         {
             FrmNotasDisciplina form = new FrmNotasDisciplina();
             AbreForm(0, form);
+        }
+
+        private void FinanceiroMensalidades_Click(object sender, EventArgs e)
+        {
+            FrmMensalidade form = new FrmMensalidade();
+            AbreForm(2, form);
         }
     }
 }
