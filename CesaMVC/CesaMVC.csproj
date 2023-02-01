@@ -141,6 +141,7 @@
     <Compile Include="br.com.cesa.dao\GastoDAO.cs" />
     <Compile Include="br.com.cesa.dao\HoraProfessorDAO.cs" />
     <Compile Include="br.com.cesa.dao\HorarioDAO.cs" />
+    <Compile Include="br.com.cesa.dao\MensalidadeDAO.cs" />
     <Compile Include="br.com.cesa.dao\MovimentacaoDAO.cs" />
     <Compile Include="br.com.cesa.dao\NotasDAO.cs" />
     <Compile Include="br.com.cesa.dao\ProdutoDAO.cs" />
@@ -156,6 +157,7 @@
     <Compile Include="br.com.cesa.model\Gasto.cs" />
     <Compile Include="br.com.cesa.model\HoraProfessor.cs" />
     <Compile Include="br.com.cesa.model\Horario.cs" />
+    <Compile Include="br.com.cesa.model\Mensalidade.cs" />
     <Compile Include="br.com.cesa.model\Movimentacao.cs" />
     <Compile Include="br.com.cesa.model\Notas.cs" />
     <Compile Include="br.com.cesa.model\Produto.cs" />
