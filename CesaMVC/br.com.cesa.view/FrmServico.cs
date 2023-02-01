@@ -185,5 +185,16 @@ namespace CesaMVC.br.com.cesa.view
             Desabilitar();
             LimparCampos();
         }
+
+        private void Grid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (Program.chamadaServico == "servico")
+            {
+                Program.idServico = Grid.CurrentRow.Cells[0].Value.ToString();
+                Program.nomeServico = Grid.CurrentRow.Cells[1].Value.ToString();
+                Program.valorServico = Grid.CurrentRow.Cells[2].Value.ToString();
+                Close();
+            }
+        }
     }
 }

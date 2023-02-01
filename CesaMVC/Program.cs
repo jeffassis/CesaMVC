@@ -25,6 +25,12 @@ namespace CesaMVC
         public static string idAluno;
 
         // Variaveis para chamar tela horario
+        public static string chamadaServico;
+        public static string idServico;
+        public static string nomeServico;
+        public static string valorServico;
+
+        // Variaveis para chamar tela horario
         public static string chamadaHorario;
         public static string idHorario;
         public static string nomeHorario;

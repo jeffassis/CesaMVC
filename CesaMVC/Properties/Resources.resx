@@ -124,11 +124,8 @@
   <data name="mont_turma" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mont_turma.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logOff_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logOff_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="estoque_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\estoque_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="notas_disciplina_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\notas_disciplina_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cadastros_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cadastros_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,9 +151,6 @@
   <data name="login_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sem-foto" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sem-foto.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="circular_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\circular_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -169,8 +163,8 @@
   <data name="btn_imprimir_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn_imprimir_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btn_excel_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn_excel_241.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ferramentas_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ferramentas_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -180,6 +174,9 @@
   </data>
   <data name="horario_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\horario_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logOn_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logOn_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="disciplina_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\disciplina_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,8 +199,8 @@
   <data name="aluno_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\aluno_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="login_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\login_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btn_excel_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_excel_241.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="historicos_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\historicos_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -213,6 +210,9 @@
   </data>
   <data name="btn_cancelar_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn_cancelar_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cesa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cesa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="gastos_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gastos_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -232,11 +232,11 @@
   <data name="btn_novo_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn_novo_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pedagogico_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pedagogico_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="login_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\login_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logOn_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logOn_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sem-foto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sem-foto.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="relatorio_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\relatorio_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -256,34 +256,37 @@
   <data name="declaracao_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\declaracao_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="notas_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\notas_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="financeiro_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\financeiro_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btn_cep_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn_cep_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="notas_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\notas_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="produto_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\produto_201.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="estoque_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\estoque_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btn_editar_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn_editar_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="produto_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\produto_201.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="livros_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\livros_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ferramentas_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ferramentas_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logOff_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logOff_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cesa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cesa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pedagogico_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pedagogico_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="notas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\notas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="notas_disciplina_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\notas_disciplina_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btn_servico_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_servico_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
