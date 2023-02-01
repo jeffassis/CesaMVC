@@ -169,10 +169,9 @@ namespace CesaMVC.br.com.cesa.view
             CbAluno.SelectedIndex = -1;
 
             // Codigo para limpar o DataGridView quando o aluno estiver vazio
-            var dt = Grid.DataSource as DataTable;
-            if (dt != null)
+            if (Grid.DataSource is DataTable dt)
             {
-                dt.Rows.Clear();  
+                dt.Rows.Clear();
             }
         }
 
@@ -268,7 +267,22 @@ namespace CesaMVC.br.com.cesa.view
 
         private void BtnPesquisar_Click(object sender, EventArgs e)
         {
-            Listar();
+            if (CbAluno.Text == "")
+            {
+                MessageBox.Show("Os campos não podem ser vazios!", "ERROR ao consultar!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                CbAluno.Focus();
+
+                // Codigo para limpar o DataGridView quando o aluno estiver vazio
+                if (Grid.DataSource is DataTable dt)
+                {
+                    dt.Rows.Clear();
+                }
+                return;
+            }
+            else
+            {
+                Listar();
+            }
         }
     }
 }

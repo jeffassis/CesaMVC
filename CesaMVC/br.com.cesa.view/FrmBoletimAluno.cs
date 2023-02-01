@@ -106,8 +106,7 @@ namespace CesaMVC.br.com.cesa.view
                 CbAluno.Focus();
 
                 // Codigo para limpar o DataGridView quando o aluno estiver vazio
-                var dt = Grid.DataSource as DataTable;
-                if (dt != null)
+                if (Grid.DataSource is DataTable dt)
                 {
                     dt.Rows.Clear();
                 }
