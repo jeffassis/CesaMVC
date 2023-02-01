@@ -109,6 +109,7 @@ namespace CesaMVC.br.com.cesa.view
         {
             Program.chamadaAlunos = "aluno";
             FrmAluno form = new FrmAluno();
+            form.BtnNovo.Visible = false;
             form.Show();
         }
 

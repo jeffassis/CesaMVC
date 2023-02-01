@@ -95,6 +95,7 @@ namespace CesaMVC.br.com.cesa.view
         {
             Program.chamadaAlunos = "NovoAluno";
             FrmAluno form = new FrmAluno();
+            form.BtnNovo.Visible = true;
             AbreForm(1, form);
         }
 
@@ -197,7 +198,8 @@ namespace CesaMVC.br.com.cesa.view
 
         private void EstoqueProdutos_Click(object sender, EventArgs e)
         {
-
+            FrmProduto form = new FrmProduto();
+            AbreForm(2, form);
         }
 
         private void PedagogicoNotaAnual_Click(object sender, EventArgs e)
