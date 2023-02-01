@@ -272,6 +272,12 @@
     <Compile Include="br.com.cesa.view\FrmNotasDisciplina.Designer.cs">
       <DependentUpon>FrmNotasDisciplina.cs</DependentUpon>
     </Compile>
+    <Compile Include="br.com.cesa.view\FrmProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.cesa.view\FrmProduto.Designer.cs">
+      <DependentUpon>FrmProduto.cs</DependentUpon>
+    </Compile>
     <Compile Include="br.com.cesa.view\FrmProfessor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -378,6 +384,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.cesa.view\FrmNotasDisciplina.resx">
       <DependentUpon>FrmNotasDisciplina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.cesa.view\FrmProduto.resx">
+      <DependentUpon>FrmProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.cesa.view\FrmProfessor.resx">
       <DependentUpon>FrmProfessor.cs</DependentUpon>

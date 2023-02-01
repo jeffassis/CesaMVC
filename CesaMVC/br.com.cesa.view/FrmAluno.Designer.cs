@@ -712,7 +712,6 @@ namespace CesaMVC.br.com.cesa.view
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.DataGridView Grid;
         private System.Windows.Forms.TextBox TxtPesquisar;
-        private System.Windows.Forms.Button BtnNovo;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button BtnCancelar;
@@ -750,5 +749,6 @@ namespace CesaMVC.br.com.cesa.view
         private System.Windows.Forms.PictureBox Foto_aluno;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ToolTip toolTip1;
+        public System.Windows.Forms.Button BtnNovo;
     }
 }
