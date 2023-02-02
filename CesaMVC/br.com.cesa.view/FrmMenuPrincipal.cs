@@ -75,8 +75,8 @@ namespace CesaMVC.br.com.cesa.view
         {
             MessageBox.Show(@"Quality Engineer: Jefferson Assis " + "\n" +
                 "Tel:(21) 981792-2516" + "\n" +
-                "Email: jeff-assis@hotmail.com" + "\n" +
-                "Github: jeffassis", "Sobre Nós", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                "Email: jeff-assis@hotmail.com"
+               ,"Sobre Nós", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void FerramentasBackup_Click(object sender, EventArgs e)
