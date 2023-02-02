@@ -178,6 +178,12 @@
     <Compile Include="br.com.cesa.report\Report_BoletimAluno.Designer.cs">
       <DependentUpon>Report_BoletimAluno.cs</DependentUpon>
     </Compile>
+    <Compile Include="br.com.cesa.report\Report_EntradaSaida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.cesa.report\Report_EntradaSaida.Designer.cs">
+      <DependentUpon>Report_EntradaSaida.cs</DependentUpon>
+    </Compile>
     <Compile Include="br.com.cesa.report\Report_HoraProfessor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -338,12 +344,16 @@
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="br.com.cesa.report\RelBoletimAluno.rdlc" />
     <EmbeddedResource Include="br.com.cesa.report\RelHoraProfessor.rdlc" />
+    <EmbeddedResource Include="br.com.cesa.report\RelMovimentacao.rdlc" />
     <EmbeddedResource Include="br.com.cesa.report\RelTurma.rdlc" />
     <EmbeddedResource Include="br.com.cesa.report\Report_AlunoTurma.resx">
       <DependentUpon>Report_AlunoTurma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.cesa.report\Report_BoletimAluno.resx">
       <DependentUpon>Report_BoletimAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.cesa.report\Report_EntradaSaida.resx">
+      <DependentUpon>Report_EntradaSaida.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.cesa.report\Report_HoraProfessor.resx">
       <DependentUpon>Report_HoraProfessor.cs</DependentUpon>

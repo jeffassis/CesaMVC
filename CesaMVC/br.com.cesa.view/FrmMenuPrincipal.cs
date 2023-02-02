@@ -220,5 +220,11 @@ namespace CesaMVC.br.com.cesa.view
             FrmMensalidade form = new FrmMensalidade();
             AbreForm(2, form);
         }
+
+        private void FinanceiroEntradaSaida_Click(object sender, EventArgs e)
+        {
+            Report_EntradaSaida form = new Report_EntradaSaida();
+            AbreForm(2, form);
+        }
     }
 }
