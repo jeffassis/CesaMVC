@@ -31,7 +31,6 @@ namespace CesaMVC.br.com.cesa.view
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProduto));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -50,6 +49,7 @@ namespace CesaMVC.br.com.cesa.view
             this.Grid = new System.Windows.Forms.DataGridView();
             this.tabProduto = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.foto_produto2 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.TxtPesquisar = new System.Windows.Forms.TextBox();
             this.BtnNovo = new System.Windows.Forms.Button();
@@ -64,6 +64,7 @@ namespace CesaMVC.br.com.cesa.view
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
             this.tabProduto.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.foto_produto2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -83,6 +84,7 @@ namespace CesaMVC.br.com.cesa.view
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel1.Controls.Add(this.foto_produto2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -224,33 +226,26 @@ namespace CesaMVC.br.com.cesa.view
             this.Grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Grid.BackgroundColor = System.Drawing.Color.White;
             this.Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Grid.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Grid.Location = new System.Drawing.Point(16, 103);
+            this.Grid.Location = new System.Drawing.Point(16, 87);
             this.Grid.MultiSelect = false;
             this.Grid.Name = "Grid";
             this.Grid.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.Grid.RowHeadersVisible = false;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Grid.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Grid.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Grid.Size = new System.Drawing.Size(846, 251);
+            this.Grid.Size = new System.Drawing.Size(846, 308);
             this.Grid.TabIndex = 53;
             this.Grid.TabStop = false;
+            this.Grid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellClick);
             this.Grid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellDoubleClick);
             // 
             // tabProduto
@@ -260,7 +255,7 @@ namespace CesaMVC.br.com.cesa.view
             this.tabProduto.Location = new System.Drawing.Point(12, 106);
             this.tabProduto.Name = "tabProduto";
             this.tabProduto.SelectedIndex = 0;
-            this.tabProduto.Size = new System.Drawing.Size(885, 397);
+            this.tabProduto.Size = new System.Drawing.Size(885, 431);
             this.tabProduto.TabIndex = 4;
             // 
             // tabPage1
@@ -273,16 +268,26 @@ namespace CesaMVC.br.com.cesa.view
             this.tabPage1.Location = new System.Drawing.Point(4, 26);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(877, 367);
+            this.tabPage1.Size = new System.Drawing.Size(877, 401);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Consultar";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // foto_produto2
+            // 
+            this.foto_produto2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.foto_produto2.Location = new System.Drawing.Point(782, 2);
+            this.foto_produto2.Name = "foto_produto2";
+            this.foto_produto2.Size = new System.Drawing.Size(96, 96);
+            this.foto_produto2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.foto_produto2.TabIndex = 57;
+            this.foto_produto2.TabStop = false;
             // 
             // pictureBox2
             // 
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox2.Image = global::CesaMVC.Properties.Resources.pesquisar_20;
-            this.pictureBox2.Location = new System.Drawing.Point(493, 36);
+            this.pictureBox2.Location = new System.Drawing.Point(493, 23);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(48, 27);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -292,7 +297,7 @@ namespace CesaMVC.br.com.cesa.view
             // TxtPesquisar
             // 
             this.TxtPesquisar.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.TxtPesquisar.Location = new System.Drawing.Point(540, 36);
+            this.TxtPesquisar.Location = new System.Drawing.Point(540, 23);
             this.TxtPesquisar.Name = "TxtPesquisar";
             this.TxtPesquisar.Size = new System.Drawing.Size(322, 27);
             this.TxtPesquisar.TabIndex = 1;
@@ -304,7 +309,7 @@ namespace CesaMVC.br.com.cesa.view
             this.BtnNovo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnNovo.ForeColor = System.Drawing.Color.White;
             this.BtnNovo.Image = global::CesaMVC.Properties.Resources.btn_novo_24;
-            this.BtnNovo.Location = new System.Drawing.Point(16, 19);
+            this.BtnNovo.Location = new System.Drawing.Point(16, 6);
             this.BtnNovo.Name = "BtnNovo";
             this.BtnNovo.Size = new System.Drawing.Size(140, 60);
             this.BtnNovo.TabIndex = 2;
@@ -336,7 +341,7 @@ namespace CesaMVC.br.com.cesa.view
             this.tabPage2.Location = new System.Drawing.Point(4, 26);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(877, 367);
+            this.tabPage2.Size = new System.Drawing.Size(877, 401);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Dados Produtos";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -357,7 +362,7 @@ namespace CesaMVC.br.com.cesa.view
             this.BtnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCancelar.ForeColor = System.Drawing.Color.White;
             this.BtnCancelar.Image = global::CesaMVC.Properties.Resources.btn_cancelar_24;
-            this.BtnCancelar.Location = new System.Drawing.Point(543, 281);
+            this.BtnCancelar.Location = new System.Drawing.Point(543, 294);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(140, 60);
             this.BtnCancelar.TabIndex = 10;
@@ -373,7 +378,7 @@ namespace CesaMVC.br.com.cesa.view
             this.BtnExcluir.Enabled = false;
             this.BtnExcluir.ForeColor = System.Drawing.Color.White;
             this.BtnExcluir.Image = global::CesaMVC.Properties.Resources.btn_excluir_24;
-            this.BtnExcluir.Location = new System.Drawing.Point(397, 281);
+            this.BtnExcluir.Location = new System.Drawing.Point(397, 294);
             this.BtnExcluir.Name = "BtnExcluir";
             this.BtnExcluir.Size = new System.Drawing.Size(140, 60);
             this.BtnExcluir.TabIndex = 9;
@@ -389,7 +394,7 @@ namespace CesaMVC.br.com.cesa.view
             this.BtnEditar.Enabled = false;
             this.BtnEditar.ForeColor = System.Drawing.Color.White;
             this.BtnEditar.Image = global::CesaMVC.Properties.Resources.btn_editar_24;
-            this.BtnEditar.Location = new System.Drawing.Point(251, 281);
+            this.BtnEditar.Location = new System.Drawing.Point(251, 294);
             this.BtnEditar.Name = "BtnEditar";
             this.BtnEditar.Size = new System.Drawing.Size(140, 60);
             this.BtnEditar.TabIndex = 8;
@@ -405,7 +410,7 @@ namespace CesaMVC.br.com.cesa.view
             this.BtnSalvar.Enabled = false;
             this.BtnSalvar.ForeColor = System.Drawing.Color.White;
             this.BtnSalvar.Image = global::CesaMVC.Properties.Resources.btn_salvar_24;
-            this.BtnSalvar.Location = new System.Drawing.Point(102, 281);
+            this.BtnSalvar.Location = new System.Drawing.Point(102, 294);
             this.BtnSalvar.Name = "BtnSalvar";
             this.BtnSalvar.Size = new System.Drawing.Size(140, 60);
             this.BtnSalvar.TabIndex = 7;
@@ -419,7 +424,7 @@ namespace CesaMVC.br.com.cesa.view
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(901, 508);
+            this.ClientSize = new System.Drawing.Size(901, 549);
             this.Controls.Add(this.tabProduto);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -439,6 +444,7 @@ namespace CesaMVC.br.com.cesa.view
             this.tabProduto.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.foto_produto2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
@@ -475,5 +481,6 @@ namespace CesaMVC.br.com.cesa.view
         private System.Windows.Forms.Button BtnEditar;
         private System.Windows.Forms.Button BtnSalvar;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox foto_produto2;
     }
 }

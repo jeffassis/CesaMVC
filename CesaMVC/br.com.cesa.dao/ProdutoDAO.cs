@@ -170,7 +170,12 @@ namespace CesaMVC.br.com.cesa.dao
             try
             {
                 DataTable dt = new DataTable();
-                string sql = "SELECT * FROM tb_produto WHERE nome like @nome";
+                string sql = @"SELECT tbp.id_produto, tbp.nome, tbp.descricao, tbf.nome, tbp.estoque, tbp.fornecedor_id,
+                                        tbp.valor_venda, tbp.valor_compra, tbp.data, tbp.imagem
+                                FROM tb_produto as tbp
+                                INNER JOIN tb_fornecedor as tbf ON tbf.id_fornecedor = tbp.fornecedor_id
+                                WHERE tbp.nome like @nome
+                                ORDER BY tbp.nome ";
                 MySqlCommand cmd = new MySqlCommand(sql, vcon);
                 cmd.Parameters.AddWithValue("@nome", nome);
                 vcon.Open();
