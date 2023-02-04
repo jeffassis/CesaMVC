@@ -288,6 +288,7 @@ namespace CesaMVC.br.com.cesa.view
         private void LimparFoto()
         {
             Foto_produto.Image = Properties.Resources.sem_foto;
+            foto_produto2.Image = Properties.Resources.sem_foto;
             foto = "img/sem-foto.jpg";
         }
 
@@ -323,7 +324,7 @@ namespace CesaMVC.br.com.cesa.view
             else
             {
                 Foto_produto.Image = Properties.Resources.sem_foto;
-            }
+            }           
 
             tabProduto.SelectedTab = tabPage2;
             Habilitar();            
@@ -335,12 +336,27 @@ namespace CesaMVC.br.com.cesa.view
             ProdutoAntigo = Grid.CurrentRow.Cells[1].Value.ToString();
         }
 
+        private void Grid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Foto do tab1
+            if (Grid.CurrentRow.Cells[9].Value != DBNull.Value)
+            {
+                byte[] imagem = (byte[])Grid.CurrentRow.Cells[9].Value;
+                MemoryStream ms = new MemoryStream(imagem);
+                foto_produto2.Image = System.Drawing.Image.FromStream(ms);
+            }
+            else
+            {
+                foto_produto2.Image = Properties.Resources.sem_foto;
+            }
+        }
+
         private void TxtPesquisar_TextChanged(object sender, EventArgs e)
         {
             string nome = "%" + TxtPesquisar.Text + "%";
 
             ProdutoDAO dao = new ProdutoDAO();
             Grid.DataSource = dao.ListarProdutoPorNome(nome);
-        }
+        }        
     }
 }
