@@ -177,5 +177,38 @@ namespace CesaMVC.br.com.cesa.dao
                 return 0;
             }
         }
+
+        public DataTable ConsultarMensalidade(string aluno, string turma, string situacao)
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                string sql = @"SELECT tbm.id_mensalidade, tbt.nome, tba.nome, tbs.nome, tbs.valor, tbm.data, tbm.funcionario,
+                                            tbm.situacao, tbm.mes, tbm.observacao
+                                FROM tb_mensalidade AS tbm
+                                INNER JOIN tb_turma as tbt ON id_turma=turma_id
+                                INNER JOIN tb_aluno as tba ON id_aluno=aluno_id
+                                INNER JOIN tb_servico as tbs ON id_servico=servico_id
+                                WHERE tbm.aluno_id=@aluno and tbm.turma_id=@turma and situacao=@situacao
+                                ORDER BY tbm.mes desc";
+                MySqlCommand cmd = new MySqlCommand(sql, vcon);
+                cmd.Parameters.AddWithValue("@aluno", aluno);
+                cmd.Parameters.AddWithValue("@turma", turma);
+                cmd.Parameters.AddWithValue("@situacao", situacao);
+                vcon.Open();
+                cmd.ExecuteNonQuery();
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                da.Fill(dt);
+                vcon.Close();
+                vcon.Dispose();
+                vcon.ClearAllPoolsAsync();
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao executar a lista: " + ex);
+                return null;
+            }
+        }
     }
 }

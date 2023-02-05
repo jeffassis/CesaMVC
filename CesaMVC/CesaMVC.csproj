@@ -328,11 +328,11 @@
     <Compile Include="br.com.cesa.view\FrmUsuario.Designer.cs">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="br.com.cesa.view\FrmMontTurma.cs">
+    <Compile Include="br.com.cesa.view\FrmMatricula.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="br.com.cesa.view\FrmMontTurma.Designer.cs">
-      <DependentUpon>FrmMontTurma.cs</DependentUpon>
+    <Compile Include="br.com.cesa.view\FrmMatricula.Designer.cs">
+      <DependentUpon>FrmMatricula.cs</DependentUpon>
     </Compile>
     <Compile Include="cesadbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -427,8 +427,8 @@
     <EmbeddedResource Include="br.com.cesa.view\FrmUsuario.resx">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="br.com.cesa.view\FrmMontTurma.resx">
-      <DependentUpon>FrmMontTurma.cs</DependentUpon>
+    <EmbeddedResource Include="br.com.cesa.view\FrmMatricula.resx">
+      <DependentUpon>FrmMatricula.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -534,6 +534,10 @@
     <None Include="Resources\btn_excel_241.png" />
     <None Include="Resources\notas_disciplina_20.png" />
     <None Include="Resources\btn_servico_24.png" />
+    <None Include="Resources\mensalidade_menu_20.png" />
+    <None Include="Resources\consultar_20.png" />
+    <None Include="Resources\calendar_20.png" />
+    <None Include="Resources\calendar_24.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

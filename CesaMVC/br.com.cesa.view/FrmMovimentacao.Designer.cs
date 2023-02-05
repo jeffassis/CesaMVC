@@ -144,7 +144,7 @@ namespace CesaMVC.br.com.cesa.view
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblTotal.Location = new System.Drawing.Point(764, 331);
+            this.lblTotal.Location = new System.Drawing.Point(757, 331);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(18, 19);
             this.lblTotal.TabIndex = 50;
@@ -155,7 +155,7 @@ namespace CesaMVC.br.com.cesa.view
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label5.Location = new System.Drawing.Point(708, 331);
+            this.label5.Location = new System.Drawing.Point(701, 331);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 19);
             this.label5.TabIndex = 49;

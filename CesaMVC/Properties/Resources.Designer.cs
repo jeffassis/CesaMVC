@@ -243,6 +243,16 @@ namespace CesaMVC.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap calendar_24 {
+            get {
+                object obj = ResourceManager.GetObject("calendar_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap capturar_foto_20 {
             get {
                 object obj = ResourceManager.GetObject("capturar_foto_20", resourceCulture);
@@ -266,6 +276,16 @@ namespace CesaMVC.Properties {
         internal static System.Drawing.Bitmap circular_20 {
             get {
                 object obj = ResourceManager.GetObject("circular_20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap consultar_20 {
+            get {
+                object obj = ResourceManager.GetObject("consultar_20", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -453,6 +473,16 @@ namespace CesaMVC.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap matricula {
+            get {
+                object obj = ResourceManager.GetObject("matricula", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mensalidade_20 {
             get {
                 object obj = ResourceManager.GetObject("mensalidade_20", resourceCulture);
@@ -463,9 +493,9 @@ namespace CesaMVC.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap mont_turma {
+        internal static System.Drawing.Bitmap mensalidade_menu_20 {
             get {
-                object obj = ResourceManager.GetObject("mont_turma", resourceCulture);
+                object obj = ResourceManager.GetObject("mensalidade_menu_20", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

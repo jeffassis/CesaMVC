@@ -50,6 +50,8 @@ namespace CesaMVC.br.com.cesa.view
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.CbAno = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
@@ -58,6 +60,8 @@ namespace CesaMVC.br.com.cesa.view
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.CbAno);
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.BtnCancelar);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.cbTurno);
@@ -284,6 +288,26 @@ namespace CesaMVC.br.com.cesa.view
             this.panel2.Size = new System.Drawing.Size(573, 100);
             this.panel2.TabIndex = 1;
             // 
+            // CbAno
+            // 
+            this.CbAno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbAno.Enabled = false;
+            this.CbAno.FormattingEnabled = true;
+            this.CbAno.Location = new System.Drawing.Point(203, 90);
+            this.CbAno.Name = "CbAno";
+            this.CbAno.Size = new System.Drawing.Size(125, 29);
+            this.CbAno.TabIndex = 38;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(199, 69);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(49, 19);
+            this.label5.TabIndex = 37;
+            this.label5.Text = "Ano.:";
+            // 
             // FrmTurma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -332,5 +356,7 @@ namespace CesaMVC.br.com.cesa.view
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ComboBox CbAno;
+        private System.Windows.Forms.Label label5;
     }
 }

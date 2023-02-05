@@ -12,5 +12,6 @@ namespace CesaMVC.br.com.cesa.model
         public string Nome { get; set; }
         public string Serie { get; set; }
         public string Turno { get; set; }
+        public int AnoId { get; set; }
     }
 }
