@@ -27,9 +27,10 @@ namespace CesaMVC.br.com.cesa.view
             Grid.Columns[1].HeaderText = "NOME";
             Grid.Columns[2].HeaderText = "SERIE";
             Grid.Columns[3].HeaderText = "TURNO";
+            Grid.Columns[4].HeaderText = "ANO";
 
             // Visibilidade das Colunas
-            //Grid.Columns[3].Visible = false;
+            Grid.Columns[0].Visible = false;
 
             // Tamanho da Letra do Header antes devemos colocar VisualStyles como "FALSE"
             Grid.EnableHeadersVisualStyles = false;
@@ -38,20 +39,19 @@ namespace CesaMVC.br.com.cesa.view
             Grid.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.AliceBlue;
 
             // O Header so fica centralizado se desabilitar a propriedade de ordenacao
-            Grid.Columns[0].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            Grid.Columns[0].SortMode = DataGridViewColumnSortMode.NotSortable;
             Grid.Columns[2].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             Grid.Columns[2].SortMode = DataGridViewColumnSortMode.NotSortable;
             Grid.Columns[3].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             Grid.Columns[3].SortMode = DataGridViewColumnSortMode.NotSortable;
+            Grid.Columns[4].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            Grid.Columns[4].SortMode = DataGridViewColumnSortMode.NotSortable;
 
             // Colocar valores centralizados na celula
-            Grid.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             Grid.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             Grid.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            Grid.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             // Define tamanho da Coluna
-            Grid.Columns[0].Width = 35;
             Grid.Columns[2].Width = 100;
             Grid.Columns[3].Width = 90;
         }
@@ -65,10 +65,19 @@ namespace CesaMVC.br.com.cesa.view
             FormatarDG();
         }
 
+        private void ComboAno()
+        {
+            TurmaDAO dao = new TurmaDAO();
+            CbAno.DataSource = dao.ListarAno();
+            CbAno.DisplayMember = "ano";
+            CbAno.ValueMember = "id_ano";
+        }
+
         private void LimparCampos()
         {
             txtNome.Text = txtSerie.Text = string.Empty;
             cbTurno.SelectedIndex = 0;
+            CbAno.SelectedIndex = 0;
         }
 
         private void Habilitar()
@@ -76,6 +85,7 @@ namespace CesaMVC.br.com.cesa.view
             txtNome.Enabled = true;
             txtSerie.Enabled = true;
             cbTurno.Enabled = true;
+            CbAno.Enabled = true;
             txtNome.Focus();
         }
 
@@ -89,10 +99,12 @@ namespace CesaMVC.br.com.cesa.view
             txtNome.Enabled = false;
             txtSerie.Enabled = false;
             cbTurno.Enabled = false;
+            CbAno.Enabled = false;
         }
 
         private void FrmTurma_Load(object sender, EventArgs e)
         {
+            ComboAno();
             Listar();
         }
 
@@ -125,7 +137,8 @@ namespace CesaMVC.br.com.cesa.view
             {
                 Nome = txtNome.Text,
                 Serie = txtSerie.Text,
-                Turno = cbTurno.Text
+                Turno = cbTurno.Text,
+                AnoId = int.Parse(CbAno.SelectedValue.ToString())
             };
             TurmaDAO dao = new TurmaDAO();
             // Verifica se a turma ja existe
@@ -158,7 +171,8 @@ namespace CesaMVC.br.com.cesa.view
             {
                 Nome = txtNome.Text,
                 Serie = txtSerie.Text,
-                Turno = cbTurno.Text
+                Turno = cbTurno.Text,
+                AnoId = int.Parse(CbAno.SelectedValue.ToString())
             };
             TurmaDAO dao = new TurmaDAO();
             // Verifica se a turma ja existe            
@@ -186,6 +200,7 @@ namespace CesaMVC.br.com.cesa.view
             txtNome.Text = Grid.CurrentRow.Cells[1].Value.ToString();
             txtSerie.Text = Grid.CurrentRow.Cells[2].Value.ToString();
             cbTurno.Text = Grid.CurrentRow.Cells[3].Value.ToString();
+            CbAno.Text = Grid.CurrentRow.Cells[4].Value.ToString();
 
             Habilitar();
             BtnEditar.Enabled = true;

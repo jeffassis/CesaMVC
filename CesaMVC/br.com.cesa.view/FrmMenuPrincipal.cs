@@ -107,7 +107,7 @@ namespace CesaMVC.br.com.cesa.view
 
         private void TurmaMontagemTurma_Click(object sender, EventArgs e)
         {
-            FrmMontTurma form = new FrmMontTurma();
+            FrmMatricula form = new FrmMatricula();
             AbreForm(2, form);
         }
 
@@ -215,15 +215,21 @@ namespace CesaMVC.br.com.cesa.view
             AbreForm(0, form);
         }
 
-        private void FinanceiroMensalidades_Click(object sender, EventArgs e)
+        private void FinanceiroEntradaSaida_Click(object sender, EventArgs e)
+        {
+            Report_EntradaSaida form = new Report_EntradaSaida();
+            AbreForm(2, form);
+        }
+
+        private void FinanceiroMensalidadeReceber_Click(object sender, EventArgs e)
         {
             FrmMensalidade form = new FrmMensalidade();
             AbreForm(2, form);
         }
 
-        private void FinanceiroEntradaSaida_Click(object sender, EventArgs e)
+        private void PedagogicoTurma_Click(object sender, EventArgs e)
         {
-            Report_EntradaSaida form = new Report_EntradaSaida();
+            FrmMatricula form = new FrmMatricula();
             AbreForm(2, form);
         }
     }

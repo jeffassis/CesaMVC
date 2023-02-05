@@ -12,10 +12,10 @@ using System.Windows.Forms;
 
 namespace CesaMVC.br.com.cesa.view
 {
-    public partial class FrmMontTurma : Form
+    public partial class FrmMatricula : Form
     {
         string idSelecionado;
-        public FrmMontTurma()
+        public FrmMatricula()
         {
             InitializeComponent();
         }
@@ -64,16 +64,33 @@ namespace CesaMVC.br.com.cesa.view
             FormatarDG();
         }
 
-        private void CarregarComboBox()
+        private void ComboAno()
         {
             TurmaDAO dao = new TurmaDAO();
-            CbTurma.DataSource = dao.ListarTurma();
+            CbAnoLetivo.DataSource = dao.ListarAno();
+            CbAnoLetivo.DisplayMember = "ano";
+            CbAnoLetivo.ValueMember = "id_ano";
+        }
+
+        private void ComboTurma()
+        {
+            TurmaDAO dao = new TurmaDAO();
+            CbTurma.DataSource = dao.ListarTurmaPorAno(int.Parse(CbAnoLetivo.SelectedValue.ToString()));
             CbTurma.DisplayMember = "nome";
             CbTurma.ValueMember = "id_turma";
         }
 
+        private void CbAnoLetivo_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            if (CbAnoLetivo.SelectedValue != null)
+            {
+                ComboTurma();
+            }
+        }
+
         private void Habilitar()
-        {            
+        {
+            BtnSalvar.Enabled = true;
             CbTurma.Enabled = true;
             BtnAluno.Enabled = true;
             txtAluno.Focus();
@@ -81,6 +98,8 @@ namespace CesaMVC.br.com.cesa.view
 
         private void Desabilitar()
         {
+            BtnSalvar.Enabled = false;
+            BtnExcluir.Enabled = false;
             txtAluno.Enabled = false;
             //cbTurma.Enabled = false;
             BtnAluno.Enabled = false;
@@ -94,7 +113,7 @@ namespace CesaMVC.br.com.cesa.view
 
         private void FrmMontTurma_Load(object sender, EventArgs e)
         {
-            CarregarComboBox();
+            ComboAno();            
         }
 
         private void BtnNovo_Click(object sender, EventArgs e)
@@ -115,9 +134,7 @@ namespace CesaMVC.br.com.cesa.view
 
         private void FrmMontTurma_Activated(object sender, EventArgs e)
         {
-            txtAluno.Text = Program.nomeAluno;
-            // Passo o id da turma para o relatorio
-            //Program.idSerieTurma = CbTurma.SelectedValue.ToString();
+            txtAluno.Text = Program.nomeAluno;            
         }
 
         private void CbTurma_SelectionChangeCommitted(object sender, EventArgs e)
@@ -173,6 +190,6 @@ namespace CesaMVC.br.com.cesa.view
         {
             Report_AlunoTurma form = new Report_AlunoTurma();
             form.ShowDialog();
-        }
+        }       
     }
 }

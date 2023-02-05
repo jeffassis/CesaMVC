@@ -50,9 +50,10 @@ namespace CesaMVC.br.com.cesa.view
             this.PedagogicoNotaAnual = new System.Windows.Forms.ToolStripMenuItem();
             this.PedagogicoNotasDisciplina = new System.Windows.Forms.ToolStripMenuItem();
             this.PedagogicoTurma = new System.Windows.Forms.ToolStripMenuItem();
-            this.TurmaMontagemTurma = new System.Windows.Forms.ToolStripMenuItem();
             this.menuFinanceiro = new System.Windows.Forms.ToolStripMenuItem();
             this.FinanceiroMensalidades = new System.Windows.Forms.ToolStripMenuItem();
+            this.FinanceiroMensalidadeConsultar = new System.Windows.Forms.ToolStripMenuItem();
+            this.FinanceiroMensalidadeReceber = new System.Windows.Forms.ToolStripMenuItem();
             this.FinanceiroMovimentacao = new System.Windows.Forms.ToolStripMenuItem();
             this.FinanceiroGastos = new System.Windows.Forms.ToolStripMenuItem();
             this.menuEstoque = new System.Windows.Forms.ToolStripMenuItem();
@@ -229,7 +230,7 @@ namespace CesaMVC.br.com.cesa.view
             this.PedagogicoHorarios.ForeColor = System.Drawing.SystemColors.Highlight;
             this.PedagogicoHorarios.Image = global::CesaMVC.Properties.Resources.horario_20;
             this.PedagogicoHorarios.Name = "PedagogicoHorarios";
-            this.PedagogicoHorarios.Size = new System.Drawing.Size(136, 24);
+            this.PedagogicoHorarios.Size = new System.Drawing.Size(180, 24);
             this.PedagogicoHorarios.Text = "Horários";
             // 
             // PedagogicoHorarioProfessor
@@ -252,7 +253,7 @@ namespace CesaMVC.br.com.cesa.view
             this.notasToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Highlight;
             this.notasToolStripMenuItem.Image = global::CesaMVC.Properties.Resources.notas;
             this.notasToolStripMenuItem.Name = "notasToolStripMenuItem";
-            this.notasToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
+            this.notasToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.notasToolStripMenuItem.Text = "Notas";
             // 
             // PedagogicoNotasLancamento
@@ -293,23 +294,13 @@ namespace CesaMVC.br.com.cesa.view
             // 
             // PedagogicoTurma
             // 
-            this.PedagogicoTurma.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.TurmaMontagemTurma});
             this.PedagogicoTurma.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PedagogicoTurma.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.PedagogicoTurma.Image = global::CesaMVC.Properties.Resources.turma_20;
+            this.PedagogicoTurma.Image = global::CesaMVC.Properties.Resources.matricula;
             this.PedagogicoTurma.Name = "PedagogicoTurma";
-            this.PedagogicoTurma.Size = new System.Drawing.Size(136, 24);
-            this.PedagogicoTurma.Text = "Turmas";
-            // 
-            // TurmaMontagemTurma
-            // 
-            this.TurmaMontagemTurma.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.TurmaMontagemTurma.Image = global::CesaMVC.Properties.Resources.mont_turma;
-            this.TurmaMontagemTurma.Name = "TurmaMontagemTurma";
-            this.TurmaMontagemTurma.Size = new System.Drawing.Size(236, 24);
-            this.TurmaMontagemTurma.Text = "Montagem de Turmas";
-            this.TurmaMontagemTurma.Click += new System.EventHandler(this.TurmaMontagemTurma_Click);
+            this.PedagogicoTurma.Size = new System.Drawing.Size(180, 24);
+            this.PedagogicoTurma.Text = "Matriculas";
+            this.PedagogicoTurma.Click += new System.EventHandler(this.PedagogicoTurma_Click);
             // 
             // menuFinanceiro
             // 
@@ -326,13 +317,32 @@ namespace CesaMVC.br.com.cesa.view
             // 
             // FinanceiroMensalidades
             // 
+            this.FinanceiroMensalidades.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.FinanceiroMensalidadeConsultar,
+            this.FinanceiroMensalidadeReceber});
             this.FinanceiroMensalidades.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FinanceiroMensalidades.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.FinanceiroMensalidades.Image = global::CesaMVC.Properties.Resources.mensalidade_20;
+            this.FinanceiroMensalidades.Image = global::CesaMVC.Properties.Resources.mensalidade_menu_20;
             this.FinanceiroMensalidades.Name = "FinanceiroMensalidades";
             this.FinanceiroMensalidades.Size = new System.Drawing.Size(192, 24);
             this.FinanceiroMensalidades.Text = "Mensalidades";
-            this.FinanceiroMensalidades.Click += new System.EventHandler(this.FinanceiroMensalidades_Click);
+            // 
+            // FinanceiroMensalidadeConsultar
+            // 
+            this.FinanceiroMensalidadeConsultar.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.FinanceiroMensalidadeConsultar.Image = global::CesaMVC.Properties.Resources.consultar_20;
+            this.FinanceiroMensalidadeConsultar.Name = "FinanceiroMensalidadeConsultar";
+            this.FinanceiroMensalidadeConsultar.Size = new System.Drawing.Size(253, 24);
+            this.FinanceiroMensalidadeConsultar.Text = "Consultar Mensalidades";
+            // 
+            // FinanceiroMensalidadeReceber
+            // 
+            this.FinanceiroMensalidadeReceber.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.FinanceiroMensalidadeReceber.Image = global::CesaMVC.Properties.Resources.mensalidade_20;
+            this.FinanceiroMensalidadeReceber.Name = "FinanceiroMensalidadeReceber";
+            this.FinanceiroMensalidadeReceber.Size = new System.Drawing.Size(253, 24);
+            this.FinanceiroMensalidadeReceber.Text = "Receber Mensalidades";
+            this.FinanceiroMensalidadeReceber.Click += new System.EventHandler(this.FinanceiroMensalidadeReceber_Click);
             // 
             // FinanceiroMovimentacao
             // 
@@ -410,7 +420,7 @@ namespace CesaMVC.br.com.cesa.view
             this.RelatoriosBoletim.ForeColor = System.Drawing.SystemColors.Highlight;
             this.RelatoriosBoletim.Image = global::CesaMVC.Properties.Resources.boletim_20;
             this.RelatoriosBoletim.Name = "RelatoriosBoletim";
-            this.RelatoriosBoletim.Size = new System.Drawing.Size(180, 24);
+            this.RelatoriosBoletim.Size = new System.Drawing.Size(170, 24);
             this.RelatoriosBoletim.Text = "Boletim";
             // 
             // RelatoriosBoletimBimestral
@@ -440,7 +450,7 @@ namespace CesaMVC.br.com.cesa.view
             this.RelatoriosDocumentos.ForeColor = System.Drawing.SystemColors.Highlight;
             this.RelatoriosDocumentos.Image = global::CesaMVC.Properties.Resources.documentos_20;
             this.RelatoriosDocumentos.Name = "RelatoriosDocumentos";
-            this.RelatoriosDocumentos.Size = new System.Drawing.Size(180, 24);
+            this.RelatoriosDocumentos.Size = new System.Drawing.Size(170, 24);
             this.RelatoriosDocumentos.Text = "Documentos";
             // 
             // RelatoriosDocumentosCircular
@@ -475,7 +485,7 @@ namespace CesaMVC.br.com.cesa.view
             this.RelatorioFinanceiro.ForeColor = System.Drawing.SystemColors.Highlight;
             this.RelatorioFinanceiro.Image = global::CesaMVC.Properties.Resources.financeiro_48;
             this.RelatorioFinanceiro.Name = "RelatorioFinanceiro";
-            this.RelatorioFinanceiro.Size = new System.Drawing.Size(180, 24);
+            this.RelatorioFinanceiro.Size = new System.Drawing.Size(170, 24);
             this.RelatorioFinanceiro.Text = "Financeiro";
             // 
             // FinanceiroEntradaSaida
@@ -495,7 +505,7 @@ namespace CesaMVC.br.com.cesa.view
             this.RelatoriosHorarios.ForeColor = System.Drawing.SystemColors.Highlight;
             this.RelatoriosHorarios.Image = global::CesaMVC.Properties.Resources.horario_20;
             this.RelatoriosHorarios.Name = "RelatoriosHorarios";
-            this.RelatoriosHorarios.Size = new System.Drawing.Size(180, 24);
+            this.RelatoriosHorarios.Size = new System.Drawing.Size(170, 24);
             this.RelatoriosHorarios.Text = "Horários";
             // 
             // RelatoriosHorariosProfessor
@@ -513,7 +523,7 @@ namespace CesaMVC.br.com.cesa.view
             this.RelatoriosTurmas.ForeColor = System.Drawing.SystemColors.Highlight;
             this.RelatoriosTurmas.Image = global::CesaMVC.Properties.Resources.turma_20;
             this.RelatoriosTurmas.Name = "RelatoriosTurmas";
-            this.RelatoriosTurmas.Size = new System.Drawing.Size(180, 24);
+            this.RelatoriosTurmas.Size = new System.Drawing.Size(170, 24);
             this.RelatoriosTurmas.Text = "Turmas";
             this.RelatoriosTurmas.Click += new System.EventHandler(this.RelatoriosTurmas_Click);
             // 
@@ -771,7 +781,6 @@ namespace CesaMVC.br.com.cesa.view
         private System.Windows.Forms.ToolStripMenuItem FerramentasBackup;
         private System.Windows.Forms.ToolStripMenuItem FerramentasCapturarFoto;
         private System.Windows.Forms.ToolStripMenuItem PedagogicoTurma;
-        private System.Windows.Forms.ToolStripMenuItem TurmaMontagemTurma;
         private System.Windows.Forms.ToolStripMenuItem notasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem RelatoriosTurmas;
         private System.Windows.Forms.ToolStripMenuItem RelatoriosDocumentos;
@@ -797,5 +806,7 @@ namespace CesaMVC.br.com.cesa.view
         private System.Windows.Forms.ToolStripMenuItem PedagogicoNotasDisciplina;
         private System.Windows.Forms.ToolStripMenuItem RelatorioFinanceiro;
         private System.Windows.Forms.ToolStripMenuItem FinanceiroEntradaSaida;
+        private System.Windows.Forms.ToolStripMenuItem FinanceiroMensalidadeConsultar;
+        private System.Windows.Forms.ToolStripMenuItem FinanceiroMensalidadeReceber;
     }
 }

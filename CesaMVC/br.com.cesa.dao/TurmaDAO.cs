@@ -26,12 +26,13 @@ namespace CesaMVC.br.com.cesa.dao
         {
             try
             {
-                string sql = @"INSERT INTO tb_turma(nome, serie, turno) 
-                                VALUES(@nome, @serie, @turno)";
+                string sql = @"INSERT INTO tb_turma(nome, serie, turno, ano_id) 
+                                VALUES(@nome, @serie, @turno, @ano_id)";
                 MySqlCommand cmd = new MySqlCommand(sql, vcon);
                 cmd.Parameters.AddWithValue("@nome", obj.Nome);
                 cmd.Parameters.AddWithValue("@serie", obj.Serie);
                 cmd.Parameters.AddWithValue("@turno", obj.Turno);
+                cmd.Parameters.AddWithValue("@ano_id", obj.AnoId);
                 vcon.Open();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Turma adicionado com sucesso", "Adicionar dados!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -49,11 +50,12 @@ namespace CesaMVC.br.com.cesa.dao
         {
             try
             {
-                string sql = @"UPDATE tb_turma SET nome=@nome, serie=@serie, turno=@turno WHERE id_turma=@id";
+                string sql = @"UPDATE tb_turma SET nome=@nome, serie=@serie, turno=@turno, ano_id=@ano_id WHERE id_turma=@id";
                 MySqlCommand cmd = new MySqlCommand(sql, vcon);
                 cmd.Parameters.AddWithValue("@nome", obj.Nome);
                 cmd.Parameters.AddWithValue("@serie", obj.Serie);
                 cmd.Parameters.AddWithValue("@turno", obj.Turno);
+                cmd.Parameters.AddWithValue("@ano_id", obj.AnoId);
                 cmd.Parameters.AddWithValue("@id", id);
                 vcon.Open();
                 cmd.ExecuteNonQuery();
@@ -93,7 +95,9 @@ namespace CesaMVC.br.com.cesa.dao
             try
             {
                 DataTable dt = new DataTable();
-                string sql = "SELECT * FROM tb_turma";
+                string sql = @"SELECT id_turma, nome, serie, turno, tba.ano 
+                               FROM tb_turma 
+                               INNER JOIN tb_ano AS tba ON tba.id_ano=ano_id";
                 MySqlCommand cmd = new MySqlCommand(sql, vcon);
                 vcon.Open();
                 cmd.ExecuteNonQuery();
@@ -131,6 +135,56 @@ namespace CesaMVC.br.com.cesa.dao
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao verificar Turma: " + ex);
+                return null;
+            }
+        }
+
+        public DataTable ListarAno()
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                string sql = "SELECT * FROM tb_ano";
+                MySqlCommand cmd = new MySqlCommand(sql, vcon);
+                vcon.Open();
+                cmd.ExecuteNonQuery();
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                da.Fill(dt);
+                vcon.Close();
+                vcon.Dispose();
+                vcon.ClearAllPoolsAsync();
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao executar a lista: " + ex);
+                return null;
+            }
+        }
+
+        public DataTable ListarTurmaPorAno(int ano)
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                string sql = @"SELECT id_turma, nome, serie, turno, tba.ano, ano_id
+                               FROM tb_turma 
+                               INNER JOIN tb_ano AS tba ON tba.id_ano=ano_id
+                               WHERE ano_id=@ano_id";
+                MySqlCommand cmd = new MySqlCommand(sql, vcon);
+                cmd.Parameters.AddWithValue("@ano_id", ano);
+                vcon.Open();
+                cmd.ExecuteNonQuery();
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                da.Fill(dt);
+                vcon.Close();
+                vcon.Dispose();
+                vcon.ClearAllPoolsAsync();
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao executar a lista: " + ex);
                 return null;
             }
         }
