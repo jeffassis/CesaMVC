@@ -178,6 +178,12 @@
     <Compile Include="br.com.cesa.report\Report_BoletimAluno.Designer.cs">
       <DependentUpon>Report_BoletimAluno.cs</DependentUpon>
     </Compile>
+    <Compile Include="br.com.cesa.report\Report_ConsultarMensalidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.cesa.report\Report_ConsultarMensalidade.Designer.cs">
+      <DependentUpon>Report_ConsultarMensalidade.cs</DependentUpon>
+    </Compile>
     <Compile Include="br.com.cesa.report\Report_EntradaSaida.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -262,6 +268,12 @@
     <Compile Include="br.com.cesa.view\FrmMensalidade.Designer.cs">
       <DependentUpon>FrmMensalidade.cs</DependentUpon>
     </Compile>
+    <Compile Include="br.com.cesa.view\FrmMensalidadeConsultar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.cesa.view\FrmMensalidadeConsultar.Designer.cs">
+      <DependentUpon>FrmMensalidadeConsultar.cs</DependentUpon>
+    </Compile>
     <Compile Include="br.com.cesa.view\FrmMenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -343,6 +355,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="br.com.cesa.report\RelBoletimAluno.rdlc" />
+    <EmbeddedResource Include="br.com.cesa.report\RelConsultarMensalidade.rdlc" />
     <EmbeddedResource Include="br.com.cesa.report\RelHoraProfessor.rdlc" />
     <EmbeddedResource Include="br.com.cesa.report\RelMovimentacao.rdlc" />
     <EmbeddedResource Include="br.com.cesa.report\RelTurma.rdlc" />
@@ -351,6 +364,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.cesa.report\Report_BoletimAluno.resx">
       <DependentUpon>Report_BoletimAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.cesa.report\Report_ConsultarMensalidade.resx">
+      <DependentUpon>Report_ConsultarMensalidade.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.cesa.report\Report_EntradaSaida.resx">
       <DependentUpon>Report_EntradaSaida.cs</DependentUpon>
@@ -393,6 +409,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.cesa.view\FrmMensalidade.resx">
       <DependentUpon>FrmMensalidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.cesa.view\FrmMensalidadeConsultar.resx">
+      <DependentUpon>FrmMensalidadeConsultar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.cesa.view\FrmMenuPrincipal.resx">
       <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
