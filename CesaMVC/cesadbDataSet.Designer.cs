@@ -70,6 +70,8 @@ namespace CesaMVC {
         
         private tb_anoDataTable tabletb_ano;
         
+        private ConsultarMensalidadeDataTable tableConsultarMensalidade;
+        
         private global::System.Data.DataRelation relationtb_nota_ibfk_1;
         
         private global::System.Data.DataRelation relationtb_nota_ibfk_2;
@@ -174,6 +176,9 @@ namespace CesaMVC {
                 }
                 if ((ds.Tables["tb_ano"] != null)) {
                     base.Tables.Add(new tb_anoDataTable(ds.Tables["tb_ano"]));
+                }
+                if ((ds.Tables["ConsultarMensalidade"] != null)) {
+                    base.Tables.Add(new ConsultarMensalidadeDataTable(ds.Tables["ConsultarMensalidade"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -425,6 +430,16 @@ namespace CesaMVC {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public ConsultarMensalidadeDataTable ConsultarMensalidade {
+            get {
+                return this.tableConsultarMensalidade;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -558,6 +573,9 @@ namespace CesaMVC {
                 }
                 if ((ds.Tables["tb_ano"] != null)) {
                     base.Tables.Add(new tb_anoDataTable(ds.Tables["tb_ano"]));
+                }
+                if ((ds.Tables["ConsultarMensalidade"] != null)) {
+                    base.Tables.Add(new ConsultarMensalidadeDataTable(ds.Tables["ConsultarMensalidade"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -730,6 +748,12 @@ namespace CesaMVC {
                     this.tabletb_ano.InitVars();
                 }
             }
+            this.tableConsultarMensalidade = ((ConsultarMensalidadeDataTable)(base.Tables["ConsultarMensalidade"]));
+            if ((initTable == true)) {
+                if ((this.tableConsultarMensalidade != null)) {
+                    this.tableConsultarMensalidade.InitVars();
+                }
+            }
             this.relationtb_nota_ibfk_1 = this.Relations["tb_nota_ibfk_1"];
             this.relationtb_nota_ibfk_2 = this.Relations["tb_nota_ibfk_2"];
             this.relationtb_nota_ibfk_3 = this.Relations["tb_nota_ibfk_3"];
@@ -790,6 +814,8 @@ namespace CesaMVC {
             base.Tables.Add(this.tableEntradaSaida);
             this.tabletb_ano = new tb_anoDataTable();
             base.Tables.Add(this.tabletb_ano);
+            this.tableConsultarMensalidade = new ConsultarMensalidadeDataTable();
+            base.Tables.Add(this.tableConsultarMensalidade);
             this.relationtb_nota_ibfk_1 = new global::System.Data.DataRelation("tb_nota_ibfk_1", new global::System.Data.DataColumn[] {
                         this.tabletb_aluno.id_alunoColumn}, new global::System.Data.DataColumn[] {
                         this.tabletb_nota.aluno_idColumn}, false);
@@ -948,6 +974,12 @@ namespace CesaMVC {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializeConsultarMensalidade() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
             if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
                 this.InitVars();
@@ -1069,6 +1101,9 @@ namespace CesaMVC {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void tb_anoRowChangeEventHandler(object sender, tb_anoRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void ConsultarMensalidadeRowChangeEventHandler(object sender, ConsultarMensalidadeRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -8864,6 +8899,409 @@ namespace CesaMVC {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class ConsultarMensalidadeDataTable : global::System.Data.TypedTableBase<ConsultarMensalidadeRow> {
+            
+            private global::System.Data.DataColumn columndata;
+            
+            private global::System.Data.DataColumn columnsituacao;
+            
+            private global::System.Data.DataColumn columnfuncionario;
+            
+            private global::System.Data.DataColumn columnmes;
+            
+            private global::System.Data.DataColumn columnid_mensalidade;
+            
+            private global::System.Data.DataColumn columnvalor;
+            
+            private global::System.Data.DataColumn columnobservacao;
+            
+            private global::System.Data.DataColumn columnTurma;
+            
+            private global::System.Data.DataColumn columnAluno;
+            
+            private global::System.Data.DataColumn columnServico;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public ConsultarMensalidadeDataTable() {
+                this.TableName = "ConsultarMensalidade";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal ConsultarMensalidadeDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected ConsultarMensalidadeDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn dataColumn {
+                get {
+                    return this.columndata;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn situacaoColumn {
+                get {
+                    return this.columnsituacao;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn funcionarioColumn {
+                get {
+                    return this.columnfuncionario;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn mesColumn {
+                get {
+                    return this.columnmes;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn id_mensalidadeColumn {
+                get {
+                    return this.columnid_mensalidade;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn valorColumn {
+                get {
+                    return this.columnvalor;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn observacaoColumn {
+                get {
+                    return this.columnobservacao;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TurmaColumn {
+                get {
+                    return this.columnTurma;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn AlunoColumn {
+                get {
+                    return this.columnAluno;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ServicoColumn {
+                get {
+                    return this.columnServico;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public ConsultarMensalidadeRow this[int index] {
+                get {
+                    return ((ConsultarMensalidadeRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event ConsultarMensalidadeRowChangeEventHandler ConsultarMensalidadeRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event ConsultarMensalidadeRowChangeEventHandler ConsultarMensalidadeRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event ConsultarMensalidadeRowChangeEventHandler ConsultarMensalidadeRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event ConsultarMensalidadeRowChangeEventHandler ConsultarMensalidadeRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddConsultarMensalidadeRow(ConsultarMensalidadeRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public ConsultarMensalidadeRow AddConsultarMensalidadeRow(System.DateTime data, string situacao, string funcionario, string mes, decimal valor, string observacao, string Turma, string Aluno, string Servico) {
+                ConsultarMensalidadeRow rowConsultarMensalidadeRow = ((ConsultarMensalidadeRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        data,
+                        situacao,
+                        funcionario,
+                        mes,
+                        null,
+                        valor,
+                        observacao,
+                        Turma,
+                        Aluno,
+                        Servico};
+                rowConsultarMensalidadeRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowConsultarMensalidadeRow);
+                return rowConsultarMensalidadeRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public ConsultarMensalidadeRow FindByid_mensalidade(int id_mensalidade) {
+                return ((ConsultarMensalidadeRow)(this.Rows.Find(new object[] {
+                            id_mensalidade})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                ConsultarMensalidadeDataTable cln = ((ConsultarMensalidadeDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new ConsultarMensalidadeDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columndata = base.Columns["data"];
+                this.columnsituacao = base.Columns["situacao"];
+                this.columnfuncionario = base.Columns["funcionario"];
+                this.columnmes = base.Columns["mes"];
+                this.columnid_mensalidade = base.Columns["id_mensalidade"];
+                this.columnvalor = base.Columns["valor"];
+                this.columnobservacao = base.Columns["observacao"];
+                this.columnTurma = base.Columns["Turma"];
+                this.columnAluno = base.Columns["Aluno"];
+                this.columnServico = base.Columns["Servico"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columndata = new global::System.Data.DataColumn("data", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndata);
+                this.columnsituacao = new global::System.Data.DataColumn("situacao", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsituacao);
+                this.columnfuncionario = new global::System.Data.DataColumn("funcionario", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfuncionario);
+                this.columnmes = new global::System.Data.DataColumn("mes", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmes);
+                this.columnid_mensalidade = new global::System.Data.DataColumn("id_mensalidade", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_mensalidade);
+                this.columnvalor = new global::System.Data.DataColumn("valor", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnvalor);
+                this.columnobservacao = new global::System.Data.DataColumn("observacao", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnobservacao);
+                this.columnTurma = new global::System.Data.DataColumn("Turma", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTurma);
+                this.columnAluno = new global::System.Data.DataColumn("Aluno", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAluno);
+                this.columnServico = new global::System.Data.DataColumn("Servico", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnServico);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnid_mensalidade}, true));
+                this.columndata.AllowDBNull = false;
+                this.columnsituacao.AllowDBNull = false;
+                this.columnsituacao.MaxLength = 20;
+                this.columnfuncionario.AllowDBNull = false;
+                this.columnfuncionario.MaxLength = 100;
+                this.columnmes.AllowDBNull = false;
+                this.columnmes.MaxLength = 20;
+                this.columnid_mensalidade.AutoIncrement = true;
+                this.columnid_mensalidade.AutoIncrementSeed = -1;
+                this.columnid_mensalidade.AutoIncrementStep = -1;
+                this.columnid_mensalidade.AllowDBNull = false;
+                this.columnid_mensalidade.Unique = true;
+                this.columnvalor.AllowDBNull = false;
+                this.columnobservacao.AllowDBNull = false;
+                this.columnobservacao.MaxLength = 250;
+                this.columnTurma.AllowDBNull = false;
+                this.columnTurma.MaxLength = 30;
+                this.columnAluno.AllowDBNull = false;
+                this.columnAluno.MaxLength = 80;
+                this.columnServico.AllowDBNull = false;
+                this.columnServico.MaxLength = 100;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public ConsultarMensalidadeRow NewConsultarMensalidadeRow() {
+                return ((ConsultarMensalidadeRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new ConsultarMensalidadeRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(ConsultarMensalidadeRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.ConsultarMensalidadeRowChanged != null)) {
+                    this.ConsultarMensalidadeRowChanged(this, new ConsultarMensalidadeRowChangeEvent(((ConsultarMensalidadeRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.ConsultarMensalidadeRowChanging != null)) {
+                    this.ConsultarMensalidadeRowChanging(this, new ConsultarMensalidadeRowChangeEvent(((ConsultarMensalidadeRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.ConsultarMensalidadeRowDeleted != null)) {
+                    this.ConsultarMensalidadeRowDeleted(this, new ConsultarMensalidadeRowChangeEvent(((ConsultarMensalidadeRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.ConsultarMensalidadeRowDeleting != null)) {
+                    this.ConsultarMensalidadeRowDeleting(this, new ConsultarMensalidadeRowChangeEvent(((ConsultarMensalidadeRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemoveConsultarMensalidadeRow(ConsultarMensalidadeRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                cesadbDataSet ds = new cesadbDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "ConsultarMensalidadeDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class tb_userRow : global::System.Data.DataRow {
@@ -10838,6 +11276,131 @@ namespace CesaMVC {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class ConsultarMensalidadeRow : global::System.Data.DataRow {
+            
+            private ConsultarMensalidadeDataTable tableConsultarMensalidade;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal ConsultarMensalidadeRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableConsultarMensalidade = ((ConsultarMensalidadeDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime data {
+                get {
+                    return ((global::System.DateTime)(this[this.tableConsultarMensalidade.dataColumn]));
+                }
+                set {
+                    this[this.tableConsultarMensalidade.dataColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string situacao {
+                get {
+                    return ((string)(this[this.tableConsultarMensalidade.situacaoColumn]));
+                }
+                set {
+                    this[this.tableConsultarMensalidade.situacaoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string funcionario {
+                get {
+                    return ((string)(this[this.tableConsultarMensalidade.funcionarioColumn]));
+                }
+                set {
+                    this[this.tableConsultarMensalidade.funcionarioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string mes {
+                get {
+                    return ((string)(this[this.tableConsultarMensalidade.mesColumn]));
+                }
+                set {
+                    this[this.tableConsultarMensalidade.mesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int id_mensalidade {
+                get {
+                    return ((int)(this[this.tableConsultarMensalidade.id_mensalidadeColumn]));
+                }
+                set {
+                    this[this.tableConsultarMensalidade.id_mensalidadeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal valor {
+                get {
+                    return ((decimal)(this[this.tableConsultarMensalidade.valorColumn]));
+                }
+                set {
+                    this[this.tableConsultarMensalidade.valorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string observacao {
+                get {
+                    return ((string)(this[this.tableConsultarMensalidade.observacaoColumn]));
+                }
+                set {
+                    this[this.tableConsultarMensalidade.observacaoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Turma {
+                get {
+                    return ((string)(this[this.tableConsultarMensalidade.TurmaColumn]));
+                }
+                set {
+                    this[this.tableConsultarMensalidade.TurmaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Aluno {
+                get {
+                    return ((string)(this[this.tableConsultarMensalidade.AlunoColumn]));
+                }
+                set {
+                    this[this.tableConsultarMensalidade.AlunoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Servico {
+                get {
+                    return ((string)(this[this.tableConsultarMensalidade.ServicoColumn]));
+                }
+                set {
+                    this[this.tableConsultarMensalidade.ServicoColumn] = value;
+                }
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -11605,6 +12168,40 @@ namespace CesaMVC {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public tb_anoRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class ConsultarMensalidadeRowChangeEvent : global::System.EventArgs {
+            
+            private ConsultarMensalidadeRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public ConsultarMensalidadeRowChangeEvent(ConsultarMensalidadeRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public ConsultarMensalidadeRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -22902,6 +23499,229 @@ ORDER BY tbs.id_dia, tbh.descricao";
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class ConsultarMensalidadeTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::MySql.Data.MySqlClient.MySqlDataAdapter _adapter;
+        
+        private global::MySql.Data.MySqlClient.MySqlConnection _connection;
+        
+        private global::MySql.Data.MySqlClient.MySqlTransaction _transaction;
+        
+        private global::MySql.Data.MySqlClient.MySqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public ConsultarMensalidadeTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::MySql.Data.MySqlClient.MySqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::MySql.Data.MySqlClient.MySqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::MySql.Data.MySqlClient.MySqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::MySql.Data.MySqlClient.MySqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::MySql.Data.MySqlClient.MySqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::MySql.Data.MySqlClient.MySqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "ConsultarMensalidade";
+            tableMapping.ColumnMappings.Add("data", "data");
+            tableMapping.ColumnMappings.Add("situacao", "situacao");
+            tableMapping.ColumnMappings.Add("funcionario", "funcionario");
+            tableMapping.ColumnMappings.Add("mes", "mes");
+            tableMapping.ColumnMappings.Add("id_mensalidade", "id_mensalidade");
+            tableMapping.ColumnMappings.Add("valor", "valor");
+            tableMapping.ColumnMappings.Add("observacao", "observacao");
+            tableMapping.ColumnMappings.Add("Turma", "Turma");
+            tableMapping.ColumnMappings.Add("Aluno", "Aluno");
+            tableMapping.ColumnMappings.Add("Servico", "Servico");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::MySql.Data.MySqlClient.MySqlConnection();
+            this._connection.ConnectionString = global::CesaMVC.Properties.Settings.Default.cesadbConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
+            this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT        tbm.id_mensalidade, tbt.nome AS Turma, tba.nome AS Aluno, tbs.nome AS Servico, tbs.valor, tbm.data, tbm.funcionario, tbm.situacao, tbm.mes, tbm.observacao
+FROM            tb_mensalidade tbm INNER JOIN
+                         tb_turma tbt ON tbt.id_turma = tbm.turma_id INNER JOIN
+                         tb_aluno tba ON tba.id_aluno = tbm.aluno_id INNER JOIN
+                         tb_servico tbs ON tbs.id_servico = tbm.servico_id
+WHERE        (tbm.aluno_id = @aluno) AND (tbm.turma_id = @turma) AND (tbm.situacao = @situacao)
+ORDER BY tbm.mes DESC";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@aluno";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "aluno_id";
+            param.SourceVersion = global::System.Data.DataRowVersion.Current;
+            this._commandCollection[0].Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@turma";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "turma_id";
+            param.SourceVersion = global::System.Data.DataRowVersion.Current;
+            this._commandCollection[0].Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@situacao";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 20;
+            param.IsNullable = true;
+            param.SourceColumn = "situacao";
+            param.SourceVersion = global::System.Data.DataRowVersion.Current;
+            this._commandCollection[0].Parameters.Add(param);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(cesadbDataSet.ConsultarMensalidadeDataTable dataTable, int aluno, int turma, string situacao) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(aluno));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((int)(turma));
+            if ((situacao == null)) {
+                throw new global::System.ArgumentNullException("situacao");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(situacao));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual cesadbDataSet.ConsultarMensalidadeDataTable GetData(int aluno, int turma, string situacao) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(aluno));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((int)(turma));
+            if ((situacao == null)) {
+                throw new global::System.ArgumentNullException("situacao");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(situacao));
+            }
+            cesadbDataSet.ConsultarMensalidadeDataTable dataTable = new cesadbDataSet.ConsultarMensalidadeDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -23476,6 +24296,15 @@ ORDER BY tbs.id_dia, tbh.descricao";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._entradaSaidaTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.EntradaSaida.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._entradaSaidaTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._tb_mensalidadeTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.tb_mensalidade.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -23530,15 +24359,6 @@ ORDER BY tbs.id_dia, tbh.descricao";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._tb_hora_professorTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tb_hora_professor.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._tb_hora_professorTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._tb_dia_semanaTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.tb_dia_semana.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -23548,12 +24368,21 @@ ORDER BY tbs.id_dia, tbh.descricao";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._entradaSaidaTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.EntradaSaida.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._tb_horarioTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tb_horario.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._entradaSaidaTableAdapter.Update(updatedRows));
+                    result = (result + this._tb_horarioTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._tb_anoTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tb_ano.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._tb_anoTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -23593,21 +24422,12 @@ ORDER BY tbs.id_dia, tbh.descricao";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._tb_horarioTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tb_horario.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._tb_hora_professorTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tb_hora_professor.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._tb_horarioTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._tb_anoTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tb_ano.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._tb_anoTableAdapter.Update(updatedRows));
+                    result = (result + this._tb_hora_professorTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -23661,6 +24481,14 @@ ORDER BY tbs.id_dia, tbh.descricao";
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._entradaSaidaTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.EntradaSaida.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._entradaSaidaTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._tb_mensalidadeTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.tb_mensalidade.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -23709,14 +24537,6 @@ ORDER BY tbs.id_dia, tbh.descricao";
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tb_hora_professorTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tb_hora_professor.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._tb_hora_professorTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._tb_dia_semanaTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.tb_dia_semana.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -23725,11 +24545,19 @@ ORDER BY tbs.id_dia, tbh.descricao";
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._entradaSaidaTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.EntradaSaida.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._tb_horarioTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tb_horario.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._entradaSaidaTableAdapter.Update(addedRows));
+                    result = (result + this._tb_horarioTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._tb_anoTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tb_ano.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._tb_anoTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -23765,19 +24593,11 @@ ORDER BY tbs.id_dia, tbh.descricao";
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tb_horarioTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tb_horario.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._tb_hora_professorTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tb_hora_professor.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._tb_horarioTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._tb_anoTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tb_ano.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._tb_anoTableAdapter.Update(addedRows));
+                    result = (result + this._tb_hora_professorTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -23791,19 +24611,11 @@ ORDER BY tbs.id_dia, tbh.descricao";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateDeletedRows(cesadbDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._tb_anoTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tb_ano.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tb_hora_professorTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tb_hora_professor.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._tb_anoTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._tb_horarioTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tb_horario.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._tb_horarioTableAdapter.Update(deletedRows));
+                    result = (result + this._tb_hora_professorTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -23839,11 +24651,19 @@ ORDER BY tbs.id_dia, tbh.descricao";
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._entradaSaidaTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.EntradaSaida.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tb_anoTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tb_ano.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._entradaSaidaTableAdapter.Update(deletedRows));
+                    result = (result + this._tb_anoTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._tb_horarioTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tb_horario.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._tb_horarioTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -23852,14 +24672,6 @@ ORDER BY tbs.id_dia, tbh.descricao";
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._tb_dia_semanaTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._tb_hora_professorTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tb_hora_professor.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._tb_hora_professorTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -23908,6 +24720,14 @@ ORDER BY tbs.id_dia, tbh.descricao";
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._tb_mensalidadeTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._entradaSaidaTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.EntradaSaida.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._entradaSaidaTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

@@ -230,7 +230,7 @@ namespace CesaMVC.br.com.cesa.view
             this.PedagogicoHorarios.ForeColor = System.Drawing.SystemColors.Highlight;
             this.PedagogicoHorarios.Image = global::CesaMVC.Properties.Resources.horario_20;
             this.PedagogicoHorarios.Name = "PedagogicoHorarios";
-            this.PedagogicoHorarios.Size = new System.Drawing.Size(180, 24);
+            this.PedagogicoHorarios.Size = new System.Drawing.Size(153, 24);
             this.PedagogicoHorarios.Text = "Horários";
             // 
             // PedagogicoHorarioProfessor
@@ -253,7 +253,7 @@ namespace CesaMVC.br.com.cesa.view
             this.notasToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Highlight;
             this.notasToolStripMenuItem.Image = global::CesaMVC.Properties.Resources.notas;
             this.notasToolStripMenuItem.Name = "notasToolStripMenuItem";
-            this.notasToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.notasToolStripMenuItem.Size = new System.Drawing.Size(153, 24);
             this.notasToolStripMenuItem.Text = "Notas";
             // 
             // PedagogicoNotasLancamento
@@ -298,7 +298,7 @@ namespace CesaMVC.br.com.cesa.view
             this.PedagogicoTurma.ForeColor = System.Drawing.SystemColors.Highlight;
             this.PedagogicoTurma.Image = global::CesaMVC.Properties.Resources.matricula;
             this.PedagogicoTurma.Name = "PedagogicoTurma";
-            this.PedagogicoTurma.Size = new System.Drawing.Size(180, 24);
+            this.PedagogicoTurma.Size = new System.Drawing.Size(153, 24);
             this.PedagogicoTurma.Text = "Matriculas";
             this.PedagogicoTurma.Click += new System.EventHandler(this.PedagogicoTurma_Click);
             // 
@@ -334,6 +334,7 @@ namespace CesaMVC.br.com.cesa.view
             this.FinanceiroMensalidadeConsultar.Name = "FinanceiroMensalidadeConsultar";
             this.FinanceiroMensalidadeConsultar.Size = new System.Drawing.Size(253, 24);
             this.FinanceiroMensalidadeConsultar.Text = "Consultar Mensalidades";
+            this.FinanceiroMensalidadeConsultar.Click += new System.EventHandler(this.FinanceiroMensalidadeConsultar_Click);
             // 
             // FinanceiroMensalidadeReceber
             // 

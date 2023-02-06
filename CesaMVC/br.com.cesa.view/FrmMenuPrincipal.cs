@@ -232,5 +232,11 @@ namespace CesaMVC.br.com.cesa.view
             FrmMatricula form = new FrmMatricula();
             AbreForm(2, form);
         }
+
+        private void FinanceiroMensalidadeConsultar_Click(object sender, EventArgs e)
+        {
+            FrmMensalidadeConsultar form = new FrmMensalidadeConsultar();
+            AbreForm(2, form);
+        }
     }
 }
