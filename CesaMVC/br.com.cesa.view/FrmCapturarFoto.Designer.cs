@@ -171,6 +171,7 @@ namespace CesaMVC.br.com.cesa.view
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Capturar Foto";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmCapturarFoto_FormClosing);
+            this.Load += new System.EventHandler(this.FrmCapturarFoto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCaptura)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureStream)).EndInit();

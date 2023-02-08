@@ -93,6 +93,7 @@ namespace CesaMVC.br.com.cesa.view
             this.Name = "FrmBackup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manutenção de Dados";
+            this.Load += new System.EventHandler(this.FrmBackup_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
