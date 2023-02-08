@@ -44,18 +44,18 @@ namespace CesaMVC.br.com.cesa.view
             this.BtnNovo = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.BtnHora = new System.Windows.Forms.Button();
-            this.CbHora = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnExcluir = new System.Windows.Forms.Button();
             this.BtnEditar = new System.Windows.Forms.Button();
             this.BtnSalvar = new System.Windows.Forms.Button();
-            this.txtDiaSemana = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.CbDisciplina = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.lblHora = new System.Windows.Forms.Label();
+            this.lblDiaSemana = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tabProfessor.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -193,14 +193,14 @@ namespace CesaMVC.br.com.cesa.view
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.lblDiaSemana);
+            this.tabPage2.Controls.Add(this.lblHora);
             this.tabPage2.Controls.Add(this.BtnHora);
-            this.tabPage2.Controls.Add(this.CbHora);
             this.tabPage2.Controls.Add(this.pictureBox1);
             this.tabPage2.Controls.Add(this.BtnCancelar);
             this.tabPage2.Controls.Add(this.BtnExcluir);
             this.tabPage2.Controls.Add(this.BtnEditar);
             this.tabPage2.Controls.Add(this.BtnSalvar);
-            this.tabPage2.Controls.Add(this.txtDiaSemana);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.CbDisciplina);
@@ -221,7 +221,7 @@ namespace CesaMVC.br.com.cesa.view
             this.BtnHora.Enabled = false;
             this.BtnHora.ForeColor = System.Drawing.Color.White;
             this.BtnHora.Image = global::CesaMVC.Properties.Resources.btn_pesquisar_24;
-            this.BtnHora.Location = new System.Drawing.Point(198, 31);
+            this.BtnHora.Location = new System.Drawing.Point(154, 34);
             this.BtnHora.Name = "BtnHora";
             this.BtnHora.Size = new System.Drawing.Size(40, 40);
             this.BtnHora.TabIndex = 27;
@@ -229,16 +229,6 @@ namespace CesaMVC.br.com.cesa.view
             this.toolTip1.SetToolTip(this.BtnHora, "Pesquisar horário");
             this.BtnHora.UseVisualStyleBackColor = false;
             this.BtnHora.Click += new System.EventHandler(this.BtnHora_Click);
-            // 
-            // CbHora
-            // 
-            this.CbHora.Enabled = false;
-            this.CbHora.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.CbHora.FormattingEnabled = true;
-            this.CbHora.Location = new System.Drawing.Point(23, 38);
-            this.CbHora.Name = "CbHora";
-            this.CbHora.Size = new System.Drawing.Size(169, 28);
-            this.CbHora.TabIndex = 25;
             // 
             // pictureBox1
             // 
@@ -322,15 +312,6 @@ namespace CesaMVC.br.com.cesa.view
             this.BtnSalvar.UseVisualStyleBackColor = false;
             this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
-            // txtDiaSemana
-            // 
-            this.txtDiaSemana.Enabled = false;
-            this.txtDiaSemana.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.txtDiaSemana.Location = new System.Drawing.Point(23, 99);
-            this.txtDiaSemana.Name = "txtDiaSemana";
-            this.txtDiaSemana.Size = new System.Drawing.Size(169, 26);
-            this.txtDiaSemana.TabIndex = 3;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -371,6 +352,24 @@ namespace CesaMVC.br.com.cesa.view
             this.label2.Size = new System.Drawing.Size(54, 19);
             this.label2.TabIndex = 10;
             this.label2.Text = "Hora.:";
+            // 
+            // lblHora
+            // 
+            this.lblHora.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblHora.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblHora.Location = new System.Drawing.Point(23, 40);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(125, 27);
+            this.lblHora.TabIndex = 1;
+            // 
+            // lblDiaSemana
+            // 
+            this.lblDiaSemana.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblDiaSemana.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblDiaSemana.Location = new System.Drawing.Point(23, 102);
+            this.lblDiaSemana.Name = "lblDiaSemana";
+            this.lblDiaSemana.Size = new System.Drawing.Size(169, 27);
+            this.lblDiaSemana.TabIndex = 28;
             // 
             // FrmHoraProfessor
             // 
@@ -418,16 +417,16 @@ namespace CesaMVC.br.com.cesa.view
         private System.Windows.Forms.Button BtnExcluir;
         private System.Windows.Forms.Button BtnEditar;
         private System.Windows.Forms.Button BtnSalvar;
-        private System.Windows.Forms.TextBox txtDiaSemana;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox CbDisciplina;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox CbSerie;
-        private System.Windows.Forms.ComboBox CbHora;
         private System.Windows.Forms.Button BtnHora;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button BtnImprimir;
+        private System.Windows.Forms.Label lblHora;
+        private System.Windows.Forms.Label lblDiaSemana;
     }
 }

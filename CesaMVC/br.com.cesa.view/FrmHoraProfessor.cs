@@ -103,8 +103,8 @@ namespace CesaMVC.br.com.cesa.view
 
         private void Limpar()
         {
-            CbHora.SelectedIndex = -1;
-            txtDiaSemana.Text = "";
+            lblHora.Text = "";
+            lblDiaSemana.Text = "";
             CbDisciplina.SelectedIndex = 0;
         }
 
@@ -135,7 +135,6 @@ namespace CesaMVC.br.com.cesa.view
             {
                 dt.Rows.Clear();
             }
-
             tabProfessor.SelectedTab = tabPage1;
         }
 
@@ -143,19 +142,16 @@ namespace CesaMVC.br.com.cesa.view
         {
             if (CbSerie.SelectedValue != null)
             {
-                Listar();
-                // Passo o id da turma para o relatorio
-                //Program.idSerieTurma = CbSerie.SelectedValue.ToString();
+                Listar();                
             }
         }
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
             // VERIFICA SE HORA ESTA VAZIO
-            if (CbHora.Text.ToString().Trim() == "")
+            if (lblHora.Text.ToString().Trim() == "")
             {                
-                MessageBox.Show("Preencha a Hora", "Campo Vazio", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                CbHora.Focus();
+                MessageBox.Show("Selecione a Hora", "Campo Vazio", MessageBoxButtons.OK, MessageBoxIcon.Information);                
                 return;
             }
             HoraProfessor obj = new HoraProfessor 
@@ -175,10 +171,9 @@ namespace CesaMVC.br.com.cesa.view
         private void BtnEditar_Click(object sender, EventArgs e)
         {
             // VERIFICA SE HORA ESTA VAZIO
-            if (CbHora.Text.ToString().Trim() == "")
+            if (lblHora.Text.ToString().Trim() == "")
             {
-                MessageBox.Show("Preencha a Hora", "Campo Vazio", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                CbHora.Focus();
+                MessageBox.Show("Selecione a Hora", "Campo Vazio", MessageBoxButtons.OK, MessageBoxIcon.Information);                
                 return;
             }
             HoraProfessor obj = new HoraProfessor
@@ -199,20 +194,22 @@ namespace CesaMVC.br.com.cesa.view
         {
             Program.chamadaHorario = "hora";
             FrmHorario form = new FrmHorario();
+            form.BtnNovo.Visible = false;
+            form.BtnExcluir.Visible = false;
             form.Show();
         }
 
         private void FrmHoraProfessor_Activated(object sender, EventArgs e)
         {
-            CbHora.Text = Program.nomeHorario;
-            txtDiaSemana.Text = Program.diaHorario;
+            lblHora.Text = Program.nomeHorario;
+            lblDiaSemana.Text = Program.diaHorario;
         }
 
         private void Grid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             idSelecionado = Grid.CurrentRow.Cells[0].Value.ToString();
-            CbHora.Text = Grid.CurrentRow.Cells[1].Value.ToString();
-            txtDiaSemana.Text = Grid.CurrentRow.Cells[2].Value.ToString();
+            lblHora.Text = Grid.CurrentRow.Cells[1].Value.ToString();
+            lblDiaSemana.Text = Grid.CurrentRow.Cells[2].Value.ToString();
             CbDisciplina.Text = Grid.CurrentRow.Cells[3].Value.ToString();
             CbSerie.Text = Grid.CurrentRow.Cells[4].Value.ToString();
 
