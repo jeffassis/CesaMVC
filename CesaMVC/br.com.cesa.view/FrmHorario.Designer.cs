@@ -305,10 +305,10 @@ namespace CesaMVC.br.com.cesa.view
         private System.Windows.Forms.ComboBox CbDiaSemana;
         private System.Windows.Forms.DataGridView Grid;
         private System.Windows.Forms.Button BtnCancelar;
-        private System.Windows.Forms.Button BtnExcluir;
         private System.Windows.Forms.Button BtnEditar;
         private System.Windows.Forms.Button BtnSalvar;
-        private System.Windows.Forms.Button BtnNovo;
         private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Button BtnNovo;
+        public System.Windows.Forms.Button BtnExcluir;
     }
 }
