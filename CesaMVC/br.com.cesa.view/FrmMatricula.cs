@@ -100,15 +100,13 @@ namespace CesaMVC.br.com.cesa.view
         {
             BtnSalvar.Enabled = false;
             BtnExcluir.Enabled = false;
-            txtAluno.Enabled = false;
-            //cbTurma.Enabled = false;
+            txtAluno.Enabled = false;            
             BtnAluno.Enabled = false;
         }
 
         private void Limpar()
         {
-            txtAluno.Text = "";
-            CbTurma.SelectedIndex = 0;
+            txtAluno.Text = "";                     
         }
 
         private void FrmMontTurma_Load(object sender, EventArgs e)
