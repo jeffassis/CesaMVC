@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace CesaMVC.br.com.cesa.view
 {
@@ -27,9 +28,11 @@ namespace CesaMVC.br.com.cesa.view
             Grid.Columns[4].HeaderText = "BIMESTRE 4";
             Grid.Columns[5].HeaderText = "MEDIA";
             Grid.Columns[6].HeaderText = "ID_TURMA";
+            Grid.Columns[7].HeaderText = "DISCIPLINA";
 
             // Visibilidade das colunas no Grid
             Grid.Columns[6].Visible = false;
+            Grid.Columns[7].Visible = false;
 
             // Tamanho da Letra do Header antes devemos colocar VisualStyles como "FALSE"
             Grid.EnableHeadersVisualStyles = false;
@@ -120,8 +123,7 @@ namespace CesaMVC.br.com.cesa.view
                 CbDisciplina.Focus();
 
                 // Codigo para limpar o DataGridView quando o aluno estiver vazio
-                var dt = Grid.DataSource as DataTable;
-                if (dt != null)
+                if (Grid.DataSource is DataTable dt)
                 {
                     dt.Rows.Clear();
                 }
@@ -140,39 +142,45 @@ namespace CesaMVC.br.com.cesa.view
             if (result == DialogResult.Yes)
             {
                 SalvarExcel(Grid);
+                MessageBox.Show("Exportado com sucesso", "Sucesso ao exportar", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
         private void SalvarExcel(DataGridView dgv)
         {
-            Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
+            Excel.Application app = new Excel.Application();
+            Excel.Workbook pasta = app.Workbooks.Add();
+            Excel.Worksheet plan;
+            plan = pasta.Worksheets.Add();
+            // Para salvar arquivo diferente
+            string data = DateTime.Now.ToString("dd-MM-yyyy-HH-mm");
 
-            excel.Application.Workbooks.Add(true);
+            plan.Range["A1"].Value = "Centro Educacional Soeiro Almeida";
+            plan.Range["A3"].Value = "Alunos";
+            plan.Range["B3"].Value = "Bimestre1";
+            plan.Range["C3"].Value = "Bimestre2";
+            plan.Range["D3"].Value = "Bimestre3";
+            plan.Range["E3"].Value = "Bimestre4";
+            plan.Range["F3"].Value = "Media";
 
-            int IndiceColuna = 0;
+            // Nome da aba na planilha
+            plan.Name = "Relatório-PorDisciplina";
 
-            foreach (DataGridViewColumn col in dgv.Columns)
+            int IndiceLinha = 4;
+            foreach(DataGridViewRow r in Grid.Rows)
             {
-                IndiceColuna++;
-                excel.Cells[1, IndiceColuna] = col.Name;
-            }
-
-            int IndiceLinha = 0;
-
-            foreach (DataGridViewRow row in dgv.Rows)
-            {
+                plan.Range["A2"].Value = r.Cells["DISCIPLINA"].Value;
+                plan.Range["A"+IndiceLinha].Value = r.Cells["aluno"].Value;
+                plan.Range["B"+IndiceLinha].Value = r.Cells["BIMESTRE 1"].Value;
+                plan.Range["C"+IndiceLinha].Value = r.Cells["BIMESTRE 2"].Value;
+                plan.Range["D"+IndiceLinha].Value = r.Cells["BIMESTRE 3"].Value;
+                plan.Range["E"+IndiceLinha].Value = r.Cells["BIMESTRE 4"].Value;
+                plan.Range["F"+IndiceLinha].Value = r.Cells["MEDIA"].Value;
                 IndiceLinha++;
-
-                IndiceColuna = 0;
-
-                foreach (DataGridViewColumn col in dgv.Columns)
-                {
-                    IndiceColuna++;
-
-                    excel.Cells[IndiceLinha + 1, IndiceColuna] = row.Cells[col.Name].Value;
-                }
-            }
-            excel.Visible = true;
+            }            
+            pasta.SaveAs(@"C:\cesa\dados\report_disciplina-"+data+".xlsx");
+            pasta.Close();
+            app.Quit();            
         }
     }
 }

@@ -203,7 +203,7 @@ namespace CesaMVC.br.com.cesa.dao
                      (SELECT AVG(nota) FROM tb_nota AS n1 WHERE n1.aluno_id=tba.id_aluno AND n1.disciplina_id=tbd.id_disciplina AND n1.turma_id=tbt.id_turma AND n1.bimestre_id=2) +
                      (SELECT AVG(nota) FROM tb_nota AS n1 WHERE n1.aluno_id=tba.id_aluno AND n1.disciplina_id=tbd.id_disciplina AND n1.turma_id=tbt.id_turma AND n1.bimestre_id=3) +
                      (SELECT AVG(nota) FROM tb_nota AS n1 WHERE n1.aluno_id=tba.id_aluno AND n1.disciplina_id=tbd.id_disciplina AND n1.turma_id=tbt.id_turma AND n1.bimestre_id=4))/4 AS 'MEDIA',
-                        turma_id
+                        turma_id, tba.nome as 'ALUNO'
                 FROM
                     tb_nota as tbn
                 INNER JOIN
@@ -251,7 +251,7 @@ namespace CesaMVC.br.com.cesa.dao
                      (SELECT AVG(nota) FROM tb_nota AS n1 WHERE n1.aluno_id=tba.id_aluno AND n1.disciplina_id=tbd.id_disciplina AND n1.turma_id=tbt.id_turma AND n1.bimestre_id=2) +
                      (SELECT AVG(nota) FROM tb_nota AS n1 WHERE n1.aluno_id=tba.id_aluno AND n1.disciplina_id=tbd.id_disciplina AND n1.turma_id=tbt.id_turma AND n1.bimestre_id=3) +
                      (SELECT AVG(nota) FROM tb_nota AS n1 WHERE n1.aluno_id=tba.id_aluno AND n1.disciplina_id=tbd.id_disciplina AND n1.turma_id=tbt.id_turma AND n1.bimestre_id=4))/4 AS 'MEDIA',
-                        turma_id as 'TURMA'
+                        turma_id as 'TURMA', tbd.nome as 'DISCIPLINA'
                 FROM
                     tb_nota as tbn
                 INNER JOIN

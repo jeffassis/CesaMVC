@@ -14,7 +14,7 @@ namespace CesaMVC.br.com.cesa.view
 {
     public partial class FrmCapturarFoto : Form
     {
-        FilterInfoCollection _filterInfoCollection;
+        readonly FilterInfoCollection _filterInfoCollection;
         VideoCaptureDevice _videoCaptureDevice;
         public FrmCapturarFoto()
         {
@@ -84,6 +84,11 @@ namespace CesaMVC.br.com.cesa.view
         {
             Encerrar();
             this.Dispose();
+        }
+
+        private void FrmCapturarFoto_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
