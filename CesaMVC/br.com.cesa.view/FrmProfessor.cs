@@ -158,8 +158,7 @@ namespace CesaMVC.br.com.cesa.view
         private void FrmProfessor_Load(object sender, EventArgs e)
         {
             TxtPesquisar.Focus();
-            LimparFoto();
-            Listar();
+            LimparFoto();            
         }
 
         private void BtnNovo_Click(object sender, EventArgs e)
@@ -223,8 +222,7 @@ namespace CesaMVC.br.com.cesa.view
             // Adiciona
             dao.AddProfessor(obj, Img());
             Desabilitar();
-            LimparCampos();
-            Listar();
+            LimparCampos();            
             tabProfessor.SelectedTab = tabPage1;
         }
 
@@ -277,8 +275,7 @@ namespace CesaMVC.br.com.cesa.view
                 dao.UpdateProfessor(obj, idSelecionado);
             }
             Desabilitar();
-            LimparCampos();
-            Listar();
+            LimparCampos();            
             alterou = "";
             tabProfessor.SelectedTab = tabPage1;
         }
@@ -303,6 +300,8 @@ namespace CesaMVC.br.com.cesa.view
 
             ProfessorDAO dao = new ProfessorDAO();
             Grid.DataSource = dao.ListarProfessorPorNome(nome);
+
+            FormatarDG();
         }
 
         private byte[] Img()
@@ -397,6 +396,17 @@ namespace CesaMVC.br.com.cesa.view
 
             // Pega o nome para atualizar
             ProfessorAntigo = Grid.CurrentRow.Cells[1].Value.ToString();
+        }
+
+        private void BtnAtualizarGrid_Click(object sender, EventArgs e)
+        {
+            // Codigo para limpar o DataGridView quando o aluno estiver vazio
+            if (Grid.DataSource is DataTable dt)
+            {
+                dt.Rows.Clear();
+            }
+
+            Listar();
         }
     }
 }

@@ -34,6 +34,7 @@ namespace CesaMVC.br.com.cesa.view
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProduto));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.foto_produto2 = new System.Windows.Forms.PictureBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,7 +50,7 @@ namespace CesaMVC.br.com.cesa.view
             this.Grid = new System.Windows.Forms.DataGridView();
             this.tabProduto = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.foto_produto2 = new System.Windows.Forms.PictureBox();
+            this.BtnAtualizarGrid = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.TxtPesquisar = new System.Windows.Forms.TextBox();
             this.BtnNovo = new System.Windows.Forms.Button();
@@ -60,11 +61,11 @@ namespace CesaMVC.br.com.cesa.view
             this.BtnEditar = new System.Windows.Forms.Button();
             this.BtnSalvar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.foto_produto2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Foto_produto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
             this.tabProduto.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.foto_produto2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -91,6 +92,16 @@ namespace CesaMVC.br.com.cesa.view
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(901, 100);
             this.panel1.TabIndex = 2;
+            // 
+            // foto_produto2
+            // 
+            this.foto_produto2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.foto_produto2.Location = new System.Drawing.Point(782, 2);
+            this.foto_produto2.Name = "foto_produto2";
+            this.foto_produto2.Size = new System.Drawing.Size(96, 96);
+            this.foto_produto2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.foto_produto2.TabIndex = 57;
+            this.foto_produto2.TabStop = false;
             // 
             // txtNome
             // 
@@ -260,6 +271,7 @@ namespace CesaMVC.br.com.cesa.view
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.BtnAtualizarGrid);
             this.tabPage1.Controls.Add(this.pictureBox2);
             this.tabPage1.Controls.Add(this.TxtPesquisar);
             this.tabPage1.Controls.Add(this.BtnNovo);
@@ -273,15 +285,18 @@ namespace CesaMVC.br.com.cesa.view
             this.tabPage1.Text = "Consultar";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // foto_produto2
+            // BtnAtualizarGrid
             // 
-            this.foto_produto2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.foto_produto2.Location = new System.Drawing.Point(782, 2);
-            this.foto_produto2.Name = "foto_produto2";
-            this.foto_produto2.Size = new System.Drawing.Size(96, 96);
-            this.foto_produto2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.foto_produto2.TabIndex = 57;
-            this.foto_produto2.TabStop = false;
+            this.BtnAtualizarGrid.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BtnAtualizarGrid.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnAtualizarGrid.ForeColor = System.Drawing.Color.White;
+            this.BtnAtualizarGrid.Image = global::CesaMVC.Properties.Resources.btn_atualizar_20;
+            this.BtnAtualizarGrid.Location = new System.Drawing.Point(452, 19);
+            this.BtnAtualizarGrid.Name = "BtnAtualizarGrid";
+            this.BtnAtualizarGrid.Size = new System.Drawing.Size(35, 35);
+            this.BtnAtualizarGrid.TabIndex = 57;
+            this.BtnAtualizarGrid.UseVisualStyleBackColor = false;
+            this.BtnAtualizarGrid.Click += new System.EventHandler(this.BtnAtualizarGrid_Click);
             // 
             // pictureBox2
             // 
@@ -439,12 +454,12 @@ namespace CesaMVC.br.com.cesa.view
             this.Load += new System.EventHandler(this.FrmProduto_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.foto_produto2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Foto_produto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).EndInit();
             this.tabProduto.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.foto_produto2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
@@ -482,5 +497,6 @@ namespace CesaMVC.br.com.cesa.view
         private System.Windows.Forms.Button BtnSalvar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox foto_produto2;
+        private System.Windows.Forms.Button BtnAtualizarGrid;
     }
 }

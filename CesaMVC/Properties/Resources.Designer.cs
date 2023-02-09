@@ -113,6 +113,16 @@ namespace CesaMVC.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap btn_atualizar_20 {
+            get {
+                object obj = ResourceManager.GetObject("btn_atualizar_20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btn_cancelar_24 {
             get {
                 object obj = ResourceManager.GetObject("btn_cancelar_24", resourceCulture);
@@ -656,6 +666,16 @@ namespace CesaMVC.Properties {
         internal static System.Drawing.Bitmap user_48 {
             get {
                 object obj = ResourceManager.GetObject("user_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap venda_20 {
+            get {
+                object obj = ResourceManager.GetObject("venda_20", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

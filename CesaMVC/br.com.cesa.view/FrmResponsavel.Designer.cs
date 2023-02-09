@@ -31,7 +31,6 @@ namespace CesaMVC.br.com.cesa.view
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmResponsavel));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -42,6 +41,7 @@ namespace CesaMVC.br.com.cesa.view
             this.TxtPesquisar = new System.Windows.Forms.TextBox();
             this.BtnNovo = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.CbParentesco = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -57,7 +57,7 @@ namespace CesaMVC.br.com.cesa.view
             this.BtnSalvar = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.CbParentesco = new System.Windows.Forms.ComboBox();
+            this.BtnAtualizarGrid = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabAluno.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -100,6 +100,7 @@ namespace CesaMVC.br.com.cesa.view
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.BtnAtualizarGrid);
             this.tabPage1.Controls.Add(this.pictureBox2);
             this.tabPage1.Controls.Add(this.Grid);
             this.tabPage1.Controls.Add(this.TxtPesquisar);
@@ -131,29 +132,21 @@ namespace CesaMVC.br.com.cesa.view
             this.Grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Grid.BackgroundColor = System.Drawing.Color.White;
             this.Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Grid.DefaultCellStyle = dataGridViewCellStyle1;
             this.Grid.Location = new System.Drawing.Point(6, 79);
             this.Grid.MultiSelect = false;
             this.Grid.Name = "Grid";
             this.Grid.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.Grid.RowHeadersVisible = false;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Grid.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Grid.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Grid.Size = new System.Drawing.Size(633, 273);
             this.Grid.TabIndex = 23;
@@ -210,6 +203,20 @@ namespace CesaMVC.br.com.cesa.view
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Dados Responsável";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // CbParentesco
+            // 
+            this.CbParentesco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbParentesco.Enabled = false;
+            this.CbParentesco.FormattingEnabled = true;
+            this.CbParentesco.Items.AddRange(new object[] {
+            "Mãe",
+            "Pai",
+            "Responsável"});
+            this.CbParentesco.Location = new System.Drawing.Point(31, 184);
+            this.CbParentesco.Name = "CbParentesco";
+            this.CbParentesco.Size = new System.Drawing.Size(175, 29);
+            this.CbParentesco.TabIndex = 52;
             // 
             // label15
             // 
@@ -383,19 +390,18 @@ namespace CesaMVC.br.com.cesa.view
             this.label2.TabIndex = 10;
             this.label2.Text = "Nome Completo*.:";
             // 
-            // CbParentesco
+            // BtnAtualizarGrid
             // 
-            this.CbParentesco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CbParentesco.Enabled = false;
-            this.CbParentesco.FormattingEnabled = true;
-            this.CbParentesco.Items.AddRange(new object[] {
-            "Mãe",
-            "Pai",
-            "Responsável"});
-            this.CbParentesco.Location = new System.Drawing.Point(31, 184);
-            this.CbParentesco.Name = "CbParentesco";
-            this.CbParentesco.Size = new System.Drawing.Size(175, 29);
-            this.CbParentesco.TabIndex = 52;
+            this.BtnAtualizarGrid.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BtnAtualizarGrid.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnAtualizarGrid.ForeColor = System.Drawing.Color.White;
+            this.BtnAtualizarGrid.Image = global::CesaMVC.Properties.Resources.btn_atualizar_20;
+            this.BtnAtualizarGrid.Location = new System.Drawing.Point(229, 28);
+            this.BtnAtualizarGrid.Name = "BtnAtualizarGrid";
+            this.BtnAtualizarGrid.Size = new System.Drawing.Size(35, 35);
+            this.BtnAtualizarGrid.TabIndex = 26;
+            this.BtnAtualizarGrid.UseVisualStyleBackColor = false;
+            this.BtnAtualizarGrid.Click += new System.EventHandler(this.BtnAtualizarGrid_Click);
             // 
             // FrmResponsavel
             // 
@@ -408,7 +414,7 @@ namespace CesaMVC.br.com.cesa.view
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.Highlight;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmResponsavel";
@@ -456,5 +462,6 @@ namespace CesaMVC.br.com.cesa.view
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox CbParentesco;
+        private System.Windows.Forms.Button BtnAtualizarGrid;
     }
 }

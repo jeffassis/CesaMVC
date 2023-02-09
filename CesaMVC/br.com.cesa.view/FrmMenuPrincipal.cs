@@ -199,6 +199,7 @@ namespace CesaMVC.br.com.cesa.view
 
         private void EstoqueProdutos_Click(object sender, EventArgs e)
         {
+            Program.chamadaProduto = "NovoProduto";
             FrmProduto form = new FrmProduto();
             AbreForm(2, form);
         }
@@ -242,6 +243,18 @@ namespace CesaMVC.br.com.cesa.view
         private void RelatorioFinanceiroMensalidade_Click(object sender, EventArgs e)
         {
             Report_ConsultarMensalidade form = new Report_ConsultarMensalidade();
+            AbreForm(2, form);
+        }
+
+        private void VendasLancamento_Click(object sender, EventArgs e)
+        {
+            FrmVenda form = new FrmVenda();
+            AbreForm(2, form);
+        }
+
+        private void VendasHistorico_Click(object sender, EventArgs e)
+        {
+            FrmVendaHistorico form = new FrmVendaHistorico();
             AbreForm(2, form);
         }
     }

@@ -157,8 +157,7 @@ namespace CesaMVC.br.com.cesa.view
         private void FrmAluno_Load(object sender, EventArgs e)
         {
             TxtPesquisar.Focus();
-            LimparFoto();
-            Listar();
+            LimparFoto();            
         }
 
         private void BtnNovo_Click(object sender, EventArgs e)
@@ -222,8 +221,7 @@ namespace CesaMVC.br.com.cesa.view
             // Adiciona aluno
             dao.AddAluno(obj, Img());
             Desabilitar();
-            LimparCampos();
-            Listar();
+            LimparCampos();            
             tabAluno.SelectedTab = tabPage1;
         }
 
@@ -277,8 +275,7 @@ namespace CesaMVC.br.com.cesa.view
                 dao.UpdateAluno(obj, idSelecionado);
             }
             Desabilitar();
-            LimparCampos();
-            Listar();
+            LimparCampos();            
             alterou = "";
             tabAluno.SelectedTab = tabPage1;
         }
@@ -303,6 +300,7 @@ namespace CesaMVC.br.com.cesa.view
 
             AlunoDAO dao = new AlunoDAO();
             Grid.DataSource = dao.ListarAlunoPorNome(nome);
+            FormatarDG();
         }
 
         private byte[] Img()
@@ -409,6 +407,17 @@ namespace CesaMVC.br.com.cesa.view
                 Program.nomeAluno = Grid.CurrentRow.Cells[1].Value.ToString();
                 Close();
             }
+        }
+
+        private void BtnAtualizarGrid_Click(object sender, EventArgs e)
+        {
+            // Codigo para limpar o DataGridView quando o aluno estiver vazio
+            if (Grid.DataSource is DataTable dt)
+            {
+                dt.Rows.Clear();
+            }
+
+            Listar();
         }
     }
 }

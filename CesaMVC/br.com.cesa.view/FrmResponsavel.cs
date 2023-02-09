@@ -104,8 +104,7 @@ namespace CesaMVC.br.com.cesa.view
 
         private void FrmResponsavel_Load(object sender, EventArgs e)
         {
-            TxtPesquisar.Focus();
-            Listar();
+            TxtPesquisar.Focus();            
         }
 
         private void BtnNovo_Click(object sender, EventArgs e)
@@ -159,8 +158,7 @@ namespace CesaMVC.br.com.cesa.view
             // Adiciona aluno
             dao.AddResponsavel(obj);
             Desabilitar();
-            LimparCampos();
-            Listar();
+            LimparCampos();            
             tabAluno.SelectedTab = tabPage1;
         }
 
@@ -198,8 +196,7 @@ namespace CesaMVC.br.com.cesa.view
             }           
             dao.UpdateResponsavel(obj, idSelecionado);            
             Desabilitar();
-            LimparCampos();
-            Listar();
+            LimparCampos();            
             tabAluno.SelectedTab = tabPage1;
         }
 
@@ -241,6 +238,19 @@ namespace CesaMVC.br.com.cesa.view
 
             ResponsavelDAO dao = new ResponsavelDAO();
             Grid.DataSource = dao.ListarResponsavelPorNome(nome);
+
+            FormatarDG();
+        }
+
+        private void BtnAtualizarGrid_Click(object sender, EventArgs e)
+        {
+            // Codigo para limpar o DataGridView quando o aluno estiver vazio
+            if (Grid.DataSource is DataTable dt)
+            {
+                dt.Rows.Clear();
+            }
+
+            Listar();
         }
     }
 }

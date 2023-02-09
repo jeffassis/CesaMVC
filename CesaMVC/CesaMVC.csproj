@@ -141,6 +141,7 @@
     <Compile Include="br.com.cesa.dao\GastoDAO.cs" />
     <Compile Include="br.com.cesa.dao\HoraProfessorDAO.cs" />
     <Compile Include="br.com.cesa.dao\HorarioDAO.cs" />
+    <Compile Include="br.com.cesa.dao\ItemVendaDAO.cs" />
     <Compile Include="br.com.cesa.dao\MensalidadeDAO.cs" />
     <Compile Include="br.com.cesa.dao\MovimentacaoDAO.cs" />
     <Compile Include="br.com.cesa.dao\NotasDAO.cs" />
@@ -150,6 +151,7 @@
     <Compile Include="br.com.cesa.dao\ServicosDAO.cs" />
     <Compile Include="br.com.cesa.dao\TurmaDAO.cs" />
     <Compile Include="br.com.cesa.dao\UsuarioDAO.cs" />
+    <Compile Include="br.com.cesa.dao\VendaDAO.cs" />
     <Compile Include="br.com.cesa.model\Aluno.cs" />
     <Compile Include="br.com.cesa.model\Bimestre.cs" />
     <Compile Include="br.com.cesa.model\Disciplina.cs" />
@@ -157,6 +159,7 @@
     <Compile Include="br.com.cesa.model\Gasto.cs" />
     <Compile Include="br.com.cesa.model\HoraProfessor.cs" />
     <Compile Include="br.com.cesa.model\Horario.cs" />
+    <Compile Include="br.com.cesa.model\ItemVenda.cs" />
     <Compile Include="br.com.cesa.model\Mensalidade.cs" />
     <Compile Include="br.com.cesa.model\Movimentacao.cs" />
     <Compile Include="br.com.cesa.model\Notas.cs" />
@@ -166,6 +169,7 @@
     <Compile Include="br.com.cesa.model\Servicos.cs" />
     <Compile Include="br.com.cesa.model\Turma.cs" />
     <Compile Include="br.com.cesa.model\Usuario.cs" />
+    <Compile Include="br.com.cesa.model\Venda.cs" />
     <Compile Include="br.com.cesa.report\Report_AlunoTurma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -346,6 +350,30 @@
     <Compile Include="br.com.cesa.view\FrmMatricula.Designer.cs">
       <DependentUpon>FrmMatricula.cs</DependentUpon>
     </Compile>
+    <Compile Include="br.com.cesa.view\FrmVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.cesa.view\FrmVenda.Designer.cs">
+      <DependentUpon>FrmVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="br.com.cesa.view\FrmVendaDetalhes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.cesa.view\FrmVendaDetalhes.Designer.cs">
+      <DependentUpon>FrmVendaDetalhes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="br.com.cesa.view\FrmVendaHistorico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.cesa.view\FrmVendaHistorico.Designer.cs">
+      <DependentUpon>FrmVendaHistorico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="br.com.cesa.view\FrmVendaPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.cesa.view\FrmVendaPagamento.Designer.cs">
+      <DependentUpon>FrmVendaPagamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="cesadbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -448,6 +476,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.cesa.view\FrmMatricula.resx">
       <DependentUpon>FrmMatricula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.cesa.view\FrmVenda.resx">
+      <DependentUpon>FrmVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.cesa.view\FrmVendaDetalhes.resx">
+      <DependentUpon>FrmVendaDetalhes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.cesa.view\FrmVendaHistorico.resx">
+      <DependentUpon>FrmVendaHistorico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.cesa.view\FrmVendaPagamento.resx">
+      <DependentUpon>FrmVendaPagamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -557,6 +597,8 @@
     <None Include="Resources\consultar_20.png" />
     <None Include="Resources\calendar_20.png" />
     <None Include="Resources\calendar_24.png" />
+    <None Include="Resources\btn_atualizar_20.png" />
+    <None Include="Resources\menu_venda_20.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -36,6 +36,13 @@ namespace CesaMVC
         public static string nomeHorario;
         public static string diaHorario;
 
+        // Variaveis para chamar tela produto
+        public static string chamadaProduto;
+        public static string idProduto;
+        public static string nomeProduto;
+        public static string precoProduto;
+        public static string estoqueProduto;
+
         /// <summary>
         /// Ponto de entrada principal para o aplicativo.
         /// </summary>
