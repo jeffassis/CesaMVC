@@ -29,26 +29,28 @@ namespace CesaMVC.br.com.cesa.view
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMensalidadeConsultar));
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.BtnImprimir = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.CbAluno = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.BtnPesquisar = new System.Windows.Forms.Button();
             this.CbTurma = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.Grid = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.BtnImprimir = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.BtnPesquisar = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -87,6 +89,30 @@ namespace CesaMVC.br.com.cesa.view
             this.groupBox2.TabIndex = 71;
             this.groupBox2.TabStop = false;
             // 
+            // BtnImprimir
+            // 
+            this.BtnImprimir.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BtnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnImprimir.ForeColor = System.Drawing.Color.White;
+            this.BtnImprimir.Image = global::CesaMVC.Properties.Resources.btn_imprimir_24;
+            this.BtnImprimir.Location = new System.Drawing.Point(275, 51);
+            this.BtnImprimir.Name = "BtnImprimir";
+            this.BtnImprimir.Size = new System.Drawing.Size(40, 40);
+            this.BtnImprimir.TabIndex = 67;
+            this.BtnImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.BtnImprimir, "Imprimir consulta");
+            this.BtnImprimir.UseVisualStyleBackColor = false;
+            this.BtnImprimir.Click += new System.EventHandler(this.BtnImprimir_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::CesaMVC.Properties.Resources.livros_48;
+            this.pictureBox2.Location = new System.Drawing.Point(157, 39);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox2.TabIndex = 66;
+            this.pictureBox2.TabStop = false;
+            // 
             // CbAluno
             // 
             this.CbAluno.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -105,6 +131,21 @@ namespace CesaMVC.br.com.cesa.view
             this.label6.Size = new System.Drawing.Size(59, 18);
             this.label6.TabIndex = 64;
             this.label6.Text = "Aluno.:";
+            // 
+            // BtnPesquisar
+            // 
+            this.BtnPesquisar.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BtnPesquisar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnPesquisar.ForeColor = System.Drawing.Color.White;
+            this.BtnPesquisar.Image = global::CesaMVC.Properties.Resources.btn_pesquisar_24;
+            this.BtnPesquisar.Location = new System.Drawing.Point(275, 107);
+            this.BtnPesquisar.Name = "BtnPesquisar";
+            this.BtnPesquisar.Size = new System.Drawing.Size(40, 40);
+            this.BtnPesquisar.TabIndex = 5;
+            this.BtnPesquisar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.BtnPesquisar, "Buscar alunos");
+            this.BtnPesquisar.UseVisualStyleBackColor = false;
+            this.BtnPesquisar.Click += new System.EventHandler(this.BtnPesquisar_Click);
             // 
             // CbTurma
             // 
@@ -163,43 +204,6 @@ namespace CesaMVC.br.com.cesa.view
             this.pictureBox1.TabIndex = 76;
             this.pictureBox1.TabStop = false;
             // 
-            // BtnImprimir
-            // 
-            this.BtnImprimir.BackColor = System.Drawing.SystemColors.Highlight;
-            this.BtnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnImprimir.ForeColor = System.Drawing.Color.White;
-            this.BtnImprimir.Image = global::CesaMVC.Properties.Resources.btn_imprimir_24;
-            this.BtnImprimir.Location = new System.Drawing.Point(275, 51);
-            this.BtnImprimir.Name = "BtnImprimir";
-            this.BtnImprimir.Size = new System.Drawing.Size(40, 40);
-            this.BtnImprimir.TabIndex = 67;
-            this.BtnImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnImprimir.UseVisualStyleBackColor = false;
-            this.BtnImprimir.Click += new System.EventHandler(this.BtnImprimir_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::CesaMVC.Properties.Resources.livros_48;
-            this.pictureBox2.Location = new System.Drawing.Point(157, 39);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox2.TabIndex = 66;
-            this.pictureBox2.TabStop = false;
-            // 
-            // BtnPesquisar
-            // 
-            this.BtnPesquisar.BackColor = System.Drawing.SystemColors.Highlight;
-            this.BtnPesquisar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnPesquisar.ForeColor = System.Drawing.Color.White;
-            this.BtnPesquisar.Image = global::CesaMVC.Properties.Resources.btn_pesquisar_24;
-            this.BtnPesquisar.Location = new System.Drawing.Point(275, 107);
-            this.BtnPesquisar.Name = "BtnPesquisar";
-            this.BtnPesquisar.Size = new System.Drawing.Size(40, 40);
-            this.BtnPesquisar.TabIndex = 5;
-            this.BtnPesquisar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnPesquisar.UseVisualStyleBackColor = false;
-            this.BtnPesquisar.Click += new System.EventHandler(this.BtnPesquisar_Click);
-            // 
             // FrmMensalidadeConsultar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -225,9 +229,9 @@ namespace CesaMVC.br.com.cesa.view
             this.panel2.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -246,5 +250,6 @@ namespace CesaMVC.br.com.cesa.view
         private System.Windows.Forms.DataGridView Grid;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button BtnImprimir;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

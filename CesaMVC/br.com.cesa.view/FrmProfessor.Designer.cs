@@ -77,6 +77,7 @@ namespace CesaMVC.br.com.cesa.view
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.BtnAtualizarGrid = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabProfessor.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -122,6 +123,7 @@ namespace CesaMVC.br.com.cesa.view
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.BtnAtualizarGrid);
             this.tabPage1.Controls.Add(this.pictureBox2);
             this.tabPage1.Controls.Add(this.Grid);
             this.tabPage1.Controls.Add(this.TxtPesquisar);
@@ -670,6 +672,20 @@ namespace CesaMVC.br.com.cesa.view
             this.label2.TabIndex = 10;
             this.label2.Text = "Nome Completo*.:";
             // 
+            // BtnAtualizarGrid
+            // 
+            this.BtnAtualizarGrid.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BtnAtualizarGrid.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnAtualizarGrid.ForeColor = System.Drawing.Color.White;
+            this.BtnAtualizarGrid.Image = global::CesaMVC.Properties.Resources.btn_atualizar_20;
+            this.BtnAtualizarGrid.Location = new System.Drawing.Point(404, 28);
+            this.BtnAtualizarGrid.Name = "BtnAtualizarGrid";
+            this.BtnAtualizarGrid.Size = new System.Drawing.Size(35, 35);
+            this.BtnAtualizarGrid.TabIndex = 26;
+            this.toolTip1.SetToolTip(this.BtnAtualizarGrid, "Atualizar Grid");
+            this.BtnAtualizarGrid.UseVisualStyleBackColor = false;
+            this.BtnAtualizarGrid.Click += new System.EventHandler(this.BtnAtualizarGrid_Click);
+            // 
             // FrmProfessor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -750,5 +766,6 @@ namespace CesaMVC.br.com.cesa.view
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button BtnAtualizarGrid;
     }
 }

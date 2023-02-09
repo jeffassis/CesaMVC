@@ -139,8 +139,7 @@ namespace CesaMVC.br.com.cesa.view
         private void FrmProduto_Load(object sender, EventArgs e)
         {
             TxtPesquisar.Focus();
-            ComboFornecedor();
-            Listar();
+            ComboFornecedor();            
             LimparFoto();
         }
 
@@ -199,8 +198,7 @@ namespace CesaMVC.br.com.cesa.view
             }
             dao.AddProduto(obj, Img());
             Desabilitar();
-            LimparCampos();
-            Listar();
+            LimparCampos();            
             tabProduto.SelectedTab = tabPage1;
         }
 
@@ -251,8 +249,7 @@ namespace CesaMVC.br.com.cesa.view
                 dao.UpdateProduto(obj, idSelecionado);
             }
             Desabilitar();
-            LimparCampos();
-            Listar();
+            LimparCampos();            
             alterou = "";
             tabProduto.SelectedTab = tabPage1;
         }
@@ -338,17 +335,28 @@ namespace CesaMVC.br.com.cesa.view
 
         private void Grid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Foto do tab1
-            if (Grid.CurrentRow.Cells[9].Value != DBNull.Value)
+            if (Program.chamadaProduto == "produto")
             {
-                byte[] imagem = (byte[])Grid.CurrentRow.Cells[9].Value;
-                MemoryStream ms = new MemoryStream(imagem);
-                foto_produto2.Image = System.Drawing.Image.FromStream(ms);
+                Program.idProduto = Grid.CurrentRow.Cells[0].Value.ToString();
+                Program.nomeProduto = Grid.CurrentRow.Cells[1].Value.ToString();
+                Program.estoqueProduto = Grid.CurrentRow.Cells[4].Value.ToString();
+                Program.precoProduto = Grid.CurrentRow.Cells[6].Value.ToString();
+                Close();
             }
             else
             {
-                foto_produto2.Image = Properties.Resources.sem_foto;
-            }
+                // Foto do tab1
+                if (Grid.CurrentRow.Cells[9].Value != DBNull.Value)
+                {
+                    byte[] imagem = (byte[])Grid.CurrentRow.Cells[9].Value;
+                    MemoryStream ms = new MemoryStream(imagem);
+                    foto_produto2.Image = System.Drawing.Image.FromStream(ms);
+                }
+                else
+                {
+                    foto_produto2.Image = Properties.Resources.sem_foto;
+                }
+            }                    
         }
 
         private void TxtPesquisar_TextChanged(object sender, EventArgs e)
@@ -357,6 +365,19 @@ namespace CesaMVC.br.com.cesa.view
 
             ProdutoDAO dao = new ProdutoDAO();
             Grid.DataSource = dao.ListarProdutoPorNome(nome);
-        }        
+
+            FormatarDG();
+        }
+
+        private void BtnAtualizarGrid_Click(object sender, EventArgs e)
+        {
+            // Codigo para limpar o DataGridView quando o aluno estiver vazio
+            if (Grid.DataSource is DataTable dt)
+            {
+                dt.Rows.Clear();
+            }
+
+            Listar();
+        }
     }
 }

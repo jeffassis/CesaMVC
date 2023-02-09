@@ -36,16 +36,11 @@ namespace CesaMVC.br.com.cesa.view
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabAluno = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Grid = new System.Windows.Forms.DataGridView();
             this.TxtPesquisar = new System.Windows.Forms.TextBox();
-            this.BtnNovo = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label15 = new System.Windows.Forms.Label();
-            this.Foto_aluno = new System.Windows.Forms.PictureBox();
-            this.BtnFoto = new System.Windows.Forms.Button();
             this.cb_estado = new System.Windows.Forms.ComboBox();
-            this.BtnCep = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -69,20 +64,26 @@ namespace CesaMVC.br.com.cesa.view
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.BtnAtualizarGrid = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.BtnNovo = new System.Windows.Forms.Button();
+            this.Foto_aluno = new System.Windows.Forms.PictureBox();
+            this.BtnFoto = new System.Windows.Forms.Button();
+            this.BtnCep = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnExcluir = new System.Windows.Forms.Button();
             this.BtnEditar = new System.Windows.Forms.Button();
             this.BtnSalvar = new System.Windows.Forms.Button();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             this.tabAluno.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Foto_aluno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -120,6 +121,7 @@ namespace CesaMVC.br.com.cesa.view
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.BtnAtualizarGrid);
             this.tabPage1.Controls.Add(this.pictureBox2);
             this.tabPage1.Controls.Add(this.Grid);
             this.tabPage1.Controls.Add(this.TxtPesquisar);
@@ -132,18 +134,6 @@ namespace CesaMVC.br.com.cesa.view
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Consultar";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Image = global::CesaMVC.Properties.Resources.pesquisar_20;
-            this.pictureBox2.Location = new System.Drawing.Point(445, 32);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(48, 27);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 24;
-            this.pictureBox2.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox2, "Pesquisar Aluno");
             // 
             // Grid
             // 
@@ -181,29 +171,10 @@ namespace CesaMVC.br.com.cesa.view
             this.TxtPesquisar.TabIndex = 1;
             this.TxtPesquisar.TextChanged += new System.EventHandler(this.TxtPesquisar_TextChanged);
             // 
-            // BtnNovo
-            // 
-            this.BtnNovo.BackColor = System.Drawing.SystemColors.Highlight;
-            this.BtnNovo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnNovo.ForeColor = System.Drawing.Color.White;
-            this.BtnNovo.Image = global::CesaMVC.Properties.Resources.btn_novo_24;
-            this.BtnNovo.Location = new System.Drawing.Point(16, 15);
-            this.BtnNovo.Name = "BtnNovo";
-            this.BtnNovo.Size = new System.Drawing.Size(140, 60);
-            this.BtnNovo.TabIndex = 2;
-            this.BtnNovo.Text = "  Novo";
-            this.BtnNovo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip1.SetToolTip(this.BtnNovo, "Novo registro");
-            this.BtnNovo.UseVisualStyleBackColor = false;
-            this.BtnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
-            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.label15);
-            this.tabPage2.Controls.Add(this.Foto_aluno);
-            this.tabPage2.Controls.Add(this.BtnFoto);
             this.tabPage2.Controls.Add(this.cb_estado);
-            this.tabPage2.Controls.Add(this.BtnCep);
             this.tabPage2.Controls.Add(this.label14);
             this.tabPage2.Controls.Add(this.txtCidade);
             this.tabPage2.Controls.Add(this.label13);
@@ -227,13 +198,16 @@ namespace CesaMVC.br.com.cesa.view
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.label3);
+            this.tabPage2.Controls.Add(this.txtNome);
+            this.tabPage2.Controls.Add(this.label2);
+            this.tabPage2.Controls.Add(this.Foto_aluno);
+            this.tabPage2.Controls.Add(this.BtnFoto);
+            this.tabPage2.Controls.Add(this.BtnCep);
             this.tabPage2.Controls.Add(this.pictureBox1);
             this.tabPage2.Controls.Add(this.BtnCancelar);
             this.tabPage2.Controls.Add(this.BtnExcluir);
             this.tabPage2.Controls.Add(this.BtnEditar);
             this.tabPage2.Controls.Add(this.BtnSalvar);
-            this.tabPage2.Controls.Add(this.txtNome);
-            this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.ForeColor = System.Drawing.SystemColors.Highlight;
             this.tabPage2.Location = new System.Drawing.Point(4, 30);
             this.tabPage2.Name = "tabPage2";
@@ -252,32 +226,6 @@ namespace CesaMVC.br.com.cesa.view
             this.label15.Size = new System.Drawing.Size(353, 19);
             this.label15.TabIndex = 51;
             this.label15.Text = "Obs: Campos com (*) não podem ser vazios!";
-            // 
-            // Foto_aluno
-            // 
-            this.Foto_aluno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Foto_aluno.Location = new System.Drawing.Point(453, 33);
-            this.Foto_aluno.Name = "Foto_aluno";
-            this.Foto_aluno.Size = new System.Drawing.Size(113, 113);
-            this.Foto_aluno.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Foto_aluno.TabIndex = 50;
-            this.Foto_aluno.TabStop = false;
-            // 
-            // BtnFoto
-            // 
-            this.BtnFoto.BackColor = System.Drawing.SystemColors.Highlight;
-            this.BtnFoto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnFoto.Enabled = false;
-            this.BtnFoto.ForeColor = System.Drawing.Color.White;
-            this.BtnFoto.Image = global::CesaMVC.Properties.Resources.btn_foto_24;
-            this.BtnFoto.Location = new System.Drawing.Point(402, 101);
-            this.BtnFoto.Name = "BtnFoto";
-            this.BtnFoto.Size = new System.Drawing.Size(45, 45);
-            this.BtnFoto.TabIndex = 19;
-            this.BtnFoto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip1.SetToolTip(this.BtnFoto, "Incluir foto");
-            this.BtnFoto.UseVisualStyleBackColor = false;
-            this.BtnFoto.Click += new System.EventHandler(this.BtnFoto_Click);
             // 
             // cb_estado
             // 
@@ -318,23 +266,6 @@ namespace CesaMVC.br.com.cesa.view
             this.cb_estado.Name = "cb_estado";
             this.cb_estado.Size = new System.Drawing.Size(63, 29);
             this.cb_estado.TabIndex = 12;
-            // 
-            // BtnCep
-            // 
-            this.BtnCep.BackColor = System.Drawing.SystemColors.Highlight;
-            this.BtnCep.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnCep.Enabled = false;
-            this.BtnCep.ForeColor = System.Drawing.Color.White;
-            this.BtnCep.Image = global::CesaMVC.Properties.Resources.btn_cep_24;
-            this.BtnCep.Location = new System.Drawing.Point(550, 319);
-            this.BtnCep.Name = "BtnCep";
-            this.BtnCep.Size = new System.Drawing.Size(130, 45);
-            this.BtnCep.TabIndex = 18;
-            this.BtnCep.Text = "  Buscar";
-            this.BtnCep.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip1.SetToolTip(this.BtnCep, "Buscar CEP");
-            this.BtnCep.UseVisualStyleBackColor = false;
-            this.BtnCep.Click += new System.EventHandler(this.BtnCep_Click);
             // 
             // label14
             // 
@@ -573,6 +504,110 @@ namespace CesaMVC.br.com.cesa.view
             this.label3.TabIndex = 25;
             this.label3.Text = "RG.:";
             // 
+            // txtNome
+            // 
+            this.txtNome.Enabled = false;
+            this.txtNome.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.txtNome.Location = new System.Drawing.Point(31, 46);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(356, 27);
+            this.txtNome.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(27, 24);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(153, 19);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Nome Completo*.:";
+            // 
+            // BtnAtualizarGrid
+            // 
+            this.BtnAtualizarGrid.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BtnAtualizarGrid.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnAtualizarGrid.ForeColor = System.Drawing.Color.White;
+            this.BtnAtualizarGrid.Image = global::CesaMVC.Properties.Resources.btn_atualizar_20;
+            this.BtnAtualizarGrid.Location = new System.Drawing.Point(404, 28);
+            this.BtnAtualizarGrid.Name = "BtnAtualizarGrid";
+            this.BtnAtualizarGrid.Size = new System.Drawing.Size(35, 35);
+            this.BtnAtualizarGrid.TabIndex = 25;
+            this.toolTip1.SetToolTip(this.BtnAtualizarGrid, "Atualizar Grid");
+            this.BtnAtualizarGrid.UseVisualStyleBackColor = false;
+            this.BtnAtualizarGrid.Click += new System.EventHandler(this.BtnAtualizarGrid_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox2.Image = global::CesaMVC.Properties.Resources.pesquisar_20;
+            this.pictureBox2.Location = new System.Drawing.Point(445, 32);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(48, 27);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 24;
+            this.pictureBox2.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox2, "Pesquisar Aluno");
+            // 
+            // BtnNovo
+            // 
+            this.BtnNovo.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BtnNovo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnNovo.ForeColor = System.Drawing.Color.White;
+            this.BtnNovo.Image = global::CesaMVC.Properties.Resources.btn_novo_24;
+            this.BtnNovo.Location = new System.Drawing.Point(16, 15);
+            this.BtnNovo.Name = "BtnNovo";
+            this.BtnNovo.Size = new System.Drawing.Size(140, 60);
+            this.BtnNovo.TabIndex = 2;
+            this.BtnNovo.Text = "  Novo";
+            this.BtnNovo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.BtnNovo, "Novo registro");
+            this.BtnNovo.UseVisualStyleBackColor = false;
+            this.BtnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
+            // 
+            // Foto_aluno
+            // 
+            this.Foto_aluno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Foto_aluno.Location = new System.Drawing.Point(453, 33);
+            this.Foto_aluno.Name = "Foto_aluno";
+            this.Foto_aluno.Size = new System.Drawing.Size(113, 113);
+            this.Foto_aluno.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Foto_aluno.TabIndex = 50;
+            this.Foto_aluno.TabStop = false;
+            // 
+            // BtnFoto
+            // 
+            this.BtnFoto.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BtnFoto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnFoto.Enabled = false;
+            this.BtnFoto.ForeColor = System.Drawing.Color.White;
+            this.BtnFoto.Image = global::CesaMVC.Properties.Resources.btn_foto_24;
+            this.BtnFoto.Location = new System.Drawing.Point(402, 101);
+            this.BtnFoto.Name = "BtnFoto";
+            this.BtnFoto.Size = new System.Drawing.Size(45, 45);
+            this.BtnFoto.TabIndex = 19;
+            this.BtnFoto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.BtnFoto, "Incluir foto");
+            this.BtnFoto.UseVisualStyleBackColor = false;
+            this.BtnFoto.Click += new System.EventHandler(this.BtnFoto_Click);
+            // 
+            // BtnCep
+            // 
+            this.BtnCep.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BtnCep.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCep.Enabled = false;
+            this.BtnCep.ForeColor = System.Drawing.Color.White;
+            this.BtnCep.Image = global::CesaMVC.Properties.Resources.btn_cep_24;
+            this.BtnCep.Location = new System.Drawing.Point(550, 319);
+            this.BtnCep.Name = "BtnCep";
+            this.BtnCep.Size = new System.Drawing.Size(130, 45);
+            this.BtnCep.TabIndex = 18;
+            this.BtnCep.Text = "  Buscar";
+            this.BtnCep.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.BtnCep, "Buscar CEP");
+            this.BtnCep.UseVisualStyleBackColor = false;
+            this.BtnCep.Click += new System.EventHandler(this.BtnCep_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CesaMVC.Properties.Resources.cesa;
@@ -650,25 +685,6 @@ namespace CesaMVC.br.com.cesa.view
             this.BtnSalvar.UseVisualStyleBackColor = false;
             this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
-            // txtNome
-            // 
-            this.txtNome.Enabled = false;
-            this.txtNome.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.txtNome.Location = new System.Drawing.Point(31, 46);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(356, 27);
-            this.txtNome.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(27, 24);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(153, 19);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Nome Completo*.:";
-            // 
             // FrmAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -693,10 +709,10 @@ namespace CesaMVC.br.com.cesa.view
             this.tabAluno.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Foto_aluno)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -750,5 +766,6 @@ namespace CesaMVC.br.com.cesa.view
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ToolTip toolTip1;
         public System.Windows.Forms.Button BtnNovo;
+        private System.Windows.Forms.Button BtnAtualizarGrid;
     }
 }
