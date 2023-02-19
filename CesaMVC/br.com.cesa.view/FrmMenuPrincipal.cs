@@ -257,5 +257,11 @@ namespace CesaMVC.br.com.cesa.view
             FrmVendaHistorico form = new FrmVendaHistorico();
             AbreForm(2, form);
         }
+
+        private void RelatoriosBoletimAnual_Click(object sender, EventArgs e)
+        {
+            Report_BoletimFinal form = new Report_BoletimFinal();
+            AbreForm(2, form);
+        }
     }
 }

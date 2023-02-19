@@ -182,6 +182,12 @@
     <Compile Include="br.com.cesa.report\Report_BoletimAluno.Designer.cs">
       <DependentUpon>Report_BoletimAluno.cs</DependentUpon>
     </Compile>
+    <Compile Include="br.com.cesa.report\Report_BoletimFinal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.cesa.report\Report_BoletimFinal.Designer.cs">
+      <DependentUpon>Report_BoletimFinal.cs</DependentUpon>
+    </Compile>
     <Compile Include="br.com.cesa.report\Report_ConsultarMensalidade.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -383,6 +389,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="br.com.cesa.report\RelBoletimAluno.rdlc" />
+    <EmbeddedResource Include="br.com.cesa.report\RelBoletimFinal.rdlc" />
     <EmbeddedResource Include="br.com.cesa.report\RelConsultarMensalidade.rdlc" />
     <EmbeddedResource Include="br.com.cesa.report\RelHoraProfessor.rdlc" />
     <EmbeddedResource Include="br.com.cesa.report\RelMovimentacao.rdlc" />
@@ -392,6 +399,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.cesa.report\Report_BoletimAluno.resx">
       <DependentUpon>Report_BoletimAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.cesa.report\Report_BoletimFinal.resx">
+      <DependentUpon>Report_BoletimFinal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.cesa.report\Report_ConsultarMensalidade.resx">
       <DependentUpon>Report_ConsultarMensalidade.cs</DependentUpon>
