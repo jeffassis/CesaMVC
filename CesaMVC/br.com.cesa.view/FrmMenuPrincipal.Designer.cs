@@ -388,7 +388,7 @@ namespace CesaMVC.br.com.cesa.view
             this.EstoqueFornecedor.ForeColor = System.Drawing.SystemColors.Highlight;
             this.EstoqueFornecedor.Image = global::CesaMVC.Properties.Resources.fornecedor_20;
             this.EstoqueFornecedor.Name = "EstoqueFornecedor";
-            this.EstoqueFornecedor.Size = new System.Drawing.Size(180, 24);
+            this.EstoqueFornecedor.Size = new System.Drawing.Size(163, 24);
             this.EstoqueFornecedor.Text = "Fornecedor";
             this.EstoqueFornecedor.Click += new System.EventHandler(this.EstoqueFornecedor_Click);
             // 
@@ -398,7 +398,7 @@ namespace CesaMVC.br.com.cesa.view
             this.EstoqueProdutos.ForeColor = System.Drawing.SystemColors.Highlight;
             this.EstoqueProdutos.Image = global::CesaMVC.Properties.Resources.produto_20;
             this.EstoqueProdutos.Name = "EstoqueProdutos";
-            this.EstoqueProdutos.Size = new System.Drawing.Size(180, 24);
+            this.EstoqueProdutos.Size = new System.Drawing.Size(163, 24);
             this.EstoqueProdutos.Text = "Produtos";
             this.EstoqueProdutos.Click += new System.EventHandler(this.EstoqueProdutos_Click);
             // 
@@ -411,7 +411,7 @@ namespace CesaMVC.br.com.cesa.view
             this.EstoqueVenda.ForeColor = System.Drawing.SystemColors.Highlight;
             this.EstoqueVenda.Image = global::CesaMVC.Properties.Resources.venda_20;
             this.EstoqueVenda.Name = "EstoqueVenda";
-            this.EstoqueVenda.Size = new System.Drawing.Size(180, 24);
+            this.EstoqueVenda.Size = new System.Drawing.Size(163, 24);
             this.EstoqueVenda.Text = "Vendas";
             // 
             // VendasHistorico
@@ -456,7 +456,7 @@ namespace CesaMVC.br.com.cesa.view
             this.RelatoriosBoletim.ForeColor = System.Drawing.SystemColors.Highlight;
             this.RelatoriosBoletim.Image = global::CesaMVC.Properties.Resources.boletim_20;
             this.RelatoriosBoletim.Name = "RelatoriosBoletim";
-            this.RelatoriosBoletim.Size = new System.Drawing.Size(170, 24);
+            this.RelatoriosBoletim.Size = new System.Drawing.Size(180, 24);
             this.RelatoriosBoletim.Text = "Boletim";
             // 
             // RelatoriosBoletimBimestral
@@ -464,7 +464,7 @@ namespace CesaMVC.br.com.cesa.view
             this.RelatoriosBoletimBimestral.ForeColor = System.Drawing.SystemColors.Highlight;
             this.RelatoriosBoletimBimestral.Image = global::CesaMVC.Properties.Resources.boletim_bimestral_20;
             this.RelatoriosBoletimBimestral.Name = "RelatoriosBoletimBimestral";
-            this.RelatoriosBoletimBimestral.Size = new System.Drawing.Size(142, 24);
+            this.RelatoriosBoletimBimestral.Size = new System.Drawing.Size(180, 24);
             this.RelatoriosBoletimBimestral.Text = "Bimestral";
             this.RelatoriosBoletimBimestral.Click += new System.EventHandler(this.RelatoriosBoletimBimestral_Click);
             // 
@@ -473,8 +473,9 @@ namespace CesaMVC.br.com.cesa.view
             this.RelatoriosBoletimAnual.ForeColor = System.Drawing.SystemColors.Highlight;
             this.RelatoriosBoletimAnual.Image = global::CesaMVC.Properties.Resources.boletim_anual_20;
             this.RelatoriosBoletimAnual.Name = "RelatoriosBoletimAnual";
-            this.RelatoriosBoletimAnual.Size = new System.Drawing.Size(142, 24);
+            this.RelatoriosBoletimAnual.Size = new System.Drawing.Size(180, 24);
             this.RelatoriosBoletimAnual.Text = "Anual";
+            this.RelatoriosBoletimAnual.Click += new System.EventHandler(this.RelatoriosBoletimAnual_Click);
             // 
             // RelatoriosDocumentos
             // 
@@ -486,7 +487,7 @@ namespace CesaMVC.br.com.cesa.view
             this.RelatoriosDocumentos.ForeColor = System.Drawing.SystemColors.Highlight;
             this.RelatoriosDocumentos.Image = global::CesaMVC.Properties.Resources.documentos_20;
             this.RelatoriosDocumentos.Name = "RelatoriosDocumentos";
-            this.RelatoriosDocumentos.Size = new System.Drawing.Size(170, 24);
+            this.RelatoriosDocumentos.Size = new System.Drawing.Size(180, 24);
             this.RelatoriosDocumentos.Text = "Documentos";
             // 
             // RelatoriosDocumentosCircular
@@ -522,7 +523,7 @@ namespace CesaMVC.br.com.cesa.view
             this.RelatorioFinanceiro.ForeColor = System.Drawing.SystemColors.Highlight;
             this.RelatorioFinanceiro.Image = global::CesaMVC.Properties.Resources.financeiro_48;
             this.RelatorioFinanceiro.Name = "RelatorioFinanceiro";
-            this.RelatorioFinanceiro.Size = new System.Drawing.Size(170, 24);
+            this.RelatorioFinanceiro.Size = new System.Drawing.Size(180, 24);
             this.RelatorioFinanceiro.Text = "Financeiro";
             // 
             // FinanceiroEntradaSaida
@@ -551,7 +552,7 @@ namespace CesaMVC.br.com.cesa.view
             this.RelatoriosHorarios.ForeColor = System.Drawing.SystemColors.Highlight;
             this.RelatoriosHorarios.Image = global::CesaMVC.Properties.Resources.horario_20;
             this.RelatoriosHorarios.Name = "RelatoriosHorarios";
-            this.RelatoriosHorarios.Size = new System.Drawing.Size(170, 24);
+            this.RelatoriosHorarios.Size = new System.Drawing.Size(180, 24);
             this.RelatoriosHorarios.Text = "Horários";
             // 
             // RelatoriosHorariosProfessor
@@ -569,7 +570,7 @@ namespace CesaMVC.br.com.cesa.view
             this.RelatoriosTurmas.ForeColor = System.Drawing.SystemColors.Highlight;
             this.RelatoriosTurmas.Image = global::CesaMVC.Properties.Resources.turma_20;
             this.RelatoriosTurmas.Name = "RelatoriosTurmas";
-            this.RelatoriosTurmas.Size = new System.Drawing.Size(170, 24);
+            this.RelatoriosTurmas.Size = new System.Drawing.Size(180, 24);
             this.RelatoriosTurmas.Text = "Turmas";
             this.RelatoriosTurmas.Click += new System.EventHandler(this.RelatoriosTurmas_Click);
             // 
