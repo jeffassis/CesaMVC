@@ -70,7 +70,8 @@ namespace CesaMVC.br.com.cesa.dao
                                FROM tb_aluno_turma as tbd
                                INNER JOIN tb_aluno as tba ON tba.id_aluno = tbd.aluno_id
                                INNER JOIN tb_turma as tbt ON tbt.id_turma = tbd.turma_id
-                               WHERE tbt.id_turma=@turma ";
+                               WHERE tbt.id_turma=@turma 
+                               ORDER BY tba.nome";
                 MySqlCommand cmd = new MySqlCommand(sql, vcon);
                 cmd.Parameters.AddWithValue("@turma", id_turma);
                 vcon.Open();

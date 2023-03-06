@@ -97,7 +97,8 @@ namespace CesaMVC.br.com.cesa.dao
                 DataTable dt = new DataTable();
                 string sql = @"SELECT id_turma, nome, serie, turno, tba.ano 
                                FROM tb_turma 
-                               INNER JOIN tb_ano AS tba ON tba.id_ano=ano_id";
+                               INNER JOIN tb_ano AS tba ON tba.id_ano=ano_id 
+                               ORDER BY nome";
                 MySqlCommand cmd = new MySqlCommand(sql, vcon);
                 vcon.Open();
                 cmd.ExecuteNonQuery();
